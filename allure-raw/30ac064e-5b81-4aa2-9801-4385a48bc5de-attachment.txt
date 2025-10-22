@@ -1,0 +1,3 @@
+Score: 0.4000
+Status: FAIL
+Reasoning: The actual output hallucinates a missing credit report and flags it as a critical issue, even though the input contains complete credit report data. This constitutes a significant fidelity error unrelated to the allowed credit report exception. While the subsequent findings and reasoning around credit score tier (665 → Tier B), LTV (67.97%), and DTI (8%) are accurate and aligned with input and policy, the continued assertion of an unavailable credit report incorrectly impacts the overall triage. Calculations are accurate, analysis is methodical, but the hallucinated absence undermines the review's faithfulness to the provided data.
