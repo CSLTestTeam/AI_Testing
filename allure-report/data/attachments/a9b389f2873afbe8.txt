@@ -1,0 +1,3 @@
+Score: 1.0000
+Status: PASS
+Reasoning: The actual output does not contain any hallucinations, apart from the expected mention of the missing credit report, which should not be penalised. All findings are faithful to the input: vehicle age, mileage, loan term, credit score, DTI and LTV calculations are accurately derived from the provided proposal and policy manual. No fabricated data or policy violations are indicated that do not have basis in the input. The response is specific to the applicant's provided figures and aligns with evaluation steps.

@@ -3,6 +3,7 @@ from deepeval import assert_test
 from deepeval.metrics import GEval, HallucinationMetric
 from deepeval.test_case import LLMTestCase, LLMTestCaseParams
 import allure
+import time
 
 # Import necessary functions/fixtures from conftest.py
 # We import the fixture function (low_risk_scenarios) and the builder function
@@ -24,7 +25,7 @@ LOW_RISK_DATA = load_low_risk_scenarios()
 )
 def test_all_low_risk_scenarios(azure_model, scenario_data):
 
-    
+    scenario_name = scenario_data['scenario_name']
     
     
     # 1. Define the GEval metric, passing the necessary model fixture
@@ -129,3 +130,6 @@ def test_all_low_risk_scenarios(azure_model, scenario_data):
     # --- 4. FINAL ASSERTION ---
     # This single, final assertion controls the overall test status in Pytest/Allure.
     assert test_failed is False, "One or more DeepEval metrics failed. Check attached report details."
+    print(f"\n[THROTTLE] Scenario {scenario_name} complete. Waiting 40 seconds for API quota to reset...")
+    time.sleep(40)  # Wait 40 seconds between tests to avoid hitting rate limits
+    

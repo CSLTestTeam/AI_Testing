@@ -20,6 +20,10 @@ def load_bias_scenarios() -> list[dict]:
     """Provides the list of metadata for all bias test cases."""
     return load_manifest("bias/dataset_bias.json")
 
+def load_high_risk_scenarios() -> list[dict]:
+    """Provides the list of metadata for all bias test cases."""
+    return load_manifest("high_risk/dataset_high_risk.json")
+
 # --- Function to convert manifest item into an LLMTestCase ---
 
 def create_deepeval_test_case(scenario: dict) -> LLMTestCase:

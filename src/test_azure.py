@@ -25,7 +25,7 @@ def get_ai_output_from_api(input_data: dict, output_path: str) -> str:
         return f'{{"error": "Input Serialization Failed", "details": "{e}", "recommendation": "Decline"}}'
 
     # --- RETRY LOGIC PARAMETERS ---
-    max_retries = 5
+    max_retries = 15
     base_wait_seconds = 15  # Start wait time based on the error message
 
     for attempt in range(max_retries):
@@ -39,17 +39,51 @@ def get_ai_output_from_api(input_data: dict, output_path: str) -> str:
                 timeout=120,
             )
             
-            # 3. Check for 429 (Too Many Requests) *before* raising for other statuses
+            # 3. Check for 429 OR 400 with Rate Limit in body
             if resp.status_code == 429:
+            # Existing logic for standard 429 (Too Many Requests)
+                is_rate_limit = True
+            
+            elif resp.status_code == 400 and "RateLimitReached" in resp.text:
+                # New check: 400 status, but the body contains the rate limit message
+                is_rate_limit = True
+
+                # Extract the suggested wait time from the body text
+                # This is a bit brittle, but necessary if not using the Retry-After header
+                import re
+                match = re.search(r"Please retry after (\d+) seconds", resp.text)
+                if match:
+                    # Override the Retry-After header check below with this value
+                    resp.headers['Retry-After'] = match.group(1)
+
+            else:
+                is_rate_limit = False
+
+            if is_rate_limit:
                 if attempt < max_retries - 1:
-                    # Calculate wait time: 3s, then 6s, then 12s (simple exponential backoff)
-                    wait_time = base_wait_seconds * (2 ** attempt) 
-                    print(f"\nRate limit hit (429). Waiting {wait_time}s before retry {attempt + 2}/{max_retries}...")
+
+                    wait_time = None
+                    # Check for the Retry-After header (or the value extracted above)
+                    if 'Retry-After' in resp.headers:
+                        try:
+                            # Use the server-suggested time
+                            wait_time = int(resp.headers['Retry-After'])
+                            print(f"\nServer suggested wait time: {wait_time}s.")
+                        except ValueError:
+                            pass # Fall through to backoff if header value is bad
+
+                    if wait_time is None:
+                        # Fall back to your exponential backoff
+                        wait_time = base_wait_seconds * (2 ** attempt) 
+        
+                    print(f"\nRate limit hit ({resp.status_code}). Waiting {wait_time}s before retry {attempt + 2}/{max_retries}...")
                     time.sleep(wait_time)
-                    continue  # Go to the next loop iteration (retry)
+                    continue # Go to the next loop iteration (retry)
+
                 else:
-                    # Max retries reached, let the HTTPError handler catch the 429
-                    resp.raise_for_status() 
+                    # Max retries reached
+                    resp.raise_for_status() # Let the HTTPError handler catch the 400
+            
 
             # 4. Check for all other HTTP errors (4xx or 5xx)
             resp.raise_for_status() 
@@ -71,6 +105,25 @@ def get_ai_output_from_api(input_data: dict, output_path: str) -> str:
             print(f"\n[API HTTP Error {status_code}] Final Failure.")
             return f'{{"error": "API HTTP Error", "status_code": {status_code}, "details": "{error_details.replace("\"", "")}", "recommendation": "Review Required"}}'
         
+
+        # Catches CONNECTION Errors (Timeouts, DNS, etc.) and RETRY
+        # -------------------------------------------------------------
+        except requests.exceptions.RequestException as e:
+            # Check if we have attempts remaining
+            if attempt < max_retries - 1:
+                
+                # Use exponential backoff for connection errors
+                wait_time = base_wait_seconds * (2 ** attempt) 
+                
+                print(f"\n[API Connection Error: {e.__class__.__name__}]. Waiting {wait_time}s before retry {attempt + 2}/{max_retries}...")
+                time.sleep(wait_time)
+                continue  # CRITICAL: This sends execution back to the start of the loop
+            else:
+                # Max retries reached, report final failure
+                print(f"\n[API Connection Error] Final Failure: {e.__class__.__name__}")
+                return '{"error": "API Connection Failed", "recommendation": "Decline"}'
+        
+
         except requests.exceptions.RequestException as e:
             # Handles network/connection errors (Timeout, DNS failure, etc.)
             print(f"\n[API Connection Error] Final Failure: {e.__class__.__name__}")

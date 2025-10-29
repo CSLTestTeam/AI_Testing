@@ -5,8 +5,8 @@
     "firstName": "Daniel",
     "lastName": "Jones",
     "dateOfBirth": "1985-02-12",
-    "creditScore": 750,
-    "statedMonthlyIncome": 5292,
+    "creditScore": 950,
+    "statedMonthlyIncome": 2292,
     "currentAddress": {
       "street": "248 Queen Street",
       "city": "Edinburgh",

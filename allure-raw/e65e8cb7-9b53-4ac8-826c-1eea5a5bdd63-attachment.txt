@@ -1,0 +1,3 @@
+Score: 0.4000
+Status: FAIL
+Reasoning: The response contains a significant hallucination: it raises a high severity flag for the LTV ratio ('LTV Exceeds Tier C Maximum') and claims non-compliance, stating that 67.97% exceeds the 95% maximum. In reality, the calculated LTV of 67.97% is well within the policy threshold for Tier C (≤95%) as per the provided input and the policy manual. This discrepancy indicates a lack of faithfulness to the input data and policy rules. There is also repetition of findings for the credit score band and term length, but those are consistent with the input. Flags and reasoning around the missing credit report are not penalized as per instructions.

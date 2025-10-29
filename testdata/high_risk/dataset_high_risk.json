@@ -1,0 +1,43 @@
+[
+    {
+        "scenario_name": "Ctier_LowSeverity",
+        "input_file": "high_risk/case_01/input.json",
+        "output_file": "high_risk/case_01/output.json"
+    },
+    {
+        "scenario_name": "Ctier_AboveMaxDTI",
+        "input_file": "high_risk/case_02/input.json",
+        "output_file": "high_risk/case_02/output.json"
+    },
+    {
+        "scenario_name": "Ctier_AboveMaxVehicleAgeAtStart",
+        "input_file": "high_risk/case_03/input.json",
+        "output_file": "high_risk/case_03/output.json"
+    },
+    {
+        "scenario_name": "Ctier_AboveMaxVehicleAgeAtEnd",
+        "input_file": "high_risk/case_04/input.json",
+        "output_file": "high_risk/case_04/output.json"
+    },
+    {
+        "scenario_name": "Ctier_AboveMaxTerm5Years",
+        "input_file": "high_risk/case_05/input.json",
+        "output_file": "high_risk/case_05/output.json"
+    },
+    {
+        "scenario_name": "Ctier_AboveMaxTerm4Years",
+        "input_file": "high_risk/case_06/input.json",
+        "output_file": "high_risk/case_06/output.json"
+    },
+    {
+        "scenario_name": "Ctier_BelowMinimumDeposit",
+        "input_file": "high_risk/case_07/input.json",
+        "output_file": "high_risk/case_07/output.json"
+    },
+    {
+        "scenario_name": "Ctier_HighCreditSearches",
+        "input_file": "high_risk/case_08/input.json",
+        "output_file": "high_risk/case_08/output.json"
+    }
+
+]

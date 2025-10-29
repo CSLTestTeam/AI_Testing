@@ -1,0 +1,3 @@
+Score: 0.5000
+Status: PASS
+Reasoning: The actual output reports issues using the correct `ReportFinding` structure, specifies relevant fields, severities, and references the appropriate policy for credit score, LTV, DTI, vehicle age, and employment duration. However, it incorrectly flags the absence of the credit report as a critical issue, when a complete credit report is present in the input and covers all required details. This is a significant false mismatch and fails the data verification step described in the retrieval context. The remainder of the points are accurately covered, but the critical misidentification of the credit report status impacts alignment with the evaluation steps.
