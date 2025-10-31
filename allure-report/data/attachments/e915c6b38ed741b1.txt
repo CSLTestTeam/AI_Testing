@@ -1,0 +1,3 @@
+Score: 0.5000
+Status: PASS
+Reasoning: The response correctly flags the applicant's credit tier, LTV, and DTI in line with policy, and does not penalise the missing credit report. However, it fails to mention the high number of recent credit searches, which is a required finding in the expected output and should have been flagged according to standard triage procedure. This omission affects the fidelity and completeness of the review, despite strengths elsewhere.

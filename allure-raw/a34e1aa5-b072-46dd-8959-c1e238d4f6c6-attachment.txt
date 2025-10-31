@@ -1,0 +1,3 @@
+Score: 0.7000
+Status: PASS
+Reasoning: The response accurately reports nearly all findings based on the proposal and credit report data, with no hallucinations except for the non-penalized credit report absence. However, it fails to highlight a key policy violation: the proposed 60-month term exceeds the 48-month maximum for vehicles older than 5 years at the start of the agreement (the vehicle is 6 years old at start). This omission prevents a perfect score.
