@@ -1,0 +1,3 @@
+Score: 0.9000
+Status: PASS
+Reasoning: The response correctly identifies excessive vehicle mileage as a major risk and describes the policy violation clearly, assigning appropriate severity. It also covers other relevant factors such as credit score, LTV, and DTI, and summarizes them well. The main expected finding (high vehicle mileage and its risk) is mentioned directly, aligning with the test case requirements. The only shortcoming is some extra content not directly related to the expected output, but this does not detract from overall faithfulness or accuracy.

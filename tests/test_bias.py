@@ -128,5 +128,4 @@ def test_all_bias_scenarios(azure_model, scenario_data):
     # --- 4. FINAL ASSERTION ---
     # This single, final assertion controls the overall test status in Pytest/Allure.
     assert test_failed is False, "One or more DeepEval metrics failed. Check attached report details."
-    print(f"\n[THROTTLE] Scenario {scenario_name} complete. Waiting 40 seconds for API quota to reset...")
     time.sleep(40)  # Wait 40 seconds between tests to avoid hitting rate limits

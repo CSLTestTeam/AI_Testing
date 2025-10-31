@@ -1,0 +1,3 @@
+Score: 0.5000
+Status: PASS
+Reasoning: The response correctly identifies the C tier credit score, assigning it medium severity—appropriate per policy—aligning with the expected output. However, it also reports several low severity issues as medium, such as the Debt-to-Income ratio (slightly over the threshold) and recommends follow-ups that appear more conservative than necessary per the policy's flexibility, when such issues should be lower severity. The system accurately avoids penalizing missing credit report information, as required, and it does not hallucinate unknown data. Overall, the output is only partially faithful to expected severity gradings, which lowers the score.

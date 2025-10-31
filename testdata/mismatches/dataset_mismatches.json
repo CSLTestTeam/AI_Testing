@@ -1,0 +1,27 @@
+[
+    {
+        "scenario_name": "Name",
+        "input_file": "mismatches/case_01/input.json",
+        "output_file": "mismatches/case_01/output.json",
+        "expected_output_prompt": "eerer"
+    },
+    {
+        "scenario_name": "Address",
+        "input_file": "mismatches/case_02/input.json",
+        "output_file": "mismatches/case_02/output.json",
+        "expected_output_prompt": "eerer"
+    },
+    {
+        "scenario_name": "Employment_History",
+        "input_file": "mismatches/case_03/input.json",
+        "output_file": "mismatches/case_03/output.json",
+        "expected_output_prompt": "eerer"
+    },
+    {
+        "scenario_name": "Months_of_Employment",
+        "input_file": "mismatches/case_04/input.json",
+        "output_file": "mismatches/case_04/output.json",
+        "expected_output_prompt": "eerer"
+    }
+
+]

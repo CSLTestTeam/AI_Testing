@@ -22,7 +22,7 @@
   "vehicle": {
     "make": "Honda",
     "model": "Jazz",
-    "year": 2021,
+    "year": 2017,
     "mileage": 48024,
     "retailPrice": 42757,
     "tradePrice": 40283
@@ -78,7 +78,7 @@
     },
     "creditScoreSummary": {
       "score": 574,
-      "scoreBand": "Good",
+      "scoreBand": "Poor",
       "positiveFactors": [
         "Long credit history",
         "Mix of credit types",

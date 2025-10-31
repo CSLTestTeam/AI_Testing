@@ -1,0 +1,33 @@
+[
+    {
+        "scenario_name": "Inconsistent_Payment_Structure",
+        "input_file": "finances/case_01/input.json",
+        "output_file": "finances/case_01/output.json",
+        "expected_output_prompt": "eerer"
+    },
+    {
+        "scenario_name": "Defaults_And_MissedPayments",
+        "input_file": "finances/case_02/input.json",
+        "output_file": "finances/case_02/output.json",
+        "expected_output_prompt": "eerer"
+    },
+    {
+        "scenario_name": "High_Credit_Utilization",
+        "input_file": "finances/case_03/input.json",
+        "output_file": "finances/case_03/output.json",
+        "expected_output_prompt": "eerer"
+    },
+    {
+        "scenario_name": "Overdue_Balances",
+        "input_file": "finances/case_04/input.json",
+        "output_file": "finances/case_04/output.json",
+        "expected_output_prompt": "eerer"
+    },
+    {
+        "scenario_name": "Fraud_Markers",
+        "input_file": "finances/case_04/input.json",
+        "output_file": "finances/case_04/output.json",
+        "expected_output_prompt": "eerer"
+    }
+
+]

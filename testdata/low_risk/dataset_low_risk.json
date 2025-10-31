@@ -2,22 +2,26 @@
     {
         "scenario_name": "Atier_high_income",
         "input_file": "low_risk/case_01/input.json",
-        "output_file": "low_risk/case_01/output.json"
+        "output_file": "low_risk/case_01/output.json",
+        "expected_output_prompt": "eerer"
     },
     {
         "scenario_name": "Atier_lower_income",
         "input_file": "low_risk/case_02/input.json",
-        "output_file": "low_risk/case_02/output.json"
+        "output_file": "low_risk/case_02/output.json",
+        "expected_output_prompt": "eerer"
     },
     {
         "scenario_name": "Atier_AboveMaxDTI",
         "input_file": "low_risk/case_03/input.json",
-        "output_file": "low_risk/case_03/output.json"
+        "output_file": "low_risk/case_03/output.json",
+        "expected_output_prompt": "eerer"
     },
     {
         "scenario_name": "Atier_Over110LTV",
         "input_file": "low_risk/case_04/input.json",
-        "output_file": "low_risk/case_04/output.json"
+        "output_file": "low_risk/case_04/output.json",
+        "expected_output_prompt": "eerer"
     }
 
 ]

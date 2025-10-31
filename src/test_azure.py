@@ -49,7 +49,6 @@ def get_ai_output_from_api(input_data: dict, output_path: str) -> str:
                 is_rate_limit = True
 
                 # Extract the suggested wait time from the body text
-                # This is a bit brittle, but necessary if not using the Retry-After header
                 import re
                 match = re.search(r"Please retry after (\d+) seconds", resp.text)
                 if match:
@@ -95,6 +94,9 @@ def get_ai_output_from_api(input_data: dict, output_path: str) -> str:
             # Write to output file (if needed for debugging)
             with open(output_path, 'w', encoding='utf-8') as f:
                 f.write(output_string)
+
+            print(f"Test successful. Applying global throttle")
+            time.sleep(10)  # Short wait after success to avoid immediate rate limits
             
             return output_string # Success! Exit the function
 

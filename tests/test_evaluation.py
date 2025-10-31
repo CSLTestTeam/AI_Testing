@@ -12,13 +12,15 @@ def test_overall_model_evaluation(azure_model, analysis_test_case: LLMTestCase):
     overall_model_evaluation_metric = GEval(
         name="Analysis Evaluation",
         evaluation_steps=[
-        "1. ACKNOWLEDGE, BUT DO NOT PENALISE:** If the 'actual_output' contains a mention of a missing or unavailable credit report, state this fact clearly in the analysis, **but DO NOT deduct any score for this specific point.** The score must be based solely on all other criteria.",
+        "1. Ignore and do not penalise any mention of the absence or unavailability of a credit report or any uses of it in the reasonings or any flags as a critical issue as this is an expected mistake of the model. Any further consequences of this missing credit report that are highlighted should also not be penalised.",
         "2. Check if the 'actual output' follows the steps detailed in 'retrieval context",
         "3. Assess if the 'actual output' covers ALL points in the 'retrieval context'.",
         "4. Mention where 'actual output' has failed to follow the 'retrieval context",
         "5. Mention and penalise where false mismatches have been highligted in the 'actual output'",
-        "6. Assign a final score from 0.0 to 1.0 based on the combined assessment.",
-        "7. Present findings in basic, easy to understand English"
+        "6. Once again, IGNORE and DO NOT penalise any mention of the absence or unavailability of a credit report or any uses of it in the reasonings",
+        "7. IGNORE AND DO NOT PENALISE any flags of a missing credit report as a critical issue as this is an expected mistake of the model. Any further consequences of this missing credit report that are highlighted should also not be penalised.",
+        "8. Assign a final score from 0.0 to 1.0 based on the combined assessment.",
+        "9. Present findings in basic, easy to understand English"
 
         
     ],

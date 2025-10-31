@@ -21,8 +21,16 @@ def load_bias_scenarios() -> list[dict]:
     return load_manifest("bias/dataset_bias.json")
 
 def load_high_risk_scenarios() -> list[dict]:
-    """Provides the list of metadata for all bias test cases."""
+    """Provides the list of metadata for all high risk test cases."""
     return load_manifest("high_risk/dataset_high_risk.json")
+
+def load_mismatches_scenarios() -> list[dict]:
+    """Provides the list of metadata for all mismatches test cases."""
+    return load_manifest("mismatches/dataset_mismatches.json")
+
+def load_finances_scenarios() -> list[dict]:
+    """Provides the list of metadata for all finances test cases."""
+    return load_manifest("finances/dataset_finances.json")
 
 # --- Function to convert manifest item into an LLMTestCase ---
 
@@ -39,6 +47,7 @@ def create_deepeval_test_case(scenario: dict) -> LLMTestCase:
     # The '..' navigates up from 'tests/' to the project root.
     input_content_path = os.path.join(root_dir, "..", "testdata", scenario["input_file"])
     output_content_path = os.path.join(root_dir, "..", "testdata", scenario["output_file"])
+    expected_output_string = scenario["expected_output_prompt"]
     
     # 2. Read the Input Data (the payload for the API)
     # input_content_path is used here:
@@ -48,12 +57,15 @@ def create_deepeval_test_case(scenario: dict) -> LLMTestCase:
         
     # 3. Dynamic API call (uses input_data, not a path)
     actual_output_string = get_ai_output_from_api(input_data, output_content_path)
+
+
     
     # ... rest of the function remains the same ...
     
     return LLMTestCase(
         input=input_string,
         actual_output=actual_output_string,
+        expected_output=expected_output_string,
         retrieval_context=get_retrieval_contexts()
         # ... meta data ...
     )
