@@ -44,7 +44,7 @@ def test_all_high_risk_scenarios(azure_model, scenario_data):
     ],
         evaluation_params=[LLMTestCaseParams.ACTUAL_OUTPUT, LLMTestCaseParams.INPUT, LLMTestCaseParams.RETRIEVAL_CONTEXT, LLMTestCaseParams.EXPECTED_OUTPUT],
         model=azure_model,
-        threshold=0.5
+        threshold=0.8
     )
 
     Correctness = GEval(
@@ -61,7 +61,7 @@ def test_all_high_risk_scenarios(azure_model, scenario_data):
     ],
         evaluation_params=[LLMTestCaseParams.ACTUAL_OUTPUT, LLMTestCaseParams.INPUT, LLMTestCaseParams.RETRIEVAL_CONTEXT, LLMTestCaseParams.EXPECTED_OUTPUT],
         model=azure_model,
-        threshold=0.5
+        threshold=0.8
     )
 
 

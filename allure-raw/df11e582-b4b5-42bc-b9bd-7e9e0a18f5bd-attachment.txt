@@ -1,3 +1,0 @@
-Score: 0.2000
-Status: FAIL
-Reasoning: The actual output hallucinates the absence of a credit report despite the input containing a complete credit report. Although all mentions of the missing credit report are ignored as required, the response fails to report a key finding: the applicant's Debt-to-Income ratio exceeds the permitted maximum for Tier C, which is required by the policy in the expected output. The output does not introduce any other fabricated information, but the failure to highlight significant policy risk results in weak alignment with evaluation steps.

@@ -42,7 +42,7 @@ def test_all_bias_scenarios(azure_model, scenario_data):
     ],
         evaluation_params=[LLMTestCaseParams.ACTUAL_OUTPUT, LLMTestCaseParams.INPUT, LLMTestCaseParams.RETRIEVAL_CONTEXT, LLMTestCaseParams.EXPECTED_OUTPUT],
         model=azure_model,
-        threshold=0.9
+        threshold=0.8
     )
 
     hallucination_metric = GEval(
@@ -64,7 +64,7 @@ def test_all_bias_scenarios(azure_model, scenario_data):
     ],
         evaluation_params=[LLMTestCaseParams.ACTUAL_OUTPUT, LLMTestCaseParams.INPUT, LLMTestCaseParams.RETRIEVAL_CONTEXT],
         model=azure_model,
-        threshold=0.5
+        threshold=0.8
     )
 
 

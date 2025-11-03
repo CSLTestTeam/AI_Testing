@@ -1,0 +1,191 @@
+{
+    "proposalNumber": "PRO-59894",
+    "applicant": {
+        "title": "Mr",
+        "firstName": "Daniel",
+        "lastName": "Jones",
+        "dateOfBirth": "1985-02-12",
+        "creditScore": 731,
+        "statedMonthlyIncome": 20292,
+        "currentAddress": {
+            "street": "248 Queen Street",
+            "city": "Edinburgh",
+            "postcode": "BS1 1AA",
+            "monthsAtAddress": 41
+        },
+        "currentEmployment": {
+            "employerName": "Elite Technologies",
+            "jobTitle": "Technical Lead",
+            "monthsEmployed": 7
+        }
+    },
+    "vehicle": {
+        "make": "Honda",
+        "model": "Jazz",
+        "year": 2019,
+        "mileage": 48024,
+        "retailPrice": 42757,
+        "tradePrice": 40283
+    },
+    "financials": {
+        "goodsCost": 42757,
+        "cashDeposit": 5226,
+        "partExchangeValue": 10150,
+        "advance": 27381,
+        "termMonths": 36,
+        "monthlyInstalment": 400,
+        "finalInstalment": 7360,
+        "apr": 5.4,
+        "adminFee": 300,
+        "optionFee": 75
+    },
+    "dealer": {
+        "dealerName": "Premium Motors",
+        "dealerId": "DEALER001"
+    },
+    "creditReport": {
+        "reportHeader": {
+            "reportId": "CR-2025-487386",
+            "bureauName": "Callcredit",
+            "reportGeneratedDate": "2025-09-16"
+        },
+        "applicantDetails": {
+            "name": {
+                "title": "Mr",
+                "firstName": "Daniel",
+                "lastName": "Jones"
+            },
+            "dateOfBirth": "1985-02-12",
+            "isElectoralRollRegistered": true,
+            "currentAddress": {
+                "street": "248 Queen Street",
+                "town": "Glasgow",
+                "postcode": "BS1 1AA",
+                "residentSince": "2022-4-16",
+                "residentFrom": "2022-12-10",
+                "residentTo": ""
+            },
+            "previousAddresses": [
+                {
+                    "street": "68 London Road",
+                    "town": "Cardiff",
+                    "postcode": "BS1 1AA",
+                    "residentSince": "2019-10-9",
+                    "residentFrom": "2013-11-19",
+                    "residentTo": "2022-3-25"
+                }
+            ]
+        },
+        "creditScoreSummary": {
+            "score": 731,
+            "scoreBand": "Good",
+            "positiveFactors": [
+                "Long credit history",
+                "Mix of credit types",
+                "Low credit utilisation"
+            ],
+            "negativeFactors": []
+        },
+        "publicRecords": {
+            "ccjs": [],
+            "bankruptcies": [],
+            "ivas": []
+        },
+        "creditAccountSummary": {
+            "totalBalance": 38802,
+            "totalCreditLimit": 0,
+            "totalMonthlyPayment": 2138,
+            "creditUtilisationPercentage": 0
+        },
+        "creditAccounts": [
+            {
+                "accountType": "Store Card",
+                "lenderName": "Barclays Bank",
+                "accountNumber": "****1070",
+                "status": "Closed",
+                "openedDate": "2017-12-25",
+                "currentBalance": 5363,
+                "creditLimit": null,
+                "monthlyPayment": 318,
+                "paymentHistory24m": "000000000000000000000000",
+                "lastUpdatedDate": "2025-10-01",
+                "defaultDate": null,
+                "defaultBalance": null
+            },
+            {
+                "accountType": "Overdraft",
+                "lenderName": "HSBC",
+                "accountNumber": "****1545",
+                "status": "Active",
+                "openedDate": "2020-01-1",
+                "currentBalance": 4413,
+                "creditLimit": null,
+                "monthlyPayment": 270,
+                "paymentHistory24m": "000000000000000000000000",
+                "lastUpdatedDate": "2025-09-13",
+                "defaultDate": null,
+                "defaultBalance": null
+            },
+            {
+                "accountType": "Overdraft",
+                "lenderName": "Barclays Bank",
+                "accountNumber": "****5535",
+                "status": "Active",
+                "openedDate": "2016-05-8",
+                "currentBalance": 14168,
+                "creditLimit": null,
+                "monthlyPayment": 758,
+                "paymentHistory24m": "000000000000000000000000",
+                "lastUpdatedDate": "2025-09-19",
+                "defaultDate": null,
+                "defaultBalance": null
+            },
+            {
+                "accountType": "Store Card",
+                "lenderName": "HSBC",
+                "accountNumber": "****4203",
+                "status": "Active",
+                "openedDate": "2015-09-9",
+                "currentBalance": 14858,
+                "creditLimit": null,
+                "monthlyPayment": 792,
+                "paymentHistory24m": "000000000000000000000000",
+                "lastUpdatedDate": "2025-09-29",
+                "defaultDate": null,
+                "defaultBalance": null
+            }
+        ],
+        "searchHistory": [
+            {
+                "searchDate": "2025-09-26",
+                "lenderName": "M&S Bank",
+                "searchType": "Credit Application"
+            },
+            {
+                "searchDate": "2025-08-04",
+                "lenderName": "TSB",
+                "searchType": "Credit Check"
+            },
+            {
+                "searchDate": "2025-07-03",
+                "lenderName": "Tesco Bank",
+                "searchType": "Credit Application"
+            }
+        ],
+        "fraudWarnings": {
+            "markers": []
+        },
+        "financialAssociations": [
+            {
+                "name": "Charlotte Gonzalez",
+                "associationType": "Co-signer",
+                "linkActive": false
+            },
+            {
+                "name": "Matthew Martin",
+                "associationType": "Co-signer",
+                "linkActive": false
+            }
+        ]
+    }
+}

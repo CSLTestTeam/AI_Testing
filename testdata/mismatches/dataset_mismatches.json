@@ -15,7 +15,7 @@
         "scenario_name": "Address_City",
         "input_file": "mismatches/case_03/input.json",
         "output_file": "mismatches/case_03/output.json",
-        "expected_output_prompt": "The output should highlight discrepancies in employment history."
+        "expected_output_prompt": "The output should highlight discrepancies in the city listed in the addresses."
     },
     {
         "scenario_name": "Address_Postcode",

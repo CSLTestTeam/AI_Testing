@@ -1,0 +1,3 @@
+Score: 0.3000
+Status: FAIL
+Reasoning: The response systematically follows the evaluation steps, covering credit tiers, LTV, vehicle age, term, and DTI as per policy. However, it fails to highlight the key expected discrepancy: employment history differences between proposal and credit report. While most flags align with policy checks, the omission of this identity/integrity issue means only partial alignment with the expected output.

@@ -25,8 +25,8 @@ def get_ai_output_from_api(input_data: dict, output_path: str) -> str:
         return f'{{"error": "Input Serialization Failed", "details": "{e}", "recommendation": "Decline"}}'
 
     # --- RETRY LOGIC PARAMETERS ---
-    max_retries = 15
-    base_wait_seconds = 15  # Start wait time based on the error message
+    max_retries = 30
+    base_wait_seconds = 3  # Start wait time based on the error message
 
     for attempt in range(max_retries):
         try:

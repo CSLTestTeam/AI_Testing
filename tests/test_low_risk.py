@@ -25,32 +25,8 @@ LOW_RISK_DATA = load_low_risk_scenarios()
 )
 def test_all_low_risk_scenarios(azure_model, scenario_data):
 
-    scenario_name = scenario_data['scenario_name']
-    
-    
-    # 1. Define the GEval metric, passing the necessary model fixture
-    ###rename to "process adherence metric"
-    overall_model_evaluation_metric = GEval(
-        name="Analysis Evaluation",
-        evaluation_steps=[
-        "1. Ignore and do not penalise any mention of the absence or unavailability of a credit report or any uses of it in the reasonings or any flags as a critical issue as this is an expected mistake of the model. Any further consequences of this missing credit report that are highlighted should also not be penalised.",
-        "2. Check if the 'actual output' follows the steps detailed in 'retrieval context",
-        "3. Assess if the 'actual output' covers ALL points in the 'retrieval context'.",
-        "4. Mention where 'actual output' has failed to follow the 'retrieval context",
-        "5. Mention and penalise where false mismatches have been highligted in the 'actual output'",
-        "6. Once again, IGNORE and DO NOT penalise any mention of the absence or unavailability of a credit report or any uses of it in the reasonings",
-        "7. IGNORE AND DO NOT PENALISE any flags of a missing credit report as a critical issue as this is an expected mistake of the model. Any further consequences of this missing credit report that are highlighted should also not be penalised.",
-        "8. Assign a final score from 0.0 to 1.0 based on the combined assessment.",
-        "9. Present findings in basic, easy to understand English"
-
-        
-    ],
-        evaluation_params=[LLMTestCaseParams.ACTUAL_OUTPUT, LLMTestCaseParams.INPUT, LLMTestCaseParams.RETRIEVAL_CONTEXT],
-        model=azure_model,
-        threshold=0.5
-    )
-
-    output_hallucination = GEval(
+    #Define G-Eval Metrics
+    Hallucination = GEval(
         name="Output Hallucination",
         evaluation_steps=[
         "1. Ignore and do not penalise any mention of the absence or unavailability of a credit report or any uses of it in the reasonings or any flags as a critical issue as this is an expected mistake of the model. Any further consequences of this missing credit report that are highlighted should also not be penalised.",
@@ -67,16 +43,33 @@ def test_all_low_risk_scenarios(azure_model, scenario_data):
     ],
         evaluation_params=[LLMTestCaseParams.ACTUAL_OUTPUT, LLMTestCaseParams.INPUT, LLMTestCaseParams.RETRIEVAL_CONTEXT, LLMTestCaseParams.EXPECTED_OUTPUT],
         model=azure_model,
-        threshold=0.5
+        threshold=0.8
+    )
+
+    Correctness = GEval(
+        name="Correctness Evaluation",
+        evaluation_steps=[
+        "1. Ignore and do not penalise any mention of the absence or unavailability of a credit report or any uses of it in the reasonings or any flags as a critical issue as this is an expected mistake of the model. Any further consequences of this missing credit report that are highlighted should also not be penalised.",
+        "2. Read the 'actual output' and compare the findings to what is mentioned in the 'expected output'",
+        "3. Assign a final score from 0.0 to 1.0 based on the combined assessment of steps 1, 2, and 3. **ENSURE the penalty for the continued mention and analysis based on a missing credit report is 0.0.**",
+        "4. Present findings in basic, easy to understand English"
+
+
+        
+    ],
+        evaluation_params=[LLMTestCaseParams.ACTUAL_OUTPUT, LLMTestCaseParams.INPUT, LLMTestCaseParams.RETRIEVAL_CONTEXT, LLMTestCaseParams.EXPECTED_OUTPUT],
+        model=azure_model,
+        threshold=0.8
     )
 
 
     test_case = create_deepeval_test_case(scenario_data)
 
     metrics_to_run = [
-        overall_model_evaluation_metric,
-        output_hallucination
+        Hallucination,
+        Correctness
     ]
+    
     
     
     #ALLURE REPORTING

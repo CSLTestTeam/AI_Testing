@@ -61,8 +61,8 @@
         "street": "248 Queen Street",
         "town": "Edinburgh",
         "postcode": "BS1 1AA",
-        "residentSince": "2022-4-16",
-        "residentFrom": "2022-12-10",
+        "residentSince": "2026-4-16",
+        "residentFrom": "2026-12-10",
         "residentTo": ""
       },
       "previousAddresses": [
@@ -72,7 +72,15 @@
           "postcode": "BS1 1AA",
           "residentSince": "2019-10-9",
           "residentFrom": "2013-11-19",
-          "residentTo": "2022-3-25"
+          "residentTo": "2025-3-25"
+        },
+        {
+          "street": "69 London Road",
+          "town": "Cardiff",
+          "postcode": "BS1 1AA",
+          "residentSince": "2017-10-9",
+          "residentFrom": "2012-11-19",
+          "residentTo": "2026-3-25"
         }
       ]
     },

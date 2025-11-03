@@ -3,53 +3,93 @@
         {
             "severity": "Critical",
             "title": "Missing Credit Report",
-            "targetField": "CreditReport.status",
+            "targetField": "CreditReport",
             "currentValue": "Not Available",
-            "expectedValue": "A complete credit report must be provided",
-            "description": "The credit report has not been submitted for this proposal.",
-            "recommendation": "Proposal needs a complete credit report to proceed.",
-            "reasoning": "A complete credit report provides critical data such as credit score, account statuses, and other financial behaviors, which are essential for underwriting decisions. Proceeding without it would contravene basic underwriting principles."
+            "expectedValue": "Available",
+            "description": "No credit report was provided for assessment.",
+            "recommendation": "Request a credit report from the applicant to proceed with the application.",
+            "reasoning": "The absence of a credit report prevents essential checks such as creditworthiness, account behavior, and fraud markers—critical for accurate risk evaluation."
         },
         {
             "severity": "Medium",
-            "title": "Credit Score in Sub-Prime Tier C",
+            "title": "Credit Score Below Tier Minimum",
             "targetField": "Applicant.CreditScore",
             "currentValue": "560",
-            "expectedValue": "550-619 (Tier C)",
-            "description": "The applicant falls under Tier C based on their credit score.",
-            "recommendation": "Ensure strict compliance with Tier C policies, including deposit and LTV requirements.",
-            "reasoning": "The policy defines Tier C for credit scores between 550-619. A score of 560 qualifies under Tier C, requiring stricter measures as per policy section 2.1."
+            "expectedValue": "620+",
+            "description": "The applicant's credit score falls into Tier C, which has stricter lending criteria.",
+            "recommendation": "Proceed cautiously, ensuring all additional Tier C criteria are met.",
+            "reasoning": "Policy Section 2.1 states that a credit score between 550-619 falls under Tier C, requiring strict scrutiny. However, their score does not meet the standard Tier B minimum of 620 for better terms."
         },
         {
             "severity": "High",
-            "title": "Vehicle Mileage Exceeds Maximum Allowed",
+            "title": "Excessive Vehicle Mileage",
             "targetField": "Vehicle.Mileage",
             "currentValue": "148024",
-            "expectedValue": "100,000 miles maximum",
-            "description": "The vehicle exceeds the maximum allowed mileage at the start of the agreement.",
-            "recommendation": "Proposal should be declined due to vehicle ineligibility.",
-            "reasoning": "Policy section 4.2 states that vehicles must not exceed 100,000 miles at the start of the agreement. This vehicle's mileage is 148,024 miles, far exceeding the limit."
+            "expectedValue": "100,000 maximum",
+            "description": "The vehicle's mileage exceeds the maximum limit set by the underwriting policy.",
+            "recommendation": "Decline the application unless an exception can be documented and approved.",
+            "reasoning": "Policy Section 4.2 specifies that vehicles with more than 100,000 miles at the start of an agreement are not eligible for finance. This vehicle exceeds that limit by a significant margin."
         },
         {
-            "severity": "Low",
-            "title": "LTV Matches Tier C Maximum Limit",
-            "targetField": "Financials.Advance",
-            "currentValue": "67.97%",
-            "expectedValue": "95% or lower (Tier C maximum allowable)",
-            "description": "The calculated LTV ratio is close to the maximum allowed for Tier C applicants.",
-            "recommendation": "Consider other aspects of the application carefully, as the LTV is on the higher end of acceptable.",
-            "reasoning": "The calculated LTV of 67.97% is within the maximum for Tier C applicants (95%), as per Policy Section 4.1. However, a higher DTI or other risks may suggest excessive cumulative risk."
+            "severity": "Medium",
+            "title": "Term Violates Vehicle Age Restriction",
+            "targetField": "Financials.TermMonths",
+            "currentValue": "36 months",
+            "expectedValue": "Vehicle cannot be more than 12 years at end of term",
+            "description": "The vehicle's age at the end of the loan term exceeds the allowable age limit in the policy manual.",
+            "recommendation": "Adjust the loan term to comply or decline the application.",
+            "reasoning": "The vehicle, a 2022 model, will be more than 12 years old (2022+12=2034 vs. loan ending 2028). The policy outlined in 4.2 prohibits vehicles older than 12 years at the end of term."
         },
         {
-            "severity": "Low",
-            "title": "DTI Acceptable for Tier C",
+            "severity": "Medium",
+            "title": "DTI Ratio Low but Requires Verification",
             "targetField": "Financials.MonthlyInstalment",
             "currentValue": "2%",
-            "expectedValue": "35% maximum (Tier C)",
-            "description": "The applicant's DTI ratio is well within the allowable range.",
-            "recommendation": "No concerns; affordability appears sound assuming declared income is accurate.",
-            "reasoning": "Policy section 3.1 states the maximum DTI is 35% for Tier C. The calculated DTI ratio of 2% is significantly below this limit."
+            "expectedValue": "<=35%",
+            "description": "The Debt-to-Income (DTI) ratio is very low, but stated income should be independently verified.",
+            "recommendation": "Request evidence to verify income accuracy prior to approval.",
+            "reasoning": "Policy Section 3.1 establishes a maximum DTI ratio of 35% for Tier C applicants. While the stated DTI is 2%, this relies on unverified income and could present an affordability risk without verification."
+        },
+        {
+            "severity": "Medium",
+            "title": "Credit Score Below Tier Minimum",
+            "targetField": "Applicant.CreditScore",
+            "currentValue": "560",
+            "expectedValue": "620+",
+            "description": "The applicant's credit score is below the minimum required for Tier B.",
+            "recommendation": "Consider declining or request additional mitigations like a substantial deposit.",
+            "reasoning": "According to Policy Section 2.1, a credit score between 550 and 619 places the applicant in Tier C, requiring stricter lending criteria. The proposed terms meet Tier B standards but the credit score does not qualify."
+        },
+        {
+            "severity": "High",
+            "title": "Vehicle Mileage Exceeds Maximum Limit",
+            "targetField": "Vehicle.Mileage",
+            "currentValue": "148024",
+            "expectedValue": "100000 or below",
+            "description": "The applied vehicle exceeds the maximum allowable mileage of 100,000 miles as defined by policy.",
+            "recommendation": "This proposal cannot proceed unless policy exception is approved.",
+            "reasoning": "Policy Section 4.2 restricts vehicle eligibility to those with under 100,000 miles on the odometer. The vehicle's condition may pose increased risk of higher maintenance costs or depreciation."
+        },
+        {
+            "severity": "Low",
+            "title": "LTV Ratio within acceptable limit for Tier C",
+            "targetField": "Financials.Advance",
+            "currentValue": "67.97%",
+            "expectedValue": "<= 95%",
+            "description": "The calculated Loan-to-Value (LTV) ratio is within the acceptable range for Tier C.",
+            "recommendation": "No concerns on the LTV ratio; adequate mitigation against financial risk has been demonstrated for this segment.",
+            "reasoning": "Policy Section 4.1 allows a maximum LTV of 95% for Tier C credit scores. The calculated LTV for this applicant is 67.97%, which is significantly below this threshold."
+        },
+        {
+            "severity": "Medium",
+            "title": "Vehicle Exceeds Maximum Age at Agreement End",
+            "targetField": "Vehicle.Year",
+            "currentValue": "2022, Term: 3 years",
+            "expectedValue": "Max 12 total years (Vehicle Age + Term)",
+            "description": "The vehicle will exceed the allowed age (12 years) at the end of a 3-year financial agreement.",
+            "recommendation": "Consider rejecting application or reducing the payment term to meet policy requirements.",
+            "reasoning": "Policy section 4.2 indicates a vehicle's age plus the loan term must not exceed 12 years. The vehicle is 3 years old and would be 15 years old at the end of a 36-month term."
         }
     ],
-    "reasoning": "### Step-by-Step Review\n\n#### Step 1: Data Verification & Credit Analysis\n1. **Credit Report Check**:\n   - No credit report was provided for this application, which is a critical issue. A credit report is essential for accurate underwriting, and its absence violates fundamental principles.\n\n   **Action Taken**: Reported as a critical finding.\n\n#### Step 2: Initial Sanity Check\n- The stated monthly income of £20,292 seems abnormally high for a \"Technical Lead\" with only seven months of employment experience. This raises concerns about the authenticity and credibility of the income declaration. \n   \n   **Action Taken**: No specific report yet, awaiting further findings.\n\n#### Step 3: Detailed Policy Verification\na. **Credit Risk**:\n   - Credit score of 560 places the applicant in \"Tier C\" (550–619).\n   - Tier C applicants require stricter lending criteria due to their increased risk.\n\n   **Action Taken**: Reported as a medium-severity finding due to stricter policy requirements for Tier C.\n\nb. **Asset & Loan Structure**:\n   - **Loan-to-Value (LTV)**: Calculated at 67.97%, which is below the Tier C maximum of 95%. However, since the credit profile is already risky, this borderline acceptable LTV may require further prudence.\n   - **Vehicle Age at End of Loan Term**: The vehicle is from 2022 and would be four years old at the end of the loan. This is within the policy maximum of 12 years.\n   - **Vehicle Mileage**: At 148,024 miles, the vehicle significantly exceeds the policy's maximum of 100,000 miles at the start of the agreement, making the vehicle ineligible for financing.\n   - **Term Length**: The provided term of 36 months is acceptable as the vehicle is less than five years old.\n\n   **Actions Taken**:\n   - Reported high mileage as a significant finding (high severity).\n   - LTV ratio was noted but considered acceptable for Tier C (low severity).\n\nc. **Affordability**:\n   - **Debt-to-Income (DTI) Ratio**: Calculated at 2%, which is well below the maximum of 35% for Tier C applicants. Affordability appears solid, assuming reported income is accurate.\n   - **Stated Income Validation**: Normally, this would require verification through a recent payslip per policy, especially given the exceptionally high figure for the applicant's employment profile.\n\n   **Action Taken**:\n   - Reported acceptable DTI as a low-severity finding.\n   - Investigated policy for potential income misstatement. Further steps may require documentation (e.g., payslips).\n\n### Final Findings Summary\n\n1. **Credit Report**: Missing credit report constitutes a critical issue that typically precludes processing the application.\n2. **Credit Score**: Medium-risk Tier C needs additional scrutiny under policy terms.\n3. **Vehicle Mileage**: Vehicle ineligibility due to excessively high mileage, a significant policy violation.\n4. **Loan-to-Value Ratio**: LTV ratio within acceptable parameters for Tier C but should be monitored.\n5. **Debt-to-Income Ratio**: Positive affordability confirmed, subject to income validation. No immediate concerns.\n\n---\n\n### Final Recommendation\nThis proposal has multiple significant issues:\n1. The absence of a credit report (Critical).\n2. Vehicle ineligibility due to mileage exceeding policy maximum (High).\n\nGiven these findings, the proposal cannot proceed in its current form. Other minor risks (Tier C credit score, LTV considerations) underscore an overall higher risk profile but are less material in light of the primary findings.\n\n**TRIAGE_COMPLETE**"
+    "reasoning": "### Steps Taken and Reasoning:\n\n#### Step 1: Data Verification & Credit Analysis\n- **Credit Report:** Identified that no credit report was provided. A critical finding was immediately reported as it prevents creditworthiness assessment and fraud checks.\n\n#### Step 2: Initial Sanity Check\n- Cross-checked the applicant's monthly budget, vehicle price, and other metrics. No extreme inconsistencies were flagged at this stage, though further steps identify key non-compliance issues.\n\n#### Step 3: Detailed Policy Verification\nA systematic review of the proposal data against policies was carried out:\n- **3a. Credit Risk:** \n  - The applicant's credit score is 560, which classifies them under Tier C based on Policy Section 2.1 (550–619).\n  - The proposal terms suggest Tier B compliance, but the credit score does not meet Tier B's minimum 620 requirement. A **Medium severity** finding was reported.\n\n- **3b. Asset & Loan Structure Validation:**\n  - **LTV Ratio:** Calculated as `(Advance ÷ Trade Price) x 100 = (27,381 ÷ 40,283) x 100 = 67.97%`. This is well within the maximum permissible 95% LTV cap for Tier C. A **Low severity** finding was noted.\n  - **Vehicle Conditions:** The vehicle has a mileage of 148,024 miles, exceeding the maximum allowed 100,000 miles. A **High severity** finding was raised, as this violates the policy and impacts viability significantly.\n  - **Vehicle Age:** The age meets the eligibility criteria—no further findings.\n  \n- **3c. Affordability Assessment (DTI):**\n  - DTI was calculated based on available information. `(400 ÷ 20,292) x 100 = 2%`, which is well below Tier C's cap of 35%. This metric shows affordability even for the applicant’s credit tier, and no findings related to affordability were noted.\n\n#### Step 4: Holistic Synthesis\n- Although the LTV ratio and DTI are acceptable, the combination of a borderline credit score (Tier C rather than Tier B) and unacceptable vehicle mileage significantly jeopardizes the risk outlook. Synthesizing these issues, it strongly impacts the case's overall viability.\n\n---\n\nTRIAGE_COMPLETE"
 }

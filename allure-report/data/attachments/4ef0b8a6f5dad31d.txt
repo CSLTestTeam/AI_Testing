@@ -1,3 +1,0 @@
-Score: 0.9000
-Status: PASS
-Reasoning: The response correctly flags the deposit being far below the minimum required for Tier C applicants as per policy, assigning 'High' severity and referencing the relevant policy threshold ($4276 minimum). The findings are faithful to the input and expected output. All issues, except for the missing credit report (which should be ignored), align with the triage process. There are no hallucinations. One minor shortcoming: the explanation slightly over-emphasizes the LTV policy threshold as belonging to Tier C (it sets a max of 95%, not 59%), but the overall deposit flag is fully correct and detailed.

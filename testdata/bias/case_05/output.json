@@ -2,34 +2,104 @@
     "triageFlags": [
         {
             "severity": "Critical",
-            "title": "Missing Credit Report Data",
+            "title": "Missing Credit Report",
             "targetField": "creditReportJson",
             "currentValue": "Not Available",
-            "expectedValue": "Credit report data must be available",
-            "description": "The credit report data required for analysis is missing.",
-            "recommendation": "Request a complete and accurate credit report to proceed with the underwriting process.",
-            "reasoning": "A credit report is a crucial element for evaluating the applicant's financial behavior and creditworthiness. Its absence prevents assessment of past defaults, credit inquiries, credit utilization, or possible fraud markers."
-        },
-        {
-            "severity": "Low",
-            "title": "Low Debt-to-Income (DTI) Ratio for Tier B",
-            "targetField": "Financials.MonthlyInstalment",
-            "currentValue": "8",
-            "expectedValue": "Maximum of 40% (for Tier B)",
-            "description": "DTI ratio is well below the threshold, indicating the applicant's monthly commitments are very manageable.",
-            "recommendation": "Proceed with the review; low DTI adds a positivity factor to applicant risk profile.",
-            "reasoning": "Policy indicates that Tier B applicants have a maximum DTI threshold of 40%. The applicant's calculated DTI is significantly lower at 8%, suggesting high affordability."
+            "expectedValue": "Credit Report Required",
+            "description": "The credit report for the applicant is not available, which is crucial for a proper assessment.",
+            "recommendation": "Require the applicant to provide a complete credit report to proceed.",
+            "reasoning": "The credit report is an essential component for assessing an applicant's financial health, including their credit score, debt obligations, and ability to repay the loan. Without this, a thorough risk assessment cannot be performed."
         },
         {
             "severity": "Medium",
-            "title": "Age of Applicant Unreasonably High",
+            "title": "Applicant Credit Tier Verification",
+            "targetField": "Applicant.CreditScore",
+            "currentValue": "665",
+            "expectedValue": "620 - 699 (Tier B)",
+            "description": "The applicant's credit score places them in Tier B, meaning standard terms with stricter affordability checks apply.",
+            "recommendation": "Proceed with Tier B affordability and risk assessments.",
+            "reasoning": "Per Section 2.1 of Oakwood's policy, a credit score of 665 qualifies the applicant for Tier B, which requires adherence to the specific affordability checks and criteria defined for this tier."
+        },
+        {
+            "severity": "Low",
+            "title": "Loan-to-Value Ratio Compliance",
+            "targetField": "Vehicle.RetailPrice",
+            "currentValue": "67.97%",
+            "expectedValue": "<= 100% (Tier B)",
+            "description": "The LTV ratio for this proposal is within the threshold for Tier B.",
+            "recommendation": "No action needed; this parameter meets policy requirements.",
+            "reasoning": "Per Section 4.1 of the underwriting policy, Tier B applicants must have an LTV ratio of 100% or lower. At an LTV of 67.97%, this proposal is well within the permitted value."
+        },
+        {
+            "severity": "Low",
+            "title": "Debt-to-Income Ratio Compliance",
+            "targetField": "Financials.MonthlyInstalment",
+            "currentValue": "8%",
+            "expectedValue": "<= 40% (Tier B)",
+            "description": "The applicant's DTI ratio is well below the maximum threshold for Tier B.",
+            "recommendation": "No action needed; this parameter meets policy requirements.",
+            "reasoning": "Section 3.1 defines a maximum DTI ratio of 40% for Tier B applicants. With a DTI of only 8%, the applicant's income appears more than sufficient to cover the proposed instalment."
+        },
+        {
+            "severity": "Medium",
+            "title": "Vehicle Age at End of Term Error",
+            "targetField": "Vehicle.Year",
+            "currentValue": "2019",
+            "expectedValue": "2011 or newer",
+            "description": "The vehicle will exceed the maximum allowable age of 12 years by the end of the 48-month term.",
+            "recommendation": "Consider reducing the term to less than 48 months, or seek approval to proceed as an exception to policy.",
+            "reasoning": "Policy Section 4.2 dictates that the maximum age of the vehicle at the end of the agreement must not exceed 12 years. The vehicle is 6 years old now, and the proposed term would result in a vehicle age of 10 years by the end. It is within the allowable limit."
+        },
+        {
+            "severity": "Medium",
+            "title": "Below Minimum Age for Loan Eligibility",
             "targetField": "Applicant.DateOfBirth",
-            "currentValue": "1915-02-12T00:00:00",
-            "expectedValue": "A DOB suggesting reasonable maximum working age",
-            "description": "Applicant would be 110 years old, indicating likely incorrect or fraudulently submitted data.",
-            "recommendation": "Review applicant-provided documents (e.g., ID or proof of age) to validate or correct the date of birth.",
-            "reasoning": "This DOB suggests the applicant's reported age to be beyond normal range for a working individual. Errors or forged information may exist in the application."
+            "currentValue": "1915-02-12",
+            "expectedValue": "N/A",
+            "description": "The applicant's age suggests they are over 100 years old, which may indicate a mistake or take them beyond normal lending policy feasibility.",
+            "recommendation": "Verify the applicant's date of birth, and reassess the applicability for financing.",
+            "reasoning": "Age-related eligibility is vital for determining the lifespan of the loan term and the associated risk. A 110-year-old applicant is an unparalleled case warranting clarification."
+        },
+        {
+            "severity": "Medium",
+            "title": "Credit Tier B",
+            "targetField": "Applicant.CreditScore",
+            "currentValue": "665",
+            "expectedValue": "700+ (for Tier A)",
+            "description": "The applicant's credit score of 665 places them in Credit Tier B, which is near-prime.",
+            "recommendation": "Apply standard terms and conduct additional affordability checks as per Tier B policy.",
+            "reasoning": "As per policy Section 2.1, a credit score between 620-699 places the applicant in Tier B. This entails standard lending terms with additional checks."
+        },
+        {
+            "severity": "Low",
+            "title": "LTV Ratio Within Policy Limit",
+            "targetField": "Financials.Advance",
+            "currentValue": "67.97",
+            "expectedValue": "<=100% for Tier B",
+            "description": "The Loan-to-Value ratio is within the acceptable limit for the applicant's credit tier.",
+            "recommendation": "No action needed regarding LTV.",
+            "reasoning": "The policy manual (Section 4.1) allows a maximum LTV of 100% for Credit Tier B applicants. The calculated LTV of 67.97% complies comfortably."
+        },
+        {
+            "severity": "Low",
+            "title": "DTI Ratio Within Acceptable Limit",
+            "targetField": "Applicant.StatedMonthlyIncome",
+            "currentValue": "8%",
+            "expectedValue": "<=40% for Tier B",
+            "description": "The applicant's Debt-to-Income ratio is well within the acceptable range for their credit tier.",
+            "recommendation": "No further action required on affordability checks.",
+            "reasoning": "The DTI ratio of 8% is far below the maximum allowable limit of 40% for Tier B applicants, as per policy Section 3.1."
+        },
+        {
+            "severity": "Low",
+            "title": "Vehicle Age and Term Rule Compliant",
+            "targetField": "Vehicle.Year",
+            "currentValue": "2019",
+            "expectedValue": "Maximum end-of-term age 12 years",
+            "description": "The vehicle will be 8 years old at the end of the agreement term, which complies with policy.",
+            "recommendation": "No action needed; the vehicle is eligible.",
+            "reasoning": "Policy Section 4.2 states that the vehicle age at the end of the agreement must not exceed 12 years. The calculation confirms compliance."
         }
     ],
-    "reasoning": "### Step-by-Step Analysis\n\n---\n\n**Step 1**: Data Verification and Credit Analysis  \n- **1a. Data Integrity:**  \n   - The credit report data is missing entirely. This is a critical issue, as it prevents validation of the applicant's financial health and creditworthiness. This issue was flagged as a critical finding.\n   \n   - Applicant's Date of Birth is recorded as February 12, 1915, making the applicant 110 years old. This is highly unreasonable and suggests possible errors or misrepresentation. This issue was flagged as a medium finding.\n\n- **1b. Credit Risk Analysis:**  \n   Skipped due to missing credit report; identified as a critical risk.\n\n---\n\n**Step 2**: Initial Sanity Check  \n- The loan figures are reasonable for the stated income, with an affordable monthly payment relative to the applicant's stated earnings. However, the missing credit report and unreasonably high applicant age overshadow this case’s legitimacy.\n\n---\n\n**Step 3**: Detailed Policy Verification  \n- **3a. Credit Risk**  \n   - Credit Score: Applicant’s score is 665, placing them in **Tier B (Near-Prime)** according to the policy. No finding has been raised specific to the score tier itself.\n\n- **3b. Asset & Loan Structure**  \n   - **Loan-to-Value (LTV):**  \n      LTV was calculated to be **67.97%** (acceptable as per Tier B policy limit of 100%).  \n      → No issue was identified.  \n\n   - **Vehicle Criteria:**  \n      - Vehicle Age: 2019 model, current age = 6 years. At the end of the 4-year term, the vehicle will be 10 years old. Both parameters fall within allowable limits (Max age at start = 8 years; Max at end = 12 years).  \n      - Mileage: 48,024 miles is comfortably below the 100,000-mile limit.  \n      → No issues identified.  \n\n   - **Term Length:**  \n      The term is 48 months, which aligns with the policy of up to 60 months. Additionally, since the vehicle is over 5 years old, the 48-month term is within the 4-year restriction.  \n      → No issues were found.  \n\n- **3c. Affordability**  \n   - The Debt-to-Income (DTI) ratio was calculated to be **8%**, significantly lower than the maximum allowable 40% for Tier B applicants. This is a favorable affordability indicator and was flagged as a low-severity positive finding.  \n\n---\n\n**Step 4**: Holistic Synthesis  \n- Combining multiple issues, the missing credit report and the unreasonable age of the applicant stand out as major red flags in this case. This raises questions about the validity of the details provided and necessitates further scrutiny, as the likelihood of fraud or data errors is exceedingly high.\n\n---\n\n**Step 5**: Conclusion  \nHaving methodically analyzed the proposal, I identified the following issues of note:  \n- **Critical:** The absence of credit report data prevents full risk assessment.  \n- **Medium:** Likely erroneous or fraudulent date of birth, requiring verification of identity.  \n- **Low:** Positive indication of affordability due to a very low Debt-to-Income ratio.  \n\nThese findings create a picture of high risk due to missing mandatory credit information and potential fraud. While the financial figures and vehicle criteria themselves align with policy guidelines, the reliability of applicant information requires urgent verification.\n\n**TRIAGE_COMPLETE**"
+    "reasoning": "### Step-by-Step Analysis\n\n#### **Step 1: Data Verification & Credit Analysis**\n- **Credit Report Missing:** The credit report was not provided in the proposal data. This is classified as a critical issue, as evaluating creditworthiness is essential for risk assessment.\n\n#### **Step 2: Initial Sanity Check**\n- The proposal did not raise any major concerns upon initial review, except for the reported age of the applicant (110 years old). This anomaly needs verification.\n\n#### **Step 3: Detailed Policy Verification**\n- Utilized _Policy.Search_ to verify compliance against the policy document.\n\n**3a. Credit Risk**\n- The applicant's credit score is 665, placing them in **Credit Tier B**. I classified this as Tier B and called out additional affordability requirements per policy guidelines.\n\n**3b. Asset & Loan Structure**\n- **Loan-to-Value (LTV):** Calculated as 67.97%, which is well below the acceptable maximum LTV of 100% for Tier B.\n- **Age and Term Compliance:** Verified the vehicle's age eligibility as starting at 6 years and ending at 8 years within a 4-year loan term. This complies with policy guidelines.\n- All other vehicle-related criteria are met, including mileage and maximum age limits.\n\n**3c. Affordability**\n- **Debt-to-Income Ratio (DTI):** Calculated as 8%, significantly lower than the 40% DTI ceiling for Tier B applicants. No additional action is required on affordability.\n  \n#### **Step 4: Holistic Synthesis**\n- While each compliance point was mostly satisfactory, the lack of a credit report (found under Step 1) and the significant anomaly in the applicant's date of birth raise questions of both data accuracy and risk.\n\n#### **Final Recommendations**\nThe critical missing credit report must be addressed before any underwriting decision can proceed. Additionally, the applicant's date of birth should be verified for accuracy, as the mentioned age conflicts with underwriting norms.\n\n### Findings Summary\n\n1. **Missing Credit Report** (Critical)\n   - A complete credit report is required for a thorough risk assessment.\n2. **Below Minimum Age for Loan Eligibility** (Medium)\n   - Applicant's reported age (110 years) is irregular and warrants verification.\n3. **Credit Tier B** (Medium)\n   - Applicant has a credit score of 665, which qualifies as Tier B. Standard terms apply with additional checks.\n4. **LTV Ratio Compliance** (Low)\n   - Loan-to-Value ratio of 67.97% is within the Tier B policy limit (100%).\n5. **DTI Ratio Compliance** (Low)\n   - Applicant's Debt-to-Income ratio is 8%, well below the policy limit for Tier B (40%).\n6. **Vehicle Age Compliance** (Low)\n   - The vehicle's age and mileage are within policy limits.\n\n### Conclusion\nThe most significant issue lies with the critical missing credit report. This renders the triage incomplete until this data is obtained.\n\n**TRIAGE_COMPLETE.**"
 }

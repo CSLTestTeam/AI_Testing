@@ -1,3 +1,0 @@
-Score: 0.3000
-Status: FAIL
-Reasoning: The response correctly maps most policy criteria—credit tier assignment, LTV and DTI calculations, and vehicle age/mileage. It accurately flags the applicant's sub-prime tier with corresponding policy effects and presents a comprehensive set of findings. However, it omits the expected and required policy violation: the term length is 60 months (5 years) while the vehicle is over 5 years old, which exceeds the maximum allowable term of 48 months. This is a clear and significant miss per the underwriting policy, reducing alignment.

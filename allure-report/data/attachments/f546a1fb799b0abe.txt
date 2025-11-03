@@ -1,0 +1,3 @@
+Score: 0.3000
+Status: FAIL
+Reasoning: The actual output does not mention the discrepancy in address history dates, which is specified as a required output. While the output correctly triages issues such as LTV ratio and the absence of a credit report without hallucinating other information, it omits reporting any data integrity findings, particularly the mismatch in address dates between the applicant's current and previous addresses in the proposal and credit report data. This is a notable shortcoming, as the evaluation expects such discrepancies to be flagged. The response is otherwise faithful and does not introduce hallucinated findings, but the key detail specified in the expected output is missing.
