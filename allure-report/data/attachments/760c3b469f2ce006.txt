@@ -1,0 +1,5 @@
+Metric: Hallucination
+Status: FAIL
+Score: 0.2000
+Threshold: 0.8000
+Reasoning: The actual output correctly flags the Loan-to-Value and Debt-to-Income ratios as exceeding the policy limits for Tier A. However, it incorrectly states the maximum LTV as 90%, while the policy allows up to 110% for Tier A, causing a factual hallucination. The DTI violation is correctly identified with accurate values and policy limit of 45%. There are no other hallucinations or invented issues besides the LTV misunderstanding. The output faithfully references input financial data for LTV and DTI calculations and appropriately assigns medium severity. Mention of missing credit report issues is correctly ignored per instructions. Overall, the reasoning aligns with the input except for the incorrect LTV limit interpretation, leading to a low to medium alignment score.

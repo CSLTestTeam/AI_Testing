@@ -1,0 +1,39 @@
+{
+    "content": {
+        "triageFlags": [
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Loan-to-Value (LTV) Calculation Missing",
+                "targetField": "Financials.LoanToValuePercent",
+                "currentValue": "0",
+                "expectedValue": "Calculated based on policy",
+                "description": "The Loan-to-Value (LTV) percentage is not provided in the proposal.",
+                "recommendation": "Calculate the LTV using the formula and compare it against the policy thresholds.",
+                "reasoning": "According to the policy, LTV is a critical metric for assessing the loan's compliance with credit tier requirements. The LTV should be calculated as (Total Advance / Vehicle Trade Price).",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            },
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Debt-to-Income (DTI) Ratio Calculation Missing",
+                "targetField": "Financials.DebtToIncomePercent",
+                "currentValue": "0",
+                "expectedValue": "Calculated based on policy",
+                "description": "The Debt-to-Income (DTI) ratio is not provided in the proposal.",
+                "recommendation": "Calculate the DTI using the formula and compare it against the policy thresholds.",
+                "reasoning": "The DTI ratio is essential for determining affordability and compliance with the policy's thresholds for the applicant's credit tier.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            }
+        ],
+        "reasoning": "The proposal was analyzed against the underwriting policy. The applicant's credit score qualifies for Tier A, which allows for a maximum DTI of 45% and an LTV of 110%. However, the proposal lacks the calculated values for both DTI and LTV, which are critical for assessing compliance with these thresholds. The vehicle and loan terms meet the policy's criteria for age, mileage, and term length. The applicant's financials and credit history appear strong, with no negative credit factors or fraud markers."
+    },
+    "message": "",
+    "isSuccessStatusCode": true
+}

@@ -10,7 +10,9 @@ import time
 load_dotenv()
 
 #read from endpoint instead of file
-API_ENDPOINT = "https://localhost:7083/api/Proposals/test-triage" 
+API_ENDPOINT = "https://localhost:7083/api/Proposals/test-triage"
+#API_ENDPOINT = "https://localhost:7001/api/Proposals/test-triage"  
+
 
 
 def get_ai_output_from_api(input_data: dict, output_path: str) -> str:
@@ -142,7 +144,7 @@ def get_ai_output_from_api(input_data: dict, output_path: str) -> str:
 #Read from retrival context text documents and combine into a single string
 
 def get_retrieval_contexts():
-    context_files = ["testdata/findings.txt", "testdata/triageservice.txt", "testdata/policysearch.txt"]
+    context_files = ["testdata/findings.txt", "testdata/triageDossier.txt", "testdata/policysearch.txt"]
     all_contexts = []
     for filename in context_files:
         try:

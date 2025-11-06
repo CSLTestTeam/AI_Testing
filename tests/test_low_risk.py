@@ -27,19 +27,15 @@ def test_all_low_risk_scenarios(azure_model, scenario_data):
 
     #Define G-Eval Metrics
     Hallucination = GEval(
-        name="Output Hallucination",
+        name="Hallucination",
         evaluation_steps=[
-        "1. Ignore and do not penalise any mention of the absence or unavailability of a credit report or any uses of it in the reasonings or any flags as a critical issue as this is an expected mistake of the model. Any further consequences of this missing credit report that are highlighted should also not be penalised.",
-        "2. Read the 'actual output' and compare the findings to what is in the 'input'",
-        "3. Assess if the 'actual output' is faithful. Mention any hallucinations or if anything has been made up except for the missing credit report",
-        "4. Do not judge the 'actual_output' based on how well it follows the steps in the 'retrieval context'. The only thing you should judge is if any hallucinations are present except for the missing credit report",
-        "5. Once again, IGNORE and DO NOT penalise any mention of the absence or unavailability of a credit report or any uses of it in the reasonings",
-        "6. IGNORE AND DO NOT PENALISE any flags of a missing credit report as a critical issue as this is an expected mistake of the model. Any further consequences of this missing credit report that are highlighted should also not be penalised.",
-        "7. Assign a final score from 0.0 to 1.0 based on the combined assessment of steps 1, 2, 3, and 4. **ENSURE the penalty for the continued mention and analysis based on a missing credit report (Step 1, 5 and 6) is 0.0.**",
-        "8. Present findings in basic, easy to understand English"
-
-
-        
+        "1. Read the 'actual output' and compare the findings to what is in the 'input'",
+        "2. Assess if the 'actual output' is faithful. Mention any hallucinations or if anything has been made up",
+        "3. Do not judge the 'actual_output' based on how well it follows the steps in the 'retrieval context'. The only thing you should judge is if any hallucinations are present",
+        "4. Check the calculations in the 'actual output' for any discrepancies with the 'input' data. Highlight any errors found.",
+        "5. Check the reasonings provided and highlight any flaws e.g logical inconsistencies, contradictions, or unsupported claims.",
+        "6. Assign a final score from 0.0 to 1.0 based on the combined assessment of steps 1, 2, 3, 4 and 5.",
+        "7. Present findings in basic, easy to understand English"
     ],
         evaluation_params=[LLMTestCaseParams.ACTUAL_OUTPUT, LLMTestCaseParams.INPUT, LLMTestCaseParams.RETRIEVAL_CONTEXT, LLMTestCaseParams.EXPECTED_OUTPUT],
         model=azure_model,
@@ -49,14 +45,9 @@ def test_all_low_risk_scenarios(azure_model, scenario_data):
     Correctness = GEval(
         name="Correctness Evaluation",
         evaluation_steps=[
-        "1. Ignore and do not penalise any mention of the absence or unavailability of a credit report or any uses of it in the reasonings or any flags as a critical issue as this is an expected mistake of the model. Any further consequences of this missing credit report that are highlighted should also not be penalised.",
-        "2. Read the 'actual output' and compare the findings to what is mentioned in the 'expected output'",
-        "3. Assign a final score from 0.0 to 1.0 based on the combined assessment of steps 1, 2, and 3. **ENSURE the penalty for the continued mention and analysis based on a missing credit report is 0.0.**",
-        "4. Present findings in basic, easy to understand English"
-
-
-        
-    ],
+        "1. Read the 'actual output' and compare the findings to what is mentioned in the 'expected output'",
+        "2. Present findings in basic, easy to understand English"
+        ],
         evaluation_params=[LLMTestCaseParams.ACTUAL_OUTPUT, LLMTestCaseParams.INPUT, LLMTestCaseParams.RETRIEVAL_CONTEXT, LLMTestCaseParams.EXPECTED_OUTPUT],
         model=azure_model,
         threshold=0.8
@@ -87,6 +78,7 @@ def test_all_low_risk_scenarios(azure_model, scenario_data):
             
             results[metric.name] = {
                 "score": metric.score,
+                "threshold": metric.threshold,
                 "reason": metric.reason,
                 "status": "PASS" if metric.is_successful() else "FAIL"
             }
@@ -97,28 +89,52 @@ def test_all_low_risk_scenarios(azure_model, scenario_data):
             # Handle unexpected errors during metric evaluation (e.g., LLM server error)
             results[metric.name] = {
                 "score": 0.0,
+                "threshold": metric.threshold,
                 "reason": f"Evaluation Error: {e}",
                 "status": "ERROR"
             }
             test_failed = True
 
-    # --- 3. LOG ALL RESULTS TO ALLURE ---
-    #log input
-    allure.attach(
-        test_case.input,
-        name=f"Input Data: {scenario_data['scenario_name']}", # <-- Unique name defined once
-        attachment_type=allure.attachment_type.JSON
-    )
-    #log output
-    with allure.step(f"Evaluate Scenario: {scenario_data['scenario_name']}"):
-        allure.attach(test_case.actual_output, name="AI Raw JSON Output", attachment_type=allure.attachment_type.JSON)
+     #**********NEW ALLURE REPORTING **********
+    with allure.step(f"Scenario Evaluation: {scenario_data['scenario_name']}"):
+    
+    # --- Attach Input Data ---
+    # Attach the input data (assumed to be available as test_case.input)
+    # Using JSON attachment type is good if the input is structured data
+        allure.attach(
+            test_case.input,
+            name="Input Data",
+            attachment_type=allure.attachment_type.JSON
+        )
 
-        for name, data in results.items():
-            allure.attach(
-                f"Score: {data['score']:.4f}\nStatus: {data['status']}\nReasoning: {data['reason']}",
-                name=f"{name} ({data['status']})",
-                attachment_type=allure.attachment_type.TEXT
-            )
+    # --- Attach Output Data ---
+    # Attach the raw AI output (assumed to be available as test_case.actual_output)
+        allure.attach(
+            test_case.actual_output,
+            name="Output Data",
+            attachment_type=allure.attachment_type.JSON
+        )
+
+    # --- Log Metric Details (Including Threshold) ---
+    for name, data in results.items():
+        
+        # 2. Format the detailed metric output as a single text block
+        #    Note: We include the threshold here
+        metric_details = (
+            f"Metric: {name}\n"
+            f"Status: {data['status']}\n"
+            f"Score: {data['score']:.4f}\n"
+            f"Threshold: {data['threshold']:.4f}\n" # <--- THRESHOLD INCLUDED HERE
+            f"Reasoning: {data['reason']}"
+        )
+        
+        # 3. Attach the detailed block as a TEXT attachment
+        allure.attach(
+            metric_details,
+            name=f"Metric Result: {name} ({data['status']})",
+            attachment_type=allure.attachment_type.TEXT
+        )
+
 
     # --- 4. FINAL ASSERTION ---
     # This single, final assertion controls the overall test status in Pytest/Allure.

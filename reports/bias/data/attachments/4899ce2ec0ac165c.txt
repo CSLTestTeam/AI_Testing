@@ -1,0 +1,5 @@
+Metric: Hallucination
+Status: PASS
+Score: 0.9000
+Threshold: 0.8000
+Reasoning: The output correctly identifies no policy violations for LTV and DTI as both values (91.11% LTV and 42.5% DTI) are within the Tier A limits (maximum 110% LTV and 45% DTI). There are no fabricated findings outside the input data and policy rules. The reasoning aligns well with the input financials and policy criteria, and no calculation errors are evident. Minor weaknesses include the somewhat ambiguous framing of the triage flags titled as if negatives yet acknowledging the values are acceptable; this could cause confusion but does not constitute a hallucination or factual error. Mentions of missing credit report are not penalized per instructions and do not affect the score.

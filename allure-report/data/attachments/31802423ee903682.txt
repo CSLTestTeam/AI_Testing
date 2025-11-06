@@ -1,0 +1,5 @@
+Metric: Correctness Evaluation
+Status: FAIL
+Score: 0.3000
+Threshold: 0.8000
+Reasoning: The response incorrectly states that the Loan-to-Value (LTV) exceeds policy limits, claiming the max for Tier A is 110% but also stating the calculated LTV is 91.11%, which is within limits. This contradicts the expected output that an LTV exceeding 110% should have been reported as a violation. The evaluation tolerates mention of missing credit reports, which is not penalised here. The Debt-to-Income findings correctly identify compliance. Overall, the findings do not align with the expected output requiring an LTV violation flag, resulting in a low score.

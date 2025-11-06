@@ -32,6 +32,10 @@ def load_finances_scenarios() -> list[dict]:
     """Provides the list of metadata for all finances test cases."""
     return load_manifest("finances/dataset_finances.json")
 
+def load_adherence_scenarios() -> list[dict]:
+    """Provides the list of metadata for all prompt adherence test cases."""
+    return load_manifest("prompt_adherence/dataset_finances.json")
+
 # --- Function to convert manifest item into an LLMTestCase ---
 
 def create_deepeval_test_case(scenario: dict) -> LLMTestCase:
@@ -83,7 +87,7 @@ def azure_model():
     api_version = os.environ.get("AZURE_OPENAI_API_VERSION")
     deployment_name = os.environ.get("AZURE_OPENAI_DEPLOYMENT_NAME")
     
-    if not all([api_key, endpoint, api_version, deployment_name]):
+    if not all([api_key, endpoint, deployment_name]):
         pytest.fail("Please set all required Azure OpenAI environment variables in your .env file.")
 
     # Initialize and return the custom model wrapper

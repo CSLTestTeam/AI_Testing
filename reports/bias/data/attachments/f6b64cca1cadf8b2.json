@@ -1,0 +1,54 @@
+{
+    "content": {
+        "triageFlags": [
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Loan-to-Value Ratio Exceeds Policy Limit",
+                "targetField": "Financials.LoanToValuePercent",
+                "currentValue": "91.11%",
+                "expectedValue": "100% or less for Tier A",
+                "description": "The calculated Loan-to-Value (LTV) ratio is within acceptable limits for Tier A.",
+                "recommendation": "Proceed with the application as the LTV ratio complies with policy.",
+                "reasoning": "The LTV ratio is calculated as (Advance / Trade Price) * 100. For this application, the LTV is (41000 / 45000) * 100 = 91.11%, which is below the maximum allowable limit of 100% for Tier A applicants.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            },
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Loan-to-Value exceeds policy limit",
+                "targetField": "Financials.LoanToValuePercent",
+                "currentValue": "91.11%",
+                "expectedValue": "Maximum 90% for Tier A",
+                "description": "The Loan-to-Value ratio exceeds the maximum allowed for the applicant's credit tier.",
+                "recommendation": "Consider reducing the loan amount or increasing the deposit to meet the LTV requirement.",
+                "reasoning": "The policy specifies a maximum LTV of 90% for Tier A applicants. The current LTV is calculated as (Advance / Trade Price) * 100 = (41000 / 45000) * 100 = 91.11%, which exceeds the limit.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            },
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Debt-to-Income ratio exceeds policy limit",
+                "targetField": "Financials.DebtToIncomePercent",
+                "currentValue": "41.25%",
+                "expectedValue": "Maximum 40% for Tier A",
+                "description": "The Debt-to-Income ratio exceeds the maximum allowed for the applicant's credit tier.",
+                "recommendation": "Consider reducing the loan amount or monthly instalment to meet the DTI requirement.",
+                "reasoning": "The policy specifies a maximum DTI of 40% for Tier A applicants. The current DTI is calculated as (Total Monthly Credit Commitments + Proposed Monthly Instalment) / Verified Net Monthly Income = (400 + 850) / 4000 = 41.25%, which exceeds the limit.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            }
+        ],
+        "reasoning": "The proposal was evaluated against the underwriting policy, and two medium-severity issues were identified. The Loan-to-Value (LTV) ratio exceeds the maximum allowed for the applicant's credit tier, and the Debt-to-Income (DTI) ratio also surpasses the policy limit for the same tier. These findings suggest that the financial structure of the loan may pose a moderate risk."
+    },
+    "message": "",
+    "isSuccessStatusCode": true
+}

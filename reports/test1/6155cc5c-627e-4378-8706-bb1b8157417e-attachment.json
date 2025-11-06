@@ -1,0 +1,39 @@
+{
+    "content": {
+        "triageFlags": [
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Loan-to-Value Ratio Exceeds Policy Limit",
+                "targetField": "Financials.LoanToValuePercent",
+                "currentValue": "91.11%",
+                "expectedValue": "100% or less for Tier A",
+                "description": "The calculated Loan-to-Value (LTV) ratio exceeds the maximum allowed for the applicant's credit tier.",
+                "recommendation": "Consider reducing the loan amount or increasing the deposit to meet the LTV policy.",
+                "reasoning": "The policy specifies a maximum LTV of 100% for Tier A applicants. The calculated LTV for this proposal is 91.11%, which is within the acceptable range for Tier A.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            },
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Debt-to-Income Ratio Exceeds Policy Limit",
+                "targetField": "Financials.DebtToIncomePercent",
+                "currentValue": "31.25%",
+                "expectedValue": "45% or less for Tier A",
+                "description": "The Debt-to-Income (DTI) ratio is within the acceptable range for the applicant's credit tier.",
+                "recommendation": "No immediate action required as the DTI is compliant.",
+                "reasoning": "The policy specifies a maximum DTI of 45% for Tier A applicants. The calculated DTI for this proposal is 31.25%, which is compliant with the policy.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            }
+        ],
+        "reasoning": "The proposal was analyzed against the underwriting policy, focusing on credit score, affordability, and asset criteria. The applicant's credit score places them in Tier A, which allows for a maximum LTV of 110% and a DTI of 45%. The calculated LTV is 91.11%, and the DTI is 31.25%, both within acceptable limits. The vehicle's age and mileage are also compliant with the policy."
+    },
+    "message": "",
+    "isSuccessStatusCode": true
+}

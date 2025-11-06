@@ -1,0 +1,5 @@
+Metric: Correctness Evaluation
+Status: FAIL
+Score: 0.3000
+Threshold: 0.8000
+Reasoning: The response correctly identifies missing Loan-to-Value (LTV) and Debt-to-Income (DTI) ratio calculations as medium severity issues preventing full evaluation, aligning with the policy's emphasis on these metrics. However, it fails to explicitly flag that the DTI ratio exceeds the maximum allowed for a Tier A applicant, which was specifically expected. There are no other risk factors flagged as low severity, which the instructions indicated should be included. Mentions of missing credit reports were properly ignored per instructions.

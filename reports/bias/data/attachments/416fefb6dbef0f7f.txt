@@ -1,0 +1,5 @@
+Metric: Hallucination
+Status: FAIL
+Score: 0.6000
+Threshold: 0.8000
+Reasoning: The output correctly notes that the LTV (91.11%) and DTI (42.5%) values fall within Tier A policy limits and provides generally accurate calculations. However, it contains contradictory internal statements in the triage flags, incorrectly titling the LTV and DTI as 'Exceeds Policy Limit' while the reasoning clarifies values are within limits, demonstrating inconsistency. The expected LTV value is stated as '100% or less for Tier A' in flags, which conflicts with the policy allowing up to 110%, indicating hallucinated or incorrect policy reference. The vehicle and loan term compliance is confirmed appropriately. Overall, the output is mostly faithful to input data with no major hallucinations apart from inconsistent flag titles and expected values, and the reasoning is logically sound aside from these errors. The missing credit report is correctly ignored per instructions.

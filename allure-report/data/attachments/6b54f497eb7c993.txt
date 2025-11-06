@@ -1,0 +1,5 @@
+Metric: Hallucination
+Status: FAIL
+Score: 0.3000
+Threshold: 0.8000
+Reasoning: The output correctly identifies key data points such as the LTV and DTI values and their comparison to policy limits, but incorrectly states that the LTV exceeds policy when the actual LTV (91.11%) is well below the Tier A maximum of 110%. The reasoning in the LTV flag contains a hallucination claiming the LTV exceeds policy despite the currentValue and expectedValue showing it is compliant. The DTI flag is accurate and well-aligned with the input data and policy. There are no other fabricated or hallucinated issues aside from the LTV discrepancy. Mentions of credit report absence or use are not penalized as per instructions.

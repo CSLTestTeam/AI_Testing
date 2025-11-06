@@ -1,0 +1,99 @@
+{
+    "content": {
+        "triageFlags": [
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Loan-to-Value (LTV) Calculation Missing",
+                "targetField": "Financials.LoanToValuePercent",
+                "currentValue": "0",
+                "expectedValue": "Calculated based on policy",
+                "description": "The Loan-to-Value (LTV) percentage is not calculated in the proposal.",
+                "recommendation": "Calculate the LTV percentage using the formula provided in the policy and ensure it complies with the maximum allowed for the applicant's credit tier.",
+                "reasoning": "According to the policy, LTV is a critical factor in determining the eligibility of a loan. The LTV percentage must be calculated as (Total Advance) / (Vehicle Trade Price) and compared against the maximum allowed for the applicant's credit tier. This value is currently missing in the proposal, which prevents a complete assessment of compliance with the policy.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            },
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Debt-to-Income (DTI) Ratio Calculation Missing",
+                "targetField": "Financials.DebtToIncomePercent",
+                "currentValue": "0",
+                "expectedValue": "Calculated based on policy",
+                "description": "The Debt-to-Income (DTI) ratio is not calculated in the proposal.",
+                "recommendation": "Calculate the DTI ratio using the formula provided in the policy and ensure it complies with the maximum allowed for the applicant's credit tier.",
+                "reasoning": "The DTI ratio is a key metric for assessing affordability and is required to determine if the applicant meets the policy's affordability thresholds. The absence of this calculation in the proposal is a significant omission that must be addressed to proceed with underwriting.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            },
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Low",
+                "title": "Residual Value Percentage Not Provided",
+                "targetField": "Asset.ResidualValuePercent",
+                "currentValue": "0",
+                "expectedValue": "Calculated based on policy",
+                "description": "The residual value percentage is not calculated in the proposal.",
+                "recommendation": "Calculate the residual value percentage to ensure it aligns with policy requirements.",
+                "reasoning": "The residual value percentage is an important factor in evaluating the financial structure of the loan. Its absence in the proposal limits the ability to fully assess the deal's compliance with policy.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            },
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Advance to Retail Price Percentage Not Provided",
+                "targetField": "Asset.AdvanceToRetailPercent",
+                "currentValue": "0",
+                "expectedValue": "Calculated based on policy",
+                "description": "The advance to retail price percentage is not calculated in the proposal.",
+                "recommendation": "Calculate the advance to retail price percentage to ensure it aligns with policy requirements.",
+                "reasoning": "The advance to retail price percentage is a critical metric for determining the financial feasibility of the loan. Its absence in the proposal prevents a complete assessment of the loan's compliance with policy.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            },
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Loan-to-Value exceeds policy limit",
+                "targetField": "Financials.LoanToValuePercent",
+                "currentValue": "102.22%",
+                "expectedValue": "<= 100%",
+                "description": "The Loan-to-Value ratio exceeds the maximum allowed for the applicant's credit tier.",
+                "recommendation": "Consider requesting a higher deposit or reducing the loan amount to meet the LTV policy.",
+                "reasoning": "The policy specifies a maximum LTV of 100% for Tier A applicants. The calculated LTV for this proposal is 102.22%, which exceeds this limit.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            },
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Debt-to-Income ratio exceeds policy threshold",
+                "targetField": "Financials.DebtToIncomePercent",
+                "currentValue": "45.56%",
+                "expectedValue": "<= 45%",
+                "description": "The Debt-to-Income ratio slightly exceeds the maximum allowed for the applicant's credit tier.",
+                "recommendation": "Consider reducing the loan amount or increasing the deposit to bring the DTI within acceptable limits.",
+                "reasoning": "The policy specifies a maximum DTI of 45% for Tier A applicants. The calculated DTI for this proposal is 45.56%, which is slightly above the threshold.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            }
+        ],
+        "reasoning": "The proposal was analyzed against the underwriting policy manual. The applicant's credit score places them in Tier A, which allows for a maximum Loan-to-Value (LTV) of 110% and a Debt-to-Income (DTI) ratio of 45%. The calculated LTV is 102.22%, which is within the Tier A limit. However, the DTI ratio is 45.56%, slightly exceeding the maximum allowed for Tier A. This indicates a potential affordability issue. Additionally, the vehicle's age and mileage are within acceptable limits, and the loan term complies with the policy."
+    },
+    "message": "",
+    "isSuccessStatusCode": true
+}

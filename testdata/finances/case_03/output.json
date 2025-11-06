@@ -1,0 +1,39 @@
+{
+    "content": {
+        "triageFlags": [
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Loan-to-Value Exceeds Policy Limit",
+                "targetField": "Financials.LoanToValuePercent",
+                "currentValue": "91.11%",
+                "expectedValue": "<= 90%",
+                "description": "The Loan-to-Value ratio exceeds the maximum allowed for the applicant's credit tier.",
+                "recommendation": "Consider reducing the loan amount or increasing the deposit to meet the LTV requirement.",
+                "reasoning": "Policy Section 4.1 states that the maximum LTV for Tier B is 90%. The calculated LTV for this application is 91.11%, which exceeds the limit.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            },
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Debt-to-Income Ratio Exceeds Policy Limit",
+                "targetField": "Financials.DebtToIncomePercent",
+                "currentValue": "41.25%",
+                "expectedValue": "<= 40%",
+                "description": "The Debt-to-Income ratio exceeds the maximum allowed for the applicant's credit tier.",
+                "recommendation": "Consider adjusting the loan terms or reducing the loan amount to meet the DTI requirement.",
+                "reasoning": "Policy Section 3.1 states that the maximum DTI for Tier B is 40%. The calculated DTI for this application is 41.25%, which exceeds the limit.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            }
+        ],
+        "reasoning": "The analysis identified two medium-severity issues: the Loan-to-Value (LTV) ratio exceeds the policy limit for the applicant's credit tier, and the Debt-to-Income (DTI) ratio also surpasses the allowable threshold. These findings suggest that the current loan terms may pose a financial risk and require adjustments to align with policy guidelines."
+    },
+    "message": "",
+    "isSuccessStatusCode": true
+}

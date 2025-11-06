@@ -1,0 +1,5 @@
+Metric: Hallucination
+Status: PASS
+Score: 0.8000
+Threshold: 0.8000
+Reasoning: The actual output correctly identifies two key missing calculations: Loan-to-Value (LTV) and Debt-to-Income (DTI) ratios, directly reflecting the input data requirements and policy rules. It does not hallucinate any issues beyond these verifiable omissions. The reasoning clearly references the necessary formulas and policy compliance, maintaining faithfulness to the input and policy manual. However, it omits reporting potential other findings such as verifying credit data consistency, credit risk factors, or affordability sanity checks from the input, which were part of the comprehensive triage steps, leading to an incomplete assessment.

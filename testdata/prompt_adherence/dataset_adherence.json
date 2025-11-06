@@ -1,0 +1,63 @@
+[
+    {
+        "scenario_name": "Scenario_01",
+        "input_file": "prompt_adherence/case_01/input.json",
+        "output_file": "prompt_adherence/case_01/output.json",
+        "expected_output_prompt": "The actual output should follow the steps detailed in 'retrieval context"
+    },
+    {
+        "scenario_name": "Scenario_02",
+        "input_file": "prompt_adherence/case_02/input.json",
+        "output_file": "prompt_adherence/case_02/output.json",
+        "expected_output_prompt": "The actual output should follow the steps detailed in 'retrieval context"
+    },
+    {
+        "scenario_name": "Scenario_03",
+        "input_file": "prompt_adherence/case_03/input.json",
+        "output_file": "prompt_adherence/case_03/output.json",
+        "expected_output_prompt": "The actual output should follow the steps detailed in 'retrieval context"
+    },
+    {
+        "scenario_name": "Scenario_04",
+        "input_file": "prompt_adherence/case_04/input.json",
+        "output_file": "prompt_adherence/case_04/output.json",
+        "expected_output_prompt": "The actual output should follow the steps detailed in 'retrieval context"
+    },
+    {
+        "scenario_name": "Scenario_05",
+        "input_file": "prompt_adherence/case_05/input.json",
+        "output_file": "prompt_adherence/case_05/output.json",
+        "expected_output_prompt": "The actual output should follow the steps detailed in 'retrieval context"
+    },
+    {
+        "scenario_name": "Scenario_06",
+        "input_file": "prompt_adherence/case_06/input.json",
+        "output_file": "prompt_adherence/case_06/output.json",
+        "expected_output_prompt": "The actual output should follow the steps detailed in 'retrieval context"
+    },
+    {
+        "scenario_name": "Scenario_07",
+        "input_file": "prompt_adherence/case_07/input.json",
+        "output_file": "prompt_adherence/case_07/output.json",
+        "expected_output_prompt": "The actual output should follow the steps detailed in 'retrieval context"
+    },
+    {
+        "scenario_name": "Scenario_08",
+        "input_file": "prompt_adherence/case_08/input.json",
+        "output_file": "prompt_adherence/case_08/output.json",
+        "expected_output_prompt": "The actual output should follow the steps detailed in 'retrieval context"
+    },
+    {
+        "scenario_name": "Scenario_09",
+        "input_file": "prompt_adherence/case_09/input.json",
+        "output_file": "prompt_adherence/case_09/output.json",
+        "expected_output_prompt": "The actual output should follow the steps detailed in 'retrieval context"
+    },
+    {
+        "scenario_name": "Scenario_10",
+        "input_file": "prompt_adherence/case_10/input.json",
+        "output_file": "prompt_adherence/case_10/output.json",
+        "expected_output_prompt": "The actual output should follow the steps detailed in 'retrieval context"
+    }
+
+]

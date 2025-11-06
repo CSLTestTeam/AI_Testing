@@ -1,0 +1,54 @@
+{
+    "content": {
+        "triageFlags": [
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Critical",
+                "title": "Applicant Age Exceeds Maximum Allowable",
+                "targetField": "Applicant.AgeYears",
+                "currentValue": "120",
+                "expectedValue": "N/A",
+                "description": "The applicant's age is significantly above the typical range for motor finance applicants.",
+                "recommendation": "Decline the application due to age exceeding acceptable limits.",
+                "reasoning": "The applicant's age of 120 years is highly unusual and raises concerns about the validity of the application or potential data entry errors. This is not addressed in the policy but is a critical issue for underwriting.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            },
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Loan-to-Value Ratio Not Calculated",
+                "targetField": "Financials.LoanToValuePercent",
+                "currentValue": "0",
+                "expectedValue": "Calculated value based on policy",
+                "description": "The Loan-to-Value ratio has not been calculated in the proposal.",
+                "recommendation": "Calculate the Loan-to-Value ratio to ensure compliance with policy limits.",
+                "reasoning": "The Loan-to-Value ratio is a critical metric for assessing the financial risk of the loan. The policy specifies maximum LTV limits based on credit tiers, which must be adhered to.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            },
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Debt-to-Income Ratio Not Calculated",
+                "targetField": "Financials.DebtToIncomePercent",
+                "currentValue": "0",
+                "expectedValue": "Calculated value based on policy",
+                "description": "The Debt-to-Income ratio has not been calculated in the proposal.",
+                "recommendation": "Calculate the Debt-to-Income ratio to ensure compliance with policy thresholds.",
+                "reasoning": "The Debt-to-Income ratio is essential for determining the applicant's ability to afford the loan. The policy outlines specific thresholds for different credit tiers, which must be verified.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            }
+        ],
+        "reasoning": "The analysis of the provided proposal revealed several critical and medium-severity issues. The applicant's age is highly unusual and not typical for motor finance applicants, raising concerns about the validity of the application. Additionally, key financial metrics such as Loan-to-Value and Debt-to-Income ratios were not calculated, which are essential for assessing the financial viability of the loan according to policy guidelines."
+    },
+    "message": "",
+    "isSuccessStatusCode": true
+}
