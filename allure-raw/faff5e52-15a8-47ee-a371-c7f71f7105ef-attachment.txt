@@ -1,0 +1,5 @@
+Metric: Correctness Evaluation
+Status: FAIL
+Score: 0.7000
+Threshold: 0.8000
+Reasoning: The response correctly identifies the term length violation (72 months exceeding the 60 months max term) with a clear medium severity flag and appropriate reasoning, aligning with the policy on term lengths. However, the second flag on LTV ratio is inaccurate, as the current LTV (approximately 91.11%) is below the policy limit of 100% for Tier B, yet the flag claims it exceeds the limit. This reduces overall alignment since only the term length issue was expected to be reported.

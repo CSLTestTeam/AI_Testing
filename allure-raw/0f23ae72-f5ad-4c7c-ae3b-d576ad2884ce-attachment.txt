@@ -1,0 +1,5 @@
+Metric: Correctness Evaluation
+Status: FAIL
+Score: 0.3000
+Threshold: 0.8000
+Reasoning: The actual output correctly identifies a critical affordability issue due to an extremely high Debt-to-Income ratio (440%), which is well above the Tier B threshold of 40%. However, it fails to mention any medium risk factors related to the applicant's Tier B status or low income explicitly, as indicated in the expected output. The output focuses solely on the critical DTI violation and does not discuss any other credit risk or income concerns, missing the expected nuanced assessment of medium risk and income level.

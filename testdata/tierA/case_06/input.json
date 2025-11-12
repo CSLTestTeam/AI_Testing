@@ -65,7 +65,7 @@
     "cashDeposit": 5000.00,
     "partExchangeValue": 2000.00,
     "advance": 41000.00,
-    "termMonths": 48,
+    "termMonths": 60,
     "monthlyInstalment": 850.00,
     "finalInstalment": 12000.00,
     "apr": 6.9,

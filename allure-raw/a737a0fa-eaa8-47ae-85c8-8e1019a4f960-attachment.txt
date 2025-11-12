@@ -1,5 +1,0 @@
-Metric: Credit Tier Hallucination
-Status: FAIL
-Score: 0.0000
-Threshold: 0.8000
-Reasoning: The applicant's credit score of 720 places them in Tier A (Prime) based on the retrieval context. However, the actual output triage flag for DTI violation incorrectly references 'Tier B' and an expected DTI of '35% or less for Tier B', which is inaccurate for this applicant. According to policy, Tier A max DTI is 45%, making the 'expectedValue' and tier mention incorrect and inconsistent with the input data and policy. This mislabeling violates steps 5, 6, and 9, requiring a score of zero with the FATAL flag true.

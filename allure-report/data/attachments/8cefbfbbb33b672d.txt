@@ -1,5 +1,0 @@
-Metric: Credit Tier Hallucination
-Status: FAIL
-Score: 0.0000
-Threshold: 0.8000
-Reasoning: The output incorrectly states the DTI maximum limit as 40% for Tier A, but based on the input credit score of 720, the applicant qualifies for Tier A (Prime) which has a maximum DTI limit of 45%. This mislabeling of the tier limit violates evaluation steps 5, 6, and 9, resulting in a fatal error and score of zero.

@@ -1,0 +1,5 @@
+Metric: Correctness Evaluation
+Status: PASS
+Score: 0.9000
+Threshold: 0.8000
+Reasoning: The response correctly identifies that the LTV ratio at 224.44% exceeds the 100% limit for Tier B applicants, labeling it as a Critical severity issue in line with policy. It also flags the DTI ratio at 55%, above the 40% Tier B threshold, as High severity, which aligns with affordability concerns per the policy. The detailed reasoning references specific policy rules and data points, fulfilling the evaluation step. However, no additional lower severity issues or minor risk factors beyond these two major flags are included, which might have been expected given the complexity of the data verification steps.

@@ -1,0 +1,5 @@
+Metric: Correctness Evaluation
+Status: FAIL
+Score: 0.2000
+Threshold: 0.8000
+Reasoning: The actual output identifies two medium severity issues related to Loan-to-Value and Debt-to-Income ratios, both within acceptable limits but near thresholds. However, it fails to report the critical policy violation that the loan term of 60 months exceeds the maximum 48 months allowed for a vehicle older than 5 years, as required by the policy and highlighted in the expected output. This omission is a significant shortcoming, though the other findings are relevant and well-reasoned.
