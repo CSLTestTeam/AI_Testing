@@ -1,0 +1,39 @@
+{
+    "content": {
+        "triageFlags": [
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Critical",
+                "title": "Excessive Debt-to-Income Ratio",
+                "targetField": "Financials.DebtToIncomePercent",
+                "currentValue": "11000",
+                "expectedValue": "<=40% for Tier B",
+                "description": "The applicant's DTI ratio significantly exceeds the maximum allowable threshold for their credit tier.",
+                "recommendation": "Decline the application due to unsustainable affordability.",
+                "reasoning": "The policy specifies a maximum DTI of 40% for Tier B applicants, but the calculated DTI is 11000%, indicating a severe affordability issue.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            },
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "High",
+                "title": "Income Discrepancy Detected",
+                "targetField": "Affordability.NetIncomeMonthly",
+                "currentValue": "20.0",
+                "expectedValue": "Verified income matching policy requirements",
+                "description": "The reported net income is implausibly low and inconsistent with the applicant's employment status.",
+                "recommendation": "Request verified income documentation to resolve the discrepancy.",
+                "reasoning": "Policy mandates income verification for affordability assessments. The reported income is not credible, necessitating further investigation.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            }
+        ],
+        "reasoning": "The analysis identified a DTI ratio far exceeding the policy threshold for the applicant's credit tier, alongside an income discrepancy that undermines the reliability of affordability calculations. These factors collectively render the proposal unviable."
+    },
+    "message": "",
+    "isSuccessStatusCode": true
+}

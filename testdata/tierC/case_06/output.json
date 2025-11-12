@@ -1,0 +1,39 @@
+{
+    "content": {
+        "triageFlags": [
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Vehicle Age Exceeds Maximum at Start of Agreement",
+                "targetField": "Asset.VehicleAgeMonths",
+                "currentValue": "92",
+                "expectedValue": "96 or less",
+                "description": "The vehicle's age at the start of the agreement exceeds the maximum allowed by policy.",
+                "recommendation": "Consider selecting a newer vehicle or adjusting the agreement terms to comply with policy.",
+                "reasoning": "Policy states that the maximum vehicle age at the start of the agreement is 8 years (96 months). The vehicle's age of 92 months at the start of the agreement is close to the limit, requiring careful consideration.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            },
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Loan-to-Value Ratio Exceeds Maximum for Credit Tier",
+                "targetField": "Financials.LoanToValuePercent",
+                "currentValue": "91.11",
+                "expectedValue": "100% or less for Tier B",
+                "description": "The Loan-to-Value ratio exceeds the maximum allowed for the applicant's credit tier.",
+                "recommendation": "Adjust the loan amount or increase the deposit to reduce the LTV ratio.",
+                "reasoning": "Policy specifies a maximum LTV of 100% for Tier B applicants. The current LTV of 91.11% is within this limit but should be monitored closely to ensure compliance.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            }
+        ],
+        "reasoning": "The identified issues, particularly the vehicle's age and LTV ratio, present moderate risks that need addressing to align with underwriting policies. Adjustments to the proposal could mitigate these risks."
+    },
+    "message": "",
+    "isSuccessStatusCode": true
+}

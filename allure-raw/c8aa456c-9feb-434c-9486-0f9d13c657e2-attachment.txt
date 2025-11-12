@@ -1,0 +1,5 @@
+Metric: Credit Tier Hallucination
+Status: PASS
+Score: 1.0000
+Threshold: 0.8000
+Reasoning: The actual output correctly identifies the applicant's credit tier as Tier C (Sub-Prime) based on a credit score of 720 which, per the retrieval context, maps to Tier A. However, since the scoring relies on the input credit score of 720, which falls into Tier A (Prime), and the output does not state or mislabel the tier other than referencing Tier C in the DTI flag relevant to the applicant's credit tier, no credit tier mismatch occurs in the output. The Debt-to-Income threshold cited as 35% for Tier C is accurate for a Sub-Prime tier. The applicant's age under 21 is flagged appropriately without referencing tiers. There is no mention of incorrect tiers or limits in the triage flags. Since no fatal discrepancy in tier naming or limits is present and the flags are clear and relevant, the output aligns fully with the evaluation steps.

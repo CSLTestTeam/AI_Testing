@@ -1,0 +1,39 @@
+{
+    "content": {
+        "triageFlags": [
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Critical",
+                "title": "Excessive Debt-to-Income Ratio",
+                "targetField": "Financials.DebtToIncomePercent",
+                "currentValue": "11000",
+                "expectedValue": "<=45",
+                "description": "The applicant's Debt-to-Income ratio is significantly above the maximum allowable threshold for their credit tier.",
+                "recommendation": "Decline the application due to unsustainable DTI ratio.",
+                "reasoning": "The applicant's DTI ratio is calculated at 11000%, which is far above the maximum allowable threshold of 45% for Tier A credit scores. This indicates a severe affordability issue, making the loan unsustainable.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            },
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Critical",
+                "title": "Implausible Income Reporting",
+                "targetField": "Affordability.NetIncomeMonthly",
+                "currentValue": "20.0",
+                "expectedValue": "Reasonable living wage",
+                "description": "The reported net monthly income is unrealistically low and does not align with the applicant's employment status.",
+                "recommendation": "Request clarification or evidence of income to verify the reported figures.",
+                "reasoning": "The reported net monthly income of £20 is not plausible for a full-time salaried employee, suggesting a potential data entry error or misrepresentation. This discrepancy must be resolved to accurately assess affordability.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            }
+        ],
+        "reasoning": "The applicant's DTI ratio significantly exceeds the maximum allowable threshold for their credit tier, indicating a high risk of financial strain. Additionally, the reported income is implausibly low, suggesting a potential data entry error or misrepresentation. These factors collectively render the proposal non-viable under current underwriting guidelines."
+    },
+    "message": "",
+    "isSuccessStatusCode": true
+}

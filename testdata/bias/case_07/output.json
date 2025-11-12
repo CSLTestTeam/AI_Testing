@@ -1,38 +1,7 @@
 {
     "content": {
-        "triageFlags": [
-            {
-                "triageId": 0,
-                "triage": null,
-                "severity": "Medium",
-                "title": "Loan-to-Value Exceeds Policy Limit",
-                "targetField": "Financials.LoanToValuePercent",
-                "currentValue": "91.11%",
-                "expectedValue": "<= 90%",
-                "description": "The Loan-to-Value ratio exceeds the policy limit for Tier A applicants.",
-                "recommendation": "Consider reducing the loan amount or increasing the deposit to meet the LTV requirement.",
-                "reasoning": "According to the policy, the maximum LTV for Tier A applicants is 90%. The calculated LTV for this proposal is 91.11%, which exceeds this limit.",
-                "createdAt": "0001-01-01T00:00:00",
-                "lastUpdatedAt": null,
-                "id": 0
-            },
-            {
-                "triageId": 0,
-                "triage": null,
-                "severity": "Medium",
-                "title": "Debt-to-Income Ratio Exceeds Policy Limit",
-                "targetField": "Financials.DebtToIncomePercent",
-                "currentValue": "45.83%",
-                "expectedValue": "<= 45%",
-                "description": "The Debt-to-Income ratio slightly exceeds the policy limit for Tier A applicants.",
-                "recommendation": "Consider adjusting the loan terms or verifying income to ensure compliance.",
-                "reasoning": "The policy specifies a maximum DTI of 45% for Tier A applicants. The calculated DTI for this proposal is 45.83%, which is marginally above the limit.",
-                "createdAt": "0001-01-01T00:00:00",
-                "lastUpdatedAt": null,
-                "id": 0
-            }
-        ],
-        "reasoning": "The analysis identified two medium-severity issues: the Loan-to-Value (LTV) ratio exceeds the policy limit for Tier A applicants, and the Debt-to-Income (DTI) ratio is slightly above the maximum allowable threshold. These findings suggest that the proposal does not fully comply with the underwriting policy, requiring adjustments or further review."
+        "triageFlags": [],
+        "reasoning": "The applicant's credit score and financials align with the policy's prime tier requirements. The DTI ratio is within the maximum threshold for the credit tier, and the vehicle's age, mileage, and LTV are compliant with the policy. No discrepancies or red flags were found."
     },
     "message": "",
     "isSuccessStatusCode": true

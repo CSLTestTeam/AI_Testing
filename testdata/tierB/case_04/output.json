@@ -1,0 +1,39 @@
+{
+    "content": {
+        "triageFlags": [
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "High",
+                "title": "Excessive Loan-to-Value (LTV) Ratio",
+                "targetField": "Financials.LoanToValuePercent",
+                "currentValue": "224.44",
+                "expectedValue": "<= 100% for Tier B",
+                "description": "The LTV ratio exceeds the maximum allowable limit for the applicant's credit tier.",
+                "recommendation": "Decline the proposal as the LTV ratio is not within acceptable policy limits.",
+                "reasoning": "According to the policy, the maximum LTV for Tier B applicants is 100%. The current LTV of 224.44% is significantly above this threshold, indicating a high risk of financial overextension.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            },
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "High",
+                "title": "Excessive Debt-to-Income (DTI) Ratio",
+                "targetField": "Financials.DebtToIncomePercent",
+                "currentValue": "55.00",
+                "expectedValue": "<= 40% for Tier B",
+                "description": "The DTI ratio exceeds the maximum allowable limit for the applicant's credit tier.",
+                "recommendation": "Decline the proposal as the DTI ratio is not within acceptable policy limits.",
+                "reasoning": "The policy specifies a maximum DTI of 40% for Tier B applicants. The current DTI of 55% indicates that the applicant's financial obligations are too high relative to their income, posing a significant risk.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            }
+        ],
+        "reasoning": "The applicant's LTV ratio of 224.44% and DTI ratio of 55% significantly exceed the maximum allowable thresholds for their credit tier (B). These violations indicate a high financial risk, making the proposal non-compliant with underwriting policies."
+    },
+    "message": "",
+    "isSuccessStatusCode": true
+}

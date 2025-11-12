@@ -1,0 +1,39 @@
+{
+    "content": {
+        "triageFlags": [
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Loan Term Exceeds Maximum Allowed",
+                "targetField": "Financials.TermMonths",
+                "currentValue": "72",
+                "expectedValue": "60 or less",
+                "description": "The loan term exceeds the maximum allowable term of 60 months as per policy.",
+                "recommendation": "Adjust the loan term to comply with the maximum allowable term of 60 months.",
+                "reasoning": "The policy specifies a maximum term of 60 months for any agreement, and the current term of 72 months exceeds this limit, posing a potential risk.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            },
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Loan-to-Value Ratio Exceeds Policy Limit",
+                "targetField": "Financials.LoanToValuePercent",
+                "currentValue": "91.11",
+                "expectedValue": "100% or less for Tier B",
+                "description": "The Loan-to-Value (LTV) ratio exceeds the maximum allowed for the applicant's credit tier.",
+                "recommendation": "Consider reducing the loan amount or increasing the deposit to bring the LTV ratio within the acceptable range.",
+                "reasoning": "The policy allows a maximum LTV of 100% for Tier B applicants, and the current LTV of 91.11% is slightly above this threshold, indicating a need for adjustment.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            }
+        ],
+        "reasoning": "The identified issues, while not critical, indicate a need for adjustments to ensure compliance with policy guidelines and mitigate potential risks."
+    },
+    "message": "",
+    "isSuccessStatusCode": true
+}

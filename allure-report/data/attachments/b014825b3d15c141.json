@@ -1,0 +1,39 @@
+{
+    "content": {
+        "triageFlags": [
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Applicant Age Below 21",
+                "targetField": "Applicant.AgeYears",
+                "currentValue": "19",
+                "expectedValue": "21+",
+                "description": "The applicant's age is below the typical minimum age requirement for standard underwriting.",
+                "recommendation": "Consider requesting additional documentation to verify financial stability and maturity.",
+                "reasoning": "The applicant's age of 19 is below the standard threshold of 21 years, which may indicate a higher risk due to limited financial experience.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            },
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "High Loan-to-Value Ratio",
+                "targetField": "Financials.LoanToValuePercent",
+                "currentValue": "91.11",
+                "expectedValue": "<= 85% for Tier A",
+                "description": "The Loan-to-Value ratio exceeds the recommended maximum for the applicant's credit tier.",
+                "recommendation": "Evaluate the justification for the high LTV and consider requesting a higher deposit.",
+                "reasoning": "The LTV ratio of 91.11% exceeds the policy's recommended maximum for Tier A applicants, which is typically 85%, indicating a higher risk exposure.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            }
+        ],
+        "reasoning": "The applicant's credit score and financials are strong, but the high LTV ratio and the applicant's young age introduce moderate risk. These factors warrant a cautious approach."
+    },
+    "message": "",
+    "isSuccessStatusCode": true
+}

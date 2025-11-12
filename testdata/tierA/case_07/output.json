@@ -1,0 +1,39 @@
+{
+    "content": {
+        "triageFlags": [
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Exceeds Maximum Term Length",
+                "targetField": "Financials.TermMonths",
+                "currentValue": "72",
+                "expectedValue": "60",
+                "description": "The proposed term length exceeds the maximum allowable term of 60 months.",
+                "recommendation": "Adjust the term length to comply with the policy limit of 60 months.",
+                "reasoning": "According to the policy, the maximum term for any agreement is 60 months. The proposed term of 72 months exceeds this limit, necessitating adjustment to align with policy.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            },
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Loan-to-Value Ratio Exceeds Policy Limit",
+                "targetField": "Financials.LoanToValuePercent",
+                "currentValue": "91.11",
+                "expectedValue": "100",
+                "description": "The LTV ratio is slightly above the threshold for the applicant's credit tier.",
+                "recommendation": "Review the LTV ratio and consider adjustments to meet the policy requirements.",
+                "reasoning": "The policy specifies a maximum LTV of 100% for Tier A applicants. The current LTV of 91.11% is within this limit, but it is close to the threshold, warranting careful consideration.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            }
+        ],
+        "reasoning": "The applicant's credit score and DTI ratio are within acceptable limits, indicating financial stability. However, the term length and LTV ratio require adjustments to align with policy guidelines, ensuring compliance and mitigating risk."
+    },
+    "message": "",
+    "isSuccessStatusCode": true
+}

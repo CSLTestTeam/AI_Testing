@@ -1,0 +1,39 @@
+{
+    "content": {
+        "triageFlags": [
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Vehicle Age Exceeds Policy Limit",
+                "targetField": "Asset.VehicleAgeMonths",
+                "currentValue": "111",
+                "expectedValue": "96 or less",
+                "description": "The vehicle's age at the start of the agreement exceeds the maximum allowed by policy.",
+                "recommendation": "Consider requesting a newer vehicle or adjusting the terms to comply with policy.",
+                "reasoning": "Policy states the maximum vehicle age at the start of the agreement should not exceed 8 years (96 months). The provided vehicle is 111 months old, which is outside the acceptable range.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            },
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Loan-to-Value Ratio Exceeds Policy Limit",
+                "targetField": "Financials.LoanToValuePercent",
+                "currentValue": "91.11",
+                "expectedValue": "110% or less",
+                "description": "The Loan-to-Value ratio is slightly above the maximum allowed for Tier A applicants.",
+                "recommendation": "Review the LTV ratio and consider adjusting the advance or vehicle price to meet policy requirements.",
+                "reasoning": "Policy allows a maximum LTV of 110% for Tier A applicants. The current LTV is 91.11%, which is within the limit but should be monitored closely due to its proximity to the threshold.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            }
+        ],
+        "reasoning": "The applicant's credit score and DTI ratio are within acceptable limits for Tier A. However, the vehicle's age at the start of the agreement exceeds the policy's maximum, and the LTV ratio is slightly above the threshold for Tier A. These factors increase the risk level, necessitating further review."
+    },
+    "message": "",
+    "isSuccessStatusCode": true
+}

@@ -1,0 +1,39 @@
+{
+    "content": {
+        "triageFlags": [
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Critical",
+                "title": "Excessive Debt-to-Income Ratio",
+                "targetField": "Financials.DebtToIncomePercent",
+                "currentValue": "440.0",
+                "expectedValue": "<= 35% for Tier C",
+                "description": "The applicant's DTI ratio is significantly above the maximum allowable threshold for their credit tier.",
+                "recommendation": "Decline the application due to the unsustainable DTI ratio.",
+                "reasoning": "According to the policy, the maximum DTI for Tier C applicants is 35%. The applicant's DTI ratio of 440% far exceeds this limit, indicating severe affordability issues.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            },
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "High",
+                "title": "Sub-Prime Credit Score",
+                "targetField": "CreditSummary.Score",
+                "currentValue": "575",
+                "expectedValue": "620+ for Tier B or higher",
+                "description": "The applicant's credit score places them in the 'Sub-Prime' category, requiring stricter lending criteria.",
+                "recommendation": "Consider declining the application or reassessing under stricter conditions.",
+                "reasoning": "The credit score of 575 categorizes the applicant as 'Sub-Prime' (Tier C), which requires stricter lending criteria, including a lower DTI ratio and potentially higher deposit requirements.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            }
+        ],
+        "reasoning": "The applicant's DTI ratio significantly exceeds the maximum allowable threshold for their credit tier, indicating a high risk of financial strain. Additionally, the credit score is within the 'Sub-Prime' range, necessitating stricter lending criteria, which are not met in this proposal."
+    },
+    "message": "",
+    "isSuccessStatusCode": true
+}

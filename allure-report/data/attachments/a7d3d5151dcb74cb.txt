@@ -1,0 +1,5 @@
+Metric: General Hallucination
+Status: PASS
+Score: 1.0000
+Threshold: 0.8000
+Reasoning: The response correctly identifies the applicant's age as below minimum policy requirements and flags it with appropriate severity and recommendations, fully supported by the input date of birth. It also notes the DTI ratio at its maximum threshold without introducing hallucinated credit tiers or unrelated policy details, as instructed to ignore. There are no fabricated or unsupported claims, and the reasoning aligns perfectly with the retrieval context and proposal data, respecting the guideline to focus solely on hallucinations.

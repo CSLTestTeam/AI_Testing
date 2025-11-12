@@ -1,75 +1,39 @@
 {
-    "triageFlags": [
-        {
-            "severity": "Critical",
-            "title": "Missing Credit Report",
-            "targetField": "creditReportJson",
-            "currentValue": "Not Available",
-            "expectedValue": "Valid credit report",
-            "description": "The applicant's credit report is missing from the submission.",
-            "recommendation": "Request a valid credit report before proceeding further.",
-            "reasoning": "The credit report is a critical component of the underwriting process. Without it, it is impossible to evaluate the applicant's creditworthiness, identify potential fraud markers, or verify key applicant data. This must be resolved before further decision-making."
-        },
-        {
-            "severity": "Low",
-            "title": "Loan-to-Value Ratio (LTV) Check",
-            "targetField": "Financials.Advance",
-            "currentValue": "67.97%",
-            "expectedValue": "<= 110% for Tier A",
-            "description": "The Loan-to-Value (LTV) ratio is within the policy limits for an applicant in Credit Tier A.",
-            "recommendation": "No action needed; proceed if other criteria are met.",
-            "reasoning": "Policy Section 4.1 allows a maximum LTV of 110% for Credit Tier A applicants. The calculated LTV is 67.97%, which is well within the acceptable range."
-        },
-        {
-            "severity": "Low",
-            "title": "Debt-to-Income Ratio (DTI) Check",
-            "targetField": "Financials.MonthlyInstalment",
-            "currentValue": "2%",
-            "expectedValue": "<= 45% for Tier A",
-            "description": "The Debt-to-Income (DTI) ratio is well below the policy limit for Tier A.",
-            "recommendation": "No action needed; proceed if other criteria are met.",
-            "reasoning": "Policy Section 3.1 allows a maximum DTI of 45% for applicants in Tier A. The calculated DTI is 2%, which is highly affordable given the applicant's stated income."
-        },
-        {
-            "severity": "Low",
-            "title": "Debt-to-Income Ratio (DTI) Check",
-            "targetField": "Applicant.DTI",
-            "currentValue": "2%",
-            "expectedValue": "<= 45% for Tier A",
-            "description": "The Debt-to-Income (DTI) ratio is well within the acceptable threshold for Credit Tier A.",
-            "recommendation": "No action required as the applicant's DTI is within an acceptable range.",
-            "reasoning": "Policy Section 3.1 states that the maximum DTI for Credit Tier A applicants is 45%. The applicant's calculated DTI is 2%, which is significantly below this threshold, posing minimal affordability concerns."
-        },
-        {
-            "severity": "Low",
-            "title": "Debt-to-Income (DTI) Ratio Check",
-            "targetField": "Financials.MonthlyInstalment",
-            "currentValue": "2%",
-            "expectedValue": "<= 45% for Tier A",
-            "description": "The Debt-to-Income (DTI) ratio is well within policy limits for the applicant's Credit Tier A.",
-            "recommendation": "No action is necessary; affordability is well within the acceptable range.",
-            "reasoning": "Policy Section 3.1 sets the maximum DTI ratio for Tier A at 45%. The applicant's DTI is extremely low at 2%, indicating high affordability."
-        },
-        {
-            "severity": "Low",
-            "title": "Vehicle Age Within Policy",
-            "targetField": "Vehicle.Year",
-            "currentValue": "2019",
-            "expectedValue": "8 years max at start, 12 years max at end",
-            "description": "The vehicle's age complies with the policy guidelines for the beginning and end of the loan term.",
-            "recommendation": "No action is necessary; the vehicle age is in compliance.",
-            "reasoning": "Policy Section 4.2 states that the maximum age of the vehicle at the start of the agreement is 8 years, and it must not exceed 12 years by the end of the agreement. The vehicle is 6 years old at inception and would be 9 years old at the end, within the allowable range."
-        },
-        {
-            "severity": "Low",
-            "title": "Vehicle Mileage Within Policy",
-            "targetField": "Vehicle.Mileage",
-            "currentValue": "48024",
-            "expectedValue": "<= 100,000 miles",
-            "description": "The vehicle's mileage meets policy criteria.",
-            "recommendation": "No action is necessary; the vehicle mileage is in compliance.",
-            "reasoning": "Policy Section 4.2 indicates a maximum mileage of 100,000 miles at the start of the agreement. The proposed vehicle mileage of 48,024 miles is well within this limit."
-        }
-    ],
-    "reasoning": "### Step 1: Data Verification & Credit Analysis - Skipped\n#### Finding\n- The applicant's credit report was missing from the submission.\n- **Action Taken:** Reported a *Critical* finding regarding the missing credit report. Without it, the applicant's creditworthiness, fraud risk, and financial obligations cannot be reviewed.\n\n---\n\n### Step 2: Initial Sanity Check\n- The stated monthly income of $20,292 is unusually high, but since the applicant is stated as a \"Technical Lead\" at \"Elite Technologies,\" this aligns with potential earnings in a senior technical role.\n- The loan amount ($27,381) is reasonable when compared to the applicant's stated monthly income, with payments constituting only 2% of monthly earnings (assuming stated income is accurate).\n\n#### Outcome\nNo significant \"red flags\" were found, apart from the absence of the credit report.\n\n---\n\n### Step 3: Detailed Policy Verification\n1. **Credit Risk**\n   - **Applicant.CreditScore:** Without the credit report, it is impossible to verify the accuracy of the credit score of 731 provided in the application. Hence, credit tier assessment could not be verified.\n\n2. **Loan-to-Value Ratio**\n   - **Calculated LTV:** 67.97%.\n   - **Policy Guidance:** Per Section 4.1 of the policy, maximum LTV for Tier A is 110%. The LTV is within acceptable policy limits. \n   - **Action Taken:** Reported a *Low* severity finding confirming policy compliance.\n\n3. **Vehicle Criteria**\n   - **Vehicle Year:** The car was manufactured in 2019. It will be 6 years old at agreement inception and 9 years old at the end of a 36-month loan term.\n   - **Policy Guidance:** Vehicles cannot exceed 8 years old at the start of the agreement or 12 years at the end.\n   - **Action Taken:** Reported a *Low* severity finding confirming compliance.\n   - **Mileage:** The vehicle has a mileage of 48,024 miles at the start.\n   - **Policy Guidance:** Maximum allowable mileage is 100,000 miles at loan start.\n   - **Action Taken:** Reported a *Low* severity finding confirming compliance.\n\n4. **DTI Assessment**\n   - **Calculated DTI:** 2%.\n   - **Policy Guidance:** Per Section 3.1, the maximum DTI for Tier A is 45%.\n   - **Action Taken:** Reported a *Low* severity finding confirming compliance.\n\n---\n\n### Step 4: Holistic Synthesis\n- Despite several compliant aspects, the lack of the credit report creates a significant gap in evaluating the applicant's creditworthiness, fraud risk, and financial obligations accurately.\n- The applicant's stated income appears unusually high, which cannot be verified without supporting documents or the credit report for cross-referencing.\n\n### Step 5: Conclusion\nThe review identifies one critical finding that the credit report is missing, and this prevents further accurate evaluation of the application. While other reviewed criteria (LTV, DTI, and vehicle requirements) comply with the policy guidelines for Credit Tier A, additional insight into the applicant's credit profile is crucial before any underwriting decision can be made.\n\n**TRIAGE_COMPLETE**"
+    "content": {
+        "triageFlags": [
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Critical",
+                "title": "Debt-to-Income Ratio Exceeds Policy Threshold",
+                "targetField": "Financials.DebtToIncomePercent",
+                "currentValue": "55.00",
+                "expectedValue": "<= 45.00",
+                "description": "The applicant's Debt-to-Income ratio exceeds the maximum allowable threshold for their credit tier.",
+                "recommendation": "Decline the application due to affordability concerns.",
+                "reasoning": "According to the policy, the maximum DTI for Tier A applicants is 45%. The applicant's DTI of 55% indicates a significant risk of financial overextension.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            },
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "High",
+                "title": "Loan-to-Value Ratio Exceeds Policy Threshold",
+                "targetField": "Financials.LoanToValuePercent",
+                "currentValue": "91.11",
+                "expectedValue": "<= 100.00",
+                "description": "The Loan-to-Value ratio exceeds the maximum allowable threshold for the applicant's credit tier.",
+                "recommendation": "Decline the application due to non-compliance with loan structure policies.",
+                "reasoning": "The policy specifies a maximum LTV of 100% for Tier A applicants. The current LTV of 91.11% is above this limit, indicating a potential risk in asset valuation and loan recovery.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            }
+        ],
+        "reasoning": "The applicant's DTI ratio of 55% significantly exceeds the maximum allowable threshold of 45% for their credit tier (Tier A). Additionally, the LTV ratio of 91.11% surpasses the policy limit of 100% for Tier A. These violations indicate a high risk of financial strain and non-compliance with underwriting policies."
+    },
+    "message": "",
+    "isSuccessStatusCode": true
 }

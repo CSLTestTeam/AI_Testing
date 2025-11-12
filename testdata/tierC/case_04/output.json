@@ -1,0 +1,39 @@
+{
+    "content": {
+        "triageFlags": [
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Critical",
+                "title": "Excessive Loan-to-Value Ratio",
+                "targetField": "Financials.LoanToValuePercent",
+                "currentValue": "224.44",
+                "expectedValue": "95% (Tier C)",
+                "description": "The Loan-to-Value ratio significantly exceeds the maximum allowed for the applicant's credit tier.",
+                "recommendation": "Decline the application as the LTV ratio is non-compliant with policy.",
+                "reasoning": "According to the policy, the maximum LTV for Tier C applicants is 95%. The current LTV of 224.44% is far above this limit, indicating an unsustainable loan structure.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            },
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Critical",
+                "title": "Debt-to-Income Ratio Exceeds Threshold",
+                "targetField": "Financials.DebtToIncomePercent",
+                "currentValue": "55.00",
+                "expectedValue": "35% (Tier C)",
+                "description": "The Debt-to-Income ratio exceeds the maximum allowable threshold for the applicant's credit tier.",
+                "recommendation": "Decline the application due to affordability concerns.",
+                "reasoning": "The policy specifies a maximum DTI of 35% for Tier C applicants. The current DTI of 55% indicates that the applicant's financial obligations are unsustainable relative to their income.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            }
+        ],
+        "reasoning": "The analysis identified critical violations in Loan-to-Value and Debt-to-Income ratios, which are fundamental to the underwriting policy. These issues indicate a high risk of default."
+    },
+    "message": "",
+    "isSuccessStatusCode": true
+}

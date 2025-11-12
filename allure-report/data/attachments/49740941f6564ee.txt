@@ -1,5 +1,0 @@
-Metric: Hallucination
-Status: FAIL
-Score: 0.5000
-Threshold: 0.8000
-Reasoning: The response correctly identifies missing calculations for Loan-to-Value and Debt-to-Income ratios, which are critical checks per the policy. However, it fails to flag that the DTI ratio exceeds the maximum allowed for Tier A applicants, as required by the expected output. It also does not report any other risk factors or discrepancies found in the input data, resulting in partial but incomplete alignment with the evaluation steps. No hallucinations are present besides the ignored credit report absence mentions.

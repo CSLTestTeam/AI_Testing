@@ -1,0 +1,39 @@
+{
+    "content": {
+        "triageFlags": [
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Applicant's Age Below 21",
+                "targetField": "Applicant.AgeYears",
+                "currentValue": "19",
+                "expectedValue": "21+",
+                "description": "The applicant's age is below the typical minimum of 21 years for financial agreements.",
+                "recommendation": "Verify the applicant's financial stability and consider additional guarantees or co-signers.",
+                "reasoning": "Applicants under 21 years old may lack sufficient financial history or stability, increasing the risk of default. This requires additional scrutiny.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            },
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Debt-to-Income Ratio at Maximum Limit",
+                "targetField": "Financials.DebtToIncomePercent",
+                "currentValue": "40.0",
+                "expectedValue": "<= 40% for Tier A",
+                "description": "The applicant's DTI ratio is at the maximum allowable limit for their credit tier.",
+                "recommendation": "Verify the applicant's income and employment details to ensure the DTI calculation is accurate and sustainable.",
+                "reasoning": "A DTI at the maximum limit indicates a higher financial burden, which could lead to difficulties in meeting payment obligations if their financial situation changes.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            }
+        ],
+        "reasoning": "The applicant's credit score qualifies them for Tier A, allowing a maximum DTI of 45%. However, the current DTI is at the maximum limit, indicating a potential risk if unforeseen financial difficulties arise. Additionally, the applicant's young age and dependents may impact their financial stability. Verifying income and employment details is recommended to confirm affordability."
+    },
+    "message": "",
+    "isSuccessStatusCode": true
+}

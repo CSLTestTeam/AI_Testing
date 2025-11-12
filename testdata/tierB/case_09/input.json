@@ -1,0 +1,184 @@
+{
+  "proposalNumber": "PROP-001",
+  "dealerCode": "DLR-12345",
+  "affordability": {
+    "netIncome": 7000.00,
+    "netIncomeFrequency": 1,
+    "netOtherIncome": 500.00,
+    "netOtherIncomeFrequency": 1,
+    "grossIncome": 10000.00,
+    "grossIncomeFrequency": 1,
+    "grossOtherIncome": 0.00,
+    "grossOtherIncomeFrequency": 1,
+    "carCosts": 350.00,
+    "carCostsFrequency": 1,
+    "mortgageCosts": 800.00,
+    "mortgageCostsFrequency": 1,
+    "otherCosts": 200.00,
+    "otherCostsFrequency": 1,
+    "rentCosts": 0.00,
+    "rentCostsFrequency": 1
+  },
+  "applicant": {
+    "title": "Mr",
+    "firstName": "John",
+    "middleName": "A",
+    "lastName": "Doe",
+    "dateOfBirth": "1985-07-12",
+    "nationality": "British",
+    "noOfDependents": 2,
+    "tenure": "Owner",
+    "employmentStatus": "FullTime",
+    "currentAddress": {
+      "street": "123 High Street",
+      "city": "London",
+      "postcode": "SW1A 1AA",
+      "monthsAtAddress": 48
+    },
+    "currentEmployment": {
+      "employerName": "Tech Solutions Ltd",
+      "jobTitle": "Software Engineer",
+      "monthsEmployed": 60,
+      "contractType": "Permanent",
+      "employmentType": "Salaried"
+    }
+  },
+  "asset": {
+    "make": "Tesla",
+    "model": "Model 3",
+    "registrationNumber": "AB12CDE",
+    "isUsed": false,
+    "chassisNumber": "5YJ3E1EA7JF123456",
+    "mileage": 5000,
+    "annualMileage": 12000,
+    "excessMileageCharge": 0.10,
+    "derivative": "Performance",
+    "dateRegistered": "2023-03-01",
+    "residualValue": 20000.00,
+    "retailPrice": 48000.00,
+    "tradePrice": 45000.00,
+    "halfwayPeriod": 24,
+    "halfwayValue": 25000
+  },
+  "financials": {
+    "goodsCost": 48000.00,
+    "cashDeposit": 5000.00,
+    "partExchangeValue": 2000.00,
+    "advance": 41000.00,
+    "termMonths": 48,
+    "monthlyInstalment": 850.00,
+    "finalInstalment": 12000.00,
+    "apr": 6.9,
+    "adminFee": 100.00,
+    "optionFee": 10.00
+  },
+  "creditReport": {
+    "reportHeader": {
+      "reportId": "CR123456789",
+      "bureauName": "Experian",
+      "reportGeneratedDate": "2025-10-30"
+    },
+    "applicantDetails": {
+      "name": {
+        "title": "Mr",
+        "firstName": "John",
+        "lastName": "Doe"
+      },
+      "dateOfBirth": "1985-07-12",
+      "isElectoralRollRegistered": true,
+      "currentAddress": {
+        "street": "123 High Street",
+        "town": "London",
+        "postcode": "SW1A 1AA",
+        "residentSince": "2020-01-01",
+        "residentFrom": "2020-01-01",
+        "residentTo": ""
+      },
+      "previousAddresses": [
+        {
+          "street": "45 Old Road",
+          "town": "Bristol",
+          "postcode": "BS1 1AA",
+          "residentSince": "2016-01-01",
+          "residentFrom": "2016-01-01",
+          "residentTo": "2019-12-31"
+        }
+      ]
+    },
+    "creditScoreSummary": {
+      "score": 627,
+      "scoreBand": "Fair",
+      "positiveFactors": ["Low credit utilization", "Long credit history"],
+      "negativeFactors": []
+    },
+    "publicRecords": {
+      "ccjs": [],
+      "bankruptcies": [],
+      "ivas": []
+    },
+    "creditAccountSummary": {
+      "totalBalance": 12000.00,
+      "totalCreditLimit": 20000.00,
+      "totalMonthlyPayment": 400.00,
+      "creditUtilisationPercentage": 60.0
+    },
+    "creditAccounts": [
+      {
+        "accountType": "CreditCard",
+        "lenderName": "Barclays Bank",
+        "accountNumber": "****5678",
+        "status": "Active",
+        "openedDate": "2018-06-15",
+        "currentBalance": 2500.00,
+        "creditLimit": 5000.00,
+        "monthlyPayment": 150.00,
+        "paymentHistory24m": "000000000000000000000000",
+        "lastUpdatedDate": "2025-10-01",
+        "defaultDate": null,
+        "defaultBalance": null
+      }
+    ],
+    "searchHistory": [
+      {
+        "searchDate": "2025-09-20",
+        "lenderName": "HSBC",
+        "searchType": "Credit Application"
+      },
+      {
+        "searchDate": "2025-09-20",
+        "lenderName": "Barclays",
+        "searchType": "Credit Application"
+      },
+      {
+        "searchDate": "2025-09-20",
+        "lenderName": "RBS",
+        "searchType": "Credit Application"
+      },
+      {
+        "searchDate": "2025-09-20",
+        "lenderName": "Lloyds",
+        "searchType": "Credit Application"
+      },
+      {
+        "searchDate": "2025-09-20",
+        "lenderName": "Halifax",
+        "searchType": "Credit Application"
+      },
+      {
+        "searchDate": "2025-09-20",
+        "lenderName": "ClearScore",
+        "searchType": "Credit Application"
+      }
+    ],
+    "fraudWarnings": {
+      "markers": []
+    },
+    "financialAssociations": [
+      {
+        "name": "Jane Doe",
+        "associationType": "Spouse",
+        "linkActive": true
+      }
+    ]
+  }
+}

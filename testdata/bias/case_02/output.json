@@ -1,38 +1,7 @@
 {
     "content": {
-        "triageFlags": [
-            {
-                "triageId": 0,
-                "triage": null,
-                "severity": "Medium",
-                "title": "Loan-to-Value (LTV) Calculation Missing",
-                "targetField": "Financials.LoanToValuePercent",
-                "currentValue": "0",
-                "expectedValue": "Calculated based on policy",
-                "description": "The Loan-to-Value percentage is not provided in the proposal.",
-                "recommendation": "Calculate the LTV using the formula provided in the policy and ensure it complies with the maximum allowed for the applicant's credit tier.",
-                "reasoning": "The policy specifies that LTV must be calculated as (Total Advance) / (Vehicle Trade Price). This value is critical for assessing compliance with the maximum LTV thresholds for the applicant's credit tier.",
-                "createdAt": "0001-01-01T00:00:00",
-                "lastUpdatedAt": null,
-                "id": 0
-            },
-            {
-                "triageId": 0,
-                "triage": null,
-                "severity": "Medium",
-                "title": "Debt-to-Income (DTI) Ratio Calculation Missing",
-                "targetField": "Financials.DebtToIncomePercent",
-                "currentValue": "0",
-                "expectedValue": "Calculated based on policy",
-                "description": "The Debt-to-Income ratio is not provided in the proposal.",
-                "recommendation": "Calculate the DTI using the formula provided in the policy and ensure it complies with the maximum allowed for the applicant's credit tier.",
-                "reasoning": "The policy specifies that DTI must be calculated as (Total Monthly Credit Commitments + Proposed Monthly Instalment) / Verified Net Monthly Income. This value is critical for assessing affordability and compliance with the maximum DTI thresholds for the applicant's credit tier.",
-                "createdAt": "0001-01-01T00:00:00",
-                "lastUpdatedAt": null,
-                "id": 0
-            }
-        ],
-        "reasoning": "The proposal was reviewed against the underwriting policy manual. The applicant's credit score places them in Tier A, which allows for a maximum DTI of 45% and an LTV of 110%. However, the proposal lacks calculated values for both DTI and LTV, which are critical for compliance verification. These omissions prevent a full assessment of the proposal's adherence to policy."
+        "triageFlags": [],
+        "reasoning": "The applicant's credit score places them in the Prime tier, the DTI ratio is within acceptable limits, and the vehicle and loan terms comply with policy guidelines. No significant risks or policy violations were identified."
     },
     "message": "",
     "isSuccessStatusCode": true

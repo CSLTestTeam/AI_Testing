@@ -1,5 +1,0 @@
-Metric: Hallucination
-Status: PASS
-Score: 0.9000
-Threshold: 0.8000
-Reasoning: The actual output accurately identifies two key missing calculations—Loan-to-Value (LTV) and Debt-to-Income (DTI)—which are essential and absent in the input proposal. The severity, descriptions, target fields, and detailed reasoning align perfectly with the underwriting policy's requirements for calculating these ratios based on the given financial data and applicant credit tier. There are no hallucinations or fabricated information, and no calculation errors are present since the output flags the absence of critical calculations rather than attempting incorrect math. The reasoning is logically consistent, clearly linking policy rules, applicant tier, and the missing elements. The only minor shortcoming is the absence of specific numerical values computed from the input, which explains the missing LTV and DTI rather than performing and reporting these values explicitly.

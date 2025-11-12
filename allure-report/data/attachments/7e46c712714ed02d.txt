@@ -1,0 +1,5 @@
+Metric: General Hallucination
+Status: PASS
+Score: 1.0000
+Threshold: 0.8000
+Reasoning: The response accurately identifies the applicant's age as below the minimum underwriting threshold and flags the DTI ratio exceeding the threshold. It matches the input data where the applicant is 19 years old and the DTI is 40%, consistent with policy rules. The output avoids mentioning credit tiers or thresholds explicitly, focusing solely on factual findings without hallucinations. There are no fabricated issues or incorrect data points beyond those excluded criteria.

@@ -38,7 +38,7 @@ def get_ai_output_from_api(input_data: dict, output_path: str) -> str:
                 data=input_string,
                 headers={"Content-Type": "application/json", "Accept": "application/json"},
                 verify=False,
-                timeout=120,
+                timeout=600,
             )
             
             # 3. Check for 429 OR 400 with Rate Limit in body

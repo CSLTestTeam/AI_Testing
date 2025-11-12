@@ -1,0 +1,24 @@
+{
+    "content": {
+        "triageFlags": [
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Vehicle Age at End of Agreement Exceeds Policy Limit",
+                "targetField": "Asset.VehicleAgeMonths",
+                "currentValue": "80",
+                "expectedValue": "Maximum 96 months at end of agreement",
+                "description": "The vehicle will be 13 years old at the end of the agreement, exceeding the policy limit of 12 years.",
+                "recommendation": "Consider reducing the loan term to ensure the vehicle's age at the end of the agreement complies with policy.",
+                "reasoning": "According to the policy, the vehicle's age at the end of the agreement must not exceed 12 years. With a term of 60 months, the vehicle will be 13 years old, violating this rule.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            }
+        ],
+        "reasoning": "The vehicle's age at the end of the agreement exceeds the policy limit, and the applicant's credit score places them in Tier B, necessitating stricter affordability checks. Adjusting the loan term could mitigate the vehicle age issue."
+    },
+    "message": "",
+    "isSuccessStatusCode": true
+}

@@ -1,0 +1,39 @@
+{
+    "content": {
+        "triageFlags": [
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Vehicle Age Exceeds Policy Limit",
+                "targetField": "Asset.VehicleAgeMonths",
+                "currentValue": "104",
+                "expectedValue": "96 or less",
+                "description": "The vehicle's age at the start of the agreement exceeds the maximum allowed by policy.",
+                "recommendation": "Consider rejecting the proposal or requesting a different vehicle that meets the age criteria.",
+                "reasoning": "According to the policy, the maximum vehicle age at the start of the agreement is 8 years (96 months). This vehicle is 104 months old, exceeding the limit.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            },
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Loan-to-Value Ratio Exceeds Policy Limit",
+                "targetField": "Financials.LoanToValuePercent",
+                "currentValue": "91.11",
+                "expectedValue": "100% or less for Tier B",
+                "description": "The Loan-to-Value ratio exceeds the maximum allowed for the applicant's credit tier.",
+                "recommendation": "Consider reducing the loan amount or increasing the deposit to meet the LTV requirements.",
+                "reasoning": "The policy specifies a maximum LTV of 100% for Tier B applicants. The current LTV is 91.11%, which is within the limit but close to the threshold, indicating a potential risk.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            }
+        ],
+        "reasoning": "The identified issues, including the vehicle's age exceeding the policy limit and the LTV ratio being slightly above the threshold for the applicant's credit tier, suggest a moderate risk level. These factors warrant careful consideration before approval."
+    },
+    "message": "",
+    "isSuccessStatusCode": true
+}

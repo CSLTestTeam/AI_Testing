@@ -1,0 +1,39 @@
+{
+    "content": {
+        "triageFlags": [
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Credit Score in Sub-Prime Tier",
+                "targetField": "CreditSummary.Score",
+                "currentValue": "575",
+                "expectedValue": "620+ for Tier B or higher",
+                "description": "The applicant's credit score places them in the Sub-Prime category, requiring stricter lending criteria.",
+                "recommendation": "Ensure all other aspects of the proposal meet the stricter requirements for Sub-Prime applicants.",
+                "reasoning": "According to the policy, a credit score of 575 falls into Tier C (Sub-Prime), which necessitates additional scrutiny and stricter lending criteria.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            },
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Loan-to-Value Ratio Exceeds Tier C Limit",
+                "targetField": "Financials.LoanToValuePercent",
+                "currentValue": "91.11",
+                "expectedValue": "95% or less for Tier C",
+                "description": "The Loan-to-Value ratio is close to the maximum allowable limit for Tier C applicants.",
+                "recommendation": "Verify the accuracy of the vehicle's trade price and ensure the advance amount is justified.",
+                "reasoning": "The policy specifies a maximum LTV of 95% for Tier C applicants. The current LTV is within this limit but requires careful validation due to its proximity to the threshold.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            }
+        ],
+        "reasoning": "The applicant's credit score places them in the Sub-Prime category, necessitating stricter lending criteria. The DTI ratio is within acceptable limits for this tier, but the high Loan-to-Value ratio and the applicant's credit history warrant a cautious approach."
+    },
+    "message": "",
+    "isSuccessStatusCode": true
+}

@@ -1,0 +1,39 @@
+{
+    "content": {
+        "triageFlags": [
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Excessive Vehicle Mileage",
+                "targetField": "Asset.Mileage",
+                "currentValue": "105000",
+                "expectedValue": "<=100000",
+                "description": "The vehicle's mileage exceeds the maximum allowable limit of 100,000 miles at the start of the agreement.",
+                "recommendation": "Consider rejecting the proposal or seeking an exception for the mileage policy.",
+                "reasoning": "Policy states that vehicles with mileage exceeding 100,000 miles at the start of the agreement are not eligible for financing. This vehicle's mileage is 105,000 miles, which is above the limit.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            },
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Low",
+                "title": "Loan-to-Value Ratio Slightly Exceeds Threshold",
+                "targetField": "Financials.LoanToValuePercent",
+                "currentValue": "91.11",
+                "expectedValue": "<=90",
+                "description": "The Loan-to-Value ratio is slightly above the maximum allowable threshold for Tier A applicants.",
+                "recommendation": "Evaluate the feasibility of reducing the loan amount or increasing the deposit to meet the LTV requirement.",
+                "reasoning": "Policy specifies a maximum LTV of 90% for Tier A applicants. The current LTV is 91.11%, which marginally exceeds this limit.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            }
+        ],
+        "reasoning": "The applicant's credit score and financial stability are strong, aligning with Tier A criteria. However, the vehicle's mileage exceeds the policy's maximum limit, and the LTV ratio is marginally above the acceptable range for Tier A. These factors necessitate careful consideration."
+    },
+    "message": "",
+    "isSuccessStatusCode": true
+}

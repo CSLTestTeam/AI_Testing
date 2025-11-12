@@ -1,0 +1,39 @@
+{
+    "content": {
+        "triageFlags": [
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Vehicle Age at Start of Agreement Exceeds Policy Limit",
+                "targetField": "Asset.VehicleAgeMonths",
+                "currentValue": "104",
+                "expectedValue": "96 or less",
+                "description": "The vehicle's age at the start of the agreement exceeds the maximum allowed by policy.",
+                "recommendation": "Consider the implications of financing an older vehicle and verify if an exception can be justified.",
+                "reasoning": "Policy states that the maximum vehicle age at the start of the agreement should not exceed 8 years (96 months). This vehicle is 104 months old, which is outside the acceptable range.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            },
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Loan-to-Value Ratio Exceeds Policy Limit for Tier A",
+                "targetField": "Financials.LoanToValuePercent",
+                "currentValue": "91.11",
+                "expectedValue": "85 or less",
+                "description": "The Loan-to-Value ratio exceeds the policy limit for Tier A applicants.",
+                "recommendation": "Review the LTV ratio and consider adjusting the loan amount or deposit to comply with policy.",
+                "reasoning": "Policy specifies a maximum LTV of 85% for Tier A applicants. The current LTV is 91.11%, which exceeds this limit.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            }
+        ],
+        "reasoning": "The applicant's credit score and DTI ratio are within acceptable limits, but the vehicle's age at the start of the agreement and the LTV ratio slightly exceed policy thresholds. These factors should be reviewed before final approval."
+    },
+    "message": "",
+    "isSuccessStatusCode": true
+}

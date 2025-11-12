@@ -1,0 +1,5 @@
+Metric: General Hallucination
+Status: PASS
+Score: 1.0000
+Threshold: 0.8000
+Reasoning: The response correctly identifies two specific underwriting issues from the input data without hallucinating any unsupported information: the applicant's age is below the standard threshold of 21 years, and the Loan-to-Value ratio exceeds the recommended maximum for the credit tier. It avoids referencing credit tiers or DTI/LTV thresholds explicitly as per step 4 instructions and contains accurate, justifiable findings grounded in the provided proposal and policy context with no hallucinations.

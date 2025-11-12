@@ -1,0 +1,39 @@
+{
+    "content": {
+        "triageFlags": [
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Credit Score in Tier B",
+                "targetField": "CreditSummary.Score",
+                "currentValue": "627",
+                "expectedValue": "700+ for Tier A",
+                "description": "The applicant's credit score places them in Tier B, requiring standard terms and stricter affordability checks.",
+                "recommendation": "Ensure affordability checks are thorough and consider additional documentation to support the application.",
+                "reasoning": "According to the policy, Tier B applicants are subject to standard terms but require stricter affordability checks due to their credit score range.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            },
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Loan-to-Value Ratio Exceeds Tier B Limit",
+                "targetField": "Financials.LoanToValuePercent",
+                "currentValue": "91.11",
+                "expectedValue": "100% or less for Tier B",
+                "description": "The LTV ratio exceeds the maximum allowed for Tier B applicants.",
+                "recommendation": "Consider requesting a higher deposit or adjusting the loan amount to meet the LTV requirements.",
+                "reasoning": "The policy specifies a maximum LTV of 100% for Tier B applicants. The current LTV of 91.11% is within this limit, but close enough to warrant a review of the deposit or loan structure.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            }
+        ],
+        "reasoning": "The applicant's credit score places them in Tier B, which allows for standard terms but requires careful affordability checks. The LTV ratio is slightly above the maximum for Tier B, necessitating a review of the deposit or loan structure."
+    },
+    "message": "",
+    "isSuccessStatusCode": true
+}

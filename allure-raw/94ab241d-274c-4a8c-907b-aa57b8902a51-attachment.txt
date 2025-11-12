@@ -1,5 +1,0 @@
-Metric: Hallucination
-Status: FAIL
-Score: 0.3000
-Threshold: 0.8000
-Reasoning: The output identifies two issues with LTV and DTI ratios exceeding policy limits; however, it incorrectly states the LTV policy limit as 90% for Tier A applicants, whereas the retrieval context specifies a maximum LTV of 110% for Tier A. This is a factual error and a hallucination. The DTI finding is accurate and consistent with the policy, showing a slight exceedance over 45%. There is no indication that any other relevant policy rules or financial data discrepancies were checked or reported. Reasoning is clear but incomplete and partially flawed due to the incorrect LTV threshold.

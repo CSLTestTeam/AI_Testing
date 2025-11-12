@@ -12,17 +12,21 @@ def load_manifest(filename: str) -> list[dict]:
 
 # --- Fixture to load all Low Risk scenarios for parameterization ---
 
-def load_low_risk_scenarios() -> list[dict]:
+def load_tierA_scenarios() -> list[dict]:
     """Provides the list of metadata for all low-risk test cases."""
-    return load_manifest("low_risk/dataset_low_risk.json")
+    return load_manifest("tierA/dataset_tierA.json")
 
 def load_bias_scenarios() -> list[dict]:
     """Provides the list of metadata for all bias test cases."""
     return load_manifest("bias/dataset_bias.json")
 
-def load_high_risk_scenarios() -> list[dict]:
+def load_tierB_scenarios() -> list[dict]:
     """Provides the list of metadata for all high risk test cases."""
-    return load_manifest("high_risk/dataset_high_risk.json")
+    return load_manifest("tierB/dataset_tierB.json")
+
+def load_tierC_scenarios() -> list[dict]:
+    """Provides the list of metadata for all high risk test cases."""
+    return load_manifest("tierC/dataset_tierC.json")
 
 def load_mismatches_scenarios() -> list[dict]:
     """Provides the list of metadata for all mismatches test cases."""

@@ -1,0 +1,39 @@
+{
+    "content": {
+        "triageFlags": [
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Credit Score in Sub-Prime Tier",
+                "targetField": "CreditSummary.Score",
+                "currentValue": "575",
+                "expectedValue": "620+ for Tier B or higher",
+                "description": "The applicant's credit score places them in the Sub-Prime tier, requiring stricter lending criteria.",
+                "recommendation": "Ensure all additional criteria for Sub-Prime tier are met, including deposit requirements.",
+                "reasoning": "According to policy, a credit score of 575 falls into the Sub-Prime tier, which necessitates stricter lending criteria to mitigate risk.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            },
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "High",
+                "title": "Term Length Exceeds Policy for Vehicle Age",
+                "targetField": "Financials.TermMonths",
+                "currentValue": "72",
+                "expectedValue": "60 months maximum for vehicles under 5 years old",
+                "description": "The proposed term length exceeds the maximum allowed for the vehicle's age.",
+                "recommendation": "Adjust the term length to comply with the policy limit of 60 months.",
+                "reasoning": "Policy states that the maximum term for vehicles under 5 years old is 60 months. The proposed term of 72 months exceeds this limit, increasing risk.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            }
+        ],
+        "reasoning": "The credit score places the applicant in a higher risk category, and the term length exceeds the maximum allowed for the vehicle's age. These factors increase the overall risk level."
+    },
+    "message": "",
+    "isSuccessStatusCode": true
+}

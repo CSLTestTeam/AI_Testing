@@ -38,9 +38,9 @@
 
         The maximum allowable DTI ratio is determined by the applicant's Credit Tier:
 
-        *   **Tier A:** Maximum DTI is **45%**.
-        *   **Tier B:** Maximum DTI is **40%**.
-        *   **Tier C:** Maximum DTI is **35%**.
+        Tier A:** Maximum DTI is 45%
+        Tier B:** Maximum DTI is 40%.
+        Tier C:** Maximum DTI is 35%.
 
         ### 3.2 Income Verification
 
@@ -55,11 +55,13 @@
 
         ### 4.1 Loan-to-Value (LTV)
 
-        LTV is calculated as `(Total Advance) / (Vehicle Trade Price)`. The maximum permitted LTV is based on the Credit Tier:
+        LTV is calculated as `(Total Advance) / (Vehicle Trade Price)`.
+        
+      The maximum permitted LTV is based on the Credit Tier:
 
-        *   **Tier A:** Max LTV is **110%**. (Allows financing of fees or small amounts of negative equity).
-        *   **Tier B:** Max LTV is **100%**.
-        *   **Tier C:** Max LTV is **95%**.
+        - Tier A (Prime): 110% (Allows financing of fees or small negative equity)
+        - Tier B (Near-Prime): 100%
+        - Tier C (Sub-Prime): 95%
 
         ### 4.2 Vehicle Criteria
 

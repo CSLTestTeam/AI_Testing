@@ -1,0 +1,39 @@
+{
+    "content": {
+        "triageFlags": [
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Vehicle Age Exceeds Policy Limit",
+                "targetField": "Asset.VehicleAgeMonths",
+                "currentValue": "111",
+                "expectedValue": "96 or less",
+                "description": "The vehicle's age at the start of the agreement exceeds the maximum allowable age of 8 years.",
+                "recommendation": "Consider declining the proposal or seeking an exception approval for the vehicle's age.",
+                "reasoning": "According to the policy, vehicles must not exceed 8 years of age at the start of the agreement. This vehicle is over 9 years old, which is outside the acceptable range.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            },
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Low",
+                "title": "Applicant in Tier B Credit Score Band",
+                "targetField": "CreditSummary.Score",
+                "currentValue": "627",
+                "expectedValue": "700+ for Tier A",
+                "description": "The applicant's credit score places them in Tier B, requiring standard terms and stricter affordability checks.",
+                "recommendation": "Ensure that affordability checks are thorough and align with Tier B requirements.",
+                "reasoning": "The applicant's credit score of 627 places them in Tier B, which necessitates stricter affordability checks as per the policy.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            }
+        ],
+        "reasoning": "The vehicle's age at the start of the agreement exceeds the policy limit, and the applicant's credit score places them in Tier B, necessitating stricter affordability checks. These factors elevate the risk level to medium."
+    },
+    "message": "",
+    "isSuccessStatusCode": true
+}

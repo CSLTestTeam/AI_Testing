@@ -24,7 +24,7 @@
     "firstName": "John",
     "middleName": "A",
     "lastName": "Doe",
-    "dateOfBirth": "2015-07-12",
+    "dateOfBirth": "2006-07-12",
     "nationality": "British",
     "noOfDependents": 2,
     "tenure": "Owner",
@@ -66,7 +66,7 @@
     "partExchangeValue": 2000.00,
     "advance": 41000.00,
     "termMonths": 48,
-    "monthlyInstalment": 850.00,
+    "monthlyInstalment": 250.00,
     "finalInstalment": 12000.00,
     "apr": 6.9,
     "adminFee": 100.00,
@@ -84,7 +84,7 @@
         "firstName": "John",
         "lastName": "Doe"
       },
-      "dateOfBirth": "2015-07-12",
+      "dateOfBirth": "2006-07-12",
       "isElectoralRollRegistered": true,
       "currentAddress": {
         "street": "123 High Street",

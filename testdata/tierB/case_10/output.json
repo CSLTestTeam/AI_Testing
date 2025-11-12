@@ -1,0 +1,39 @@
+{
+    "content": {
+        "triageFlags": [
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Excessive Vehicle Mileage",
+                "targetField": "Asset.Mileage",
+                "currentValue": "105000",
+                "expectedValue": "<= 100000",
+                "description": "The vehicle's mileage exceeds the maximum allowed at the start of the agreement.",
+                "recommendation": "Consider requesting a justification or alternative vehicle with lower mileage.",
+                "reasoning": "Policy states a maximum mileage of 100,000 miles at the start of the agreement. This vehicle's mileage exceeds this limit, potentially impacting its residual value.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            },
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "High Loan-to-Value Ratio",
+                "targetField": "Financials.LoanToValuePercent",
+                "currentValue": "91.11",
+                "expectedValue": "<= 85",
+                "description": "The Loan-to-Value ratio exceeds the maximum allowed for the applicant's credit tier.",
+                "recommendation": "Request a higher deposit or adjust the loan amount to comply with the LTV policy.",
+                "reasoning": "For a Tier B credit score, the maximum LTV is 85%. The current LTV of 91.11% exceeds this limit, increasing the financial risk.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            }
+        ],
+        "reasoning": "The identified issues, while not critical, suggest a need for further scrutiny to ensure compliance with policy and mitigate potential risks."
+    },
+    "message": "",
+    "isSuccessStatusCode": true
+}
