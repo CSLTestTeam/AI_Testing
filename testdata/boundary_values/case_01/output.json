@@ -1,0 +1,39 @@
+{
+    "content": {
+        "triageFlags": [
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Credit Score in Tier C",
+                "targetField": "CreditSummary.Score",
+                "currentValue": "550",
+                "expectedValue": "550-619",
+                "description": "The applicant's credit score places them in Tier C, requiring stricter lending criteria.",
+                "recommendation": "Ensure all Tier C requirements, including minimum deposit and DTI ratio, are strictly adhered to.",
+                "reasoning": "According to the policy, a credit score of 550 falls into Tier C, which necessitates a minimum deposit and a maximum DTI ratio of 35%.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            },
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Low",
+                "title": "DTI Ratio Close to Threshold",
+                "targetField": "Financials.DebtToIncomePercent",
+                "currentValue": "31.43",
+                "expectedValue": "<=35% for Tier C",
+                "description": "The applicant's DTI ratio is within the acceptable range for Tier C but close to the maximum threshold.",
+                "recommendation": "Verify income documentation to ensure the DTI calculation is accurate and sustainable.",
+                "reasoning": "The DTI ratio is a critical measure of affordability, and being close to the threshold warrants careful verification of income and expenses.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            }
+        ],
+        "reasoning": "The applicant's credit score places them in Tier C, necessitating stricter criteria. The DTI ratio is within acceptable limits for Tier C, but close to the threshold. The LTV ratio is compliant, and the vehicle meets all criteria. Additional income verification is recommended to confirm affordability."
+    },
+    "message": "",
+    "isSuccessStatusCode": true
+}

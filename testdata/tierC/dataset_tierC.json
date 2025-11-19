@@ -58,6 +58,12 @@
         "input_file": "tierC/case_10/input.json",
         "output_file": "tierC/case_10/output.json",
         "expected_output_prompt": "The output should mention that the vehicle mileage is high and may pose a risk."
+    },
+    {
+        "scenario_name": "Ctier_LowDeposit",
+        "input_file": "tierC/case_11/input.json",
+        "output_file": "tierC/case_11/output.json",
+        "expected_output_prompt": "The output should mention that the deposit is below the minimum for tier C applicants"
     }
 
 ]

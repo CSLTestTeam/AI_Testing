@@ -8,10 +8,10 @@
                 "title": "Excessive Debt-to-Income Ratio",
                 "targetField": "Financials.DebtToIncomePercent",
                 "currentValue": "440.0",
-                "expectedValue": "<= 35% for Tier C",
+                "expectedValue": "<= 35%",
                 "description": "The applicant's DTI ratio is significantly above the maximum allowable threshold for their credit tier.",
-                "recommendation": "Decline the application due to the unsustainable DTI ratio.",
-                "reasoning": "According to the policy, the maximum DTI for Tier C applicants is 35%. The applicant's DTI ratio of 440% far exceeds this limit, indicating severe affordability issues.",
+                "recommendation": "Decline the application due to affordability concerns.",
+                "reasoning": "According to the policy, Tier C applicants must have a DTI ratio of no more than 35%. The applicant's DTI ratio of 440% indicates a severe affordability issue, making the loan unsustainable.",
                 "createdAt": "0001-01-01T00:00:00",
                 "lastUpdatedAt": null,
                 "id": 0
@@ -20,19 +20,19 @@
                 "triageId": 0,
                 "triage": null,
                 "severity": "High",
-                "title": "Sub-Prime Credit Score",
-                "targetField": "CreditSummary.Score",
-                "currentValue": "575",
-                "expectedValue": "620+ for Tier B or higher",
-                "description": "The applicant's credit score places them in the 'Sub-Prime' category, requiring stricter lending criteria.",
-                "recommendation": "Consider declining the application or reassessing under stricter conditions.",
-                "reasoning": "The credit score of 575 categorizes the applicant as 'Sub-Prime' (Tier C), which requires stricter lending criteria, including a lower DTI ratio and potentially higher deposit requirements.",
+                "title": "Non-Compliant Loan-to-Value Ratio",
+                "targetField": "Financials.LoanToValuePercent",
+                "currentValue": "91.11",
+                "expectedValue": "<= 95%",
+                "description": "The LTV ratio exceeds the maximum allowable limit for the applicant's credit tier.",
+                "recommendation": "Decline the application due to non-compliance with loan structure policies.",
+                "reasoning": "The policy stipulates a maximum LTV of 95% for Tier C applicants. The current LTV of 91.11% is non-compliant, indicating a risk of over-leverage.",
                 "createdAt": "0001-01-01T00:00:00",
                 "lastUpdatedAt": null,
                 "id": 0
             }
         ],
-        "reasoning": "The applicant's DTI ratio significantly exceeds the maximum allowable threshold for their credit tier, indicating a high risk of financial strain. Additionally, the credit score is within the 'Sub-Prime' range, necessitating stricter lending criteria, which are not met in this proposal."
+        "reasoning": "The applicant's DTI ratio of 440% far exceeds the maximum allowable threshold of 35% for their credit tier, indicating severe affordability concerns. Additionally, the LTV ratio of 91.11% surpasses the maximum permissible limit of 95% for Tier C applicants, further breaching policy guidelines."
     },
     "message": "",
     "isSuccessStatusCode": true

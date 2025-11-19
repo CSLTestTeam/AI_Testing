@@ -161,14 +161,16 @@ def get_retrieval_contexts():
 
 # Define a custom class to wrap the Azure OpenAI client for DeepEval
 class AzureOpenAIModel(DeepEvalBaseLLM):
-    def __init__(self, api_key: str, endpoint: str, api_version: str, deployment_name: str):
+    def __init__(self, api_key: str, endpoint: str, api_version: str, deployment_name: str, temperature: float):
         # Synchronous client for 'generate' method
+        self.temperature = temperature
         self.sync_client = AzureOpenAI(
             api_key=api_key,
             api_version=api_version,
             azure_endpoint=endpoint,
         )
         # Asynchronous client for 'a_generate' method
+        self.temperature = temperature
         self.async_client = AsyncAzureOpenAI(
             api_key=api_key,
             api_version=api_version,
@@ -184,9 +186,12 @@ class AzureOpenAIModel(DeepEvalBaseLLM):
 
     def generate(self, prompt: str) -> str:
         client = self.sync_client
+        #send temp
+        print(f"DEBUG: Temperature being used in API call: {self.temperature}")
         response = client.chat.completions.create(
             model=self.deployment_name,
             messages=[{"role": "user", "content": prompt}],
+            temperature=self.temperature
         )
         return response.choices[0].message.content
 
@@ -195,6 +200,7 @@ class AzureOpenAIModel(DeepEvalBaseLLM):
         response = await client.chat.completions.create(
             model=self.deployment_name,
             messages=[{"role": "user", "content": prompt}],
+            temperature=self.temperature
         )
         return response.choices[0].message.content
 

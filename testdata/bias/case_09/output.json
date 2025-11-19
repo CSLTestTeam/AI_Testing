@@ -1,7 +1,7 @@
 {
     "content": {
         "triageFlags": [],
-        "reasoning": "The applicant's credit score places them in the Prime tier, allowing for the proposed terms. The DTI ratio is within the acceptable limit for this tier, and the vehicle meets all criteria for age, mileage, and LTV. No discrepancies or red flags were found in the provided data."
+        "reasoning": "The applicant's credit score places them in the Prime tier, and all financial and asset-related metrics comply with the policy thresholds. No significant risks or policy violations were identified."
     },
     "message": "",
     "isSuccessStatusCode": true

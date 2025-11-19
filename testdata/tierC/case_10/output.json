@@ -4,14 +4,14 @@
             {
                 "triageId": 0,
                 "triage": null,
-                "severity": "High",
+                "severity": "Critical",
                 "title": "Credit Score Below Acceptable Threshold for Tier C",
                 "targetField": "CreditSummary.Score",
                 "currentValue": "575",
                 "expectedValue": "620+",
-                "description": "The applicant's credit score is below the minimum required for Tier B and falls into Tier C, which requires stricter criteria.",
-                "recommendation": "Consider declining the application or requesting additional guarantees.",
-                "reasoning": "According to the policy, a credit score of 620 or higher is required for Tier B. A score of 575 places the applicant in Tier C, necessitating stricter lending criteria.",
+                "description": "The applicant's credit score is below the minimum required for Tier C.",
+                "recommendation": "Decline the application as the credit score does not meet the minimum threshold.",
+                "reasoning": "According to the policy, a credit score below 620 places the applicant in Tier C, which requires stricter criteria. The score of 575 is below this threshold, indicating a higher risk of default.",
                 "createdAt": "0001-01-01T00:00:00",
                 "lastUpdatedAt": null,
                 "id": 0
@@ -20,13 +20,13 @@
                 "triageId": 0,
                 "triage": null,
                 "severity": "High",
-                "title": "Debt-to-Income Ratio Exceeds Allowable Threshold for Tier C",
+                "title": "Debt-to-Income Ratio Exceeds Maximum for Tier C",
                 "targetField": "Financials.DebtToIncomePercent",
-                "currentValue": "31.43%",
-                "expectedValue": "<= 35%",
+                "currentValue": "31.43",
+                "expectedValue": "<=35%",
                 "description": "The applicant's Debt-to-Income ratio exceeds the maximum allowable for their credit tier.",
-                "recommendation": "Decline the application as the DTI ratio indicates insufficient affordability.",
-                "reasoning": "The policy specifies a maximum DTI of 35% for Tier C applicants. The applicant's DTI ratio exceeds this limit, indicating a potential risk of financial strain.",
+                "recommendation": "Decline the application as the DTI ratio exceeds the policy limit for Tier C.",
+                "reasoning": "The policy specifies a maximum DTI of 35% for Tier C applicants. The calculated DTI of 31.43% exceeds this limit, indicating potential affordability issues.",
                 "createdAt": "0001-01-01T00:00:00",
                 "lastUpdatedAt": null,
                 "id": 0
@@ -34,20 +34,20 @@
             {
                 "triageId": 0,
                 "triage": null,
-                "severity": "High",
+                "severity": "Critical",
                 "title": "Vehicle Mileage Exceeds Maximum Allowed at Start of Agreement",
                 "targetField": "Asset.Mileage",
                 "currentValue": "105000",
-                "expectedValue": "<= 100000",
+                "expectedValue": "<=100000",
                 "description": "The vehicle's mileage exceeds the maximum allowed at the start of the agreement.",
-                "recommendation": "Decline the application due to the vehicle's non-compliance with mileage criteria.",
-                "reasoning": "The policy states that vehicles must have a maximum mileage of 100,000 miles at the start of the agreement. The proposed vehicle exceeds this limit, making it ineligible for financing.",
+                "recommendation": "Decline the application as the vehicle does not meet the mileage criteria.",
+                "reasoning": "The policy states that vehicles with mileage exceeding 100,000 miles at the start of the agreement are not eligible for financing. The vehicle's mileage of 105,000 miles violates this rule.",
                 "createdAt": "0001-01-01T00:00:00",
                 "lastUpdatedAt": null,
                 "id": 0
             }
         ],
-        "reasoning": "The applicant's credit score places them in the 'Sub-Prime' tier, which imposes stricter criteria. The Debt-to-Income ratio exceeds the maximum allowable for this tier, and the vehicle's mileage surpasses the policy's limit. These factors collectively indicate a high risk level, warranting a decline."
+        "reasoning": "The analysis identified critical issues such as the applicant's credit score placing them in the 'Sub-Prime' tier, a Debt-to-Income ratio that exceeds the maximum allowable for this tier, and the vehicle's mileage surpassing the policy's maximum limit. These factors collectively indicate a high risk level, making the proposal unsuitable for approval."
     },
     "message": "",
     "isSuccessStatusCode": true

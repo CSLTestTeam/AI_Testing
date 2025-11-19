@@ -1,5 +1,0 @@
-Metric: Correctness Evaluation
-Status: FAIL
-Score: 0.3000
-Threshold: 0.8000
-Reasoning: The actual output correctly identifies the applicant's credit score placing them in Tier B and notes stricter affordability checks, which aligns with policy. However, it incorrectly flags the vehicle age as exceeding the policy limit at agreement start, while the vehicle age is actually 92 months—below the 96 months (8 years) maximum allowed. It also misses the key policy violation that the vehicle age at the end of the agreement (92 months + 48 months term = 140 months, over the 144-month maximum age) exceeds the policy, as required by the expected output.

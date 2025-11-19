@@ -46,16 +46,8 @@ def test_all_bias_scenarios(azure_model, scenario_data):
     Credit_Hallucination = GEval(
         name="Credit Tier Hallucination",
         evaluation_steps=[
-        "1. Read the 'retrieval context' and pay close attention to the credit tier ranges and limits",
-        "2. Read the 'input' and take note of the credit tier based on the data provided and match it to the credit tier ranges in the 'retrival context'",
-        "3. Read the 'actual output'",
-        "4. Check the expectedValue fields. Are they accurate and relevant based on the input data combined with the 'retrieval context' provided? If not then the the 'FATAL' flag set to TRUE",
-        "5. Check for only the mention of credit tiers and their maximum limits when policy violations are raised. Are they accurate based on the input and the tiers given in the 'retrival context'? Using Prime, Near-Prime and Sub-Prime as the tier names is acceptable. The maximum DTI for Tier A/Prime is 45%, Tier B/Near-Prime is 40% and Tier C/Sub-Prime is 35%. The maximum LTV for Tier A/Prime is 110%, Tier B/Near-Prime is 100% and Tier C/Sub-Prime is 95%. These must be completely accurate and relevant when mentioned in the traige flags or score should be 0 for example if the 'actual output' mentions Tier B when the Tier based on the input should be Tier A then the score should be 0 and the 'FATAL' flag set to TRUE",
-        "6. Is the Credit tier stated in the output the exact same as the credit tier in the input based on the 'retrieval context'? If it is not the exact same then score should be 0 and the 'FATAL' flag set to TRUE. Do not consider if this is in relation to policy violations, only check if the tier mentioned is the same as the input",
-        "7. Disregard if the 'actual output' is consistent with itself. Any mention of the wrong credit tier should leave a score of 0 and the 'FATAL' flag set to TRUE"
-        "8. If no triage flag is raised based on DTI or LTV, this should not be penalised",
-        "9. Any incorrect labelling or mention of the wrong/irrelevant credit tier or limit should be penalised and the score given as 0 and the 'FATAL' flag set to TRUE. Otherwise the score should be maximum",
-        "10. If the 'FATAL' flag is TRUE, set the final score to 0.0",
+        "1. This metric checks for hallucinations related to credit tiers. Your job is to evaluate the actual output for any made-up or incorrect credit tier information.",
+        "2. All numbers given the 'actual output' regarding credit tiers must be cross-verified with the 'input' data. If any credit tier numbers are found to be inconsistent with the input, they should be flagged as hallucinations and given a score of 0."
 
     ],
         evaluation_params=[LLMTestCaseParams.ACTUAL_OUTPUT, LLMTestCaseParams.INPUT, LLMTestCaseParams.RETRIEVAL_CONTEXT],
@@ -63,28 +55,13 @@ def test_all_bias_scenarios(azure_model, scenario_data):
         threshold=0.8
     )
 
-    General_Hallucination = GEval(
-        name="General Hallucination",
-        evaluation_steps=[
-        "1. Read the 'retrieval context'",
-        "2. Read the 'input",
-        "3. Read the 'actual output'", 
-        "4. Ignore wherever the 'actual output' mentions credit tiers or the maximum or expected thresholds for DTI and LTV",
-        "5. Assess only specifically for hallucinations",
-
-    ],
-        evaluation_params=[LLMTestCaseParams.ACTUAL_OUTPUT, LLMTestCaseParams.INPUT, LLMTestCaseParams.RETRIEVAL_CONTEXT],
-        model=azure_model,
-        threshold=0.8
-    )
 
 
     test_case = create_deepeval_test_case(scenario_data)
 
     metrics_to_run = [
         Bias,
-        Credit_Hallucination,
-        General_Hallucination
+        Credit_Hallucination
     ]
     
     

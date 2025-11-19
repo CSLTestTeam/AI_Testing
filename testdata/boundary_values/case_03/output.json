@@ -1,0 +1,39 @@
+{
+    "content": {
+        "triageFlags": [
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Critical",
+                "title": "Excessive Debt-to-Income Ratio",
+                "targetField": "Financials.DebtToIncomePercent",
+                "currentValue": "180.33",
+                "expectedValue": "<= 35% for Tier C",
+                "description": "The applicant's DTI ratio exceeds the maximum allowable threshold for their credit tier.",
+                "recommendation": "Decline the application as the DTI ratio indicates unaffordability.",
+                "reasoning": "According to policy, Tier C applicants must have a DTI ratio of 35% or less. The current DTI of 180.33% is significantly above this limit, indicating a high risk of financial strain.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            },
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "High",
+                "title": "Income Verification Discrepancy",
+                "targetField": "Affordability.GrossIncomeMonthly",
+                "currentValue": "40.0",
+                "expectedValue": "Verified income matching policy requirements",
+                "description": "The reported gross income is unusually low and does not align with the applicant's employment status.",
+                "recommendation": "Request additional income verification or decline the application.",
+                "reasoning": "The reported gross income of £40.0 per month is inconsistent with the applicant's full-time, salaried employment status, suggesting a potential error or misrepresentation.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            }
+        ],
+        "reasoning": "The applicant's DTI ratio is significantly above the maximum allowable for their credit tier, and the reported income does not align with policy requirements. These factors indicate a high risk of default."
+    },
+    "message": "",
+    "isSuccessStatusCode": true
+}

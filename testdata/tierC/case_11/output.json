@@ -1,0 +1,39 @@
+{
+    "content": {
+        "triageFlags": [
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Credit Score Below Tier B Threshold",
+                "targetField": "CreditSummary.Score",
+                "currentValue": "575",
+                "expectedValue": "620+",
+                "description": "The applicant's credit score places them in Tier C, which requires stricter lending criteria.",
+                "recommendation": "Ensure all Tier C requirements are met, including a minimum deposit and thorough affordability checks.",
+                "reasoning": "According to the policy, a credit score of 575 falls into Tier C, which necessitates additional scrutiny and stricter lending criteria.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            },
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Low",
+                "title": "DTI Ratio Close to Maximum Threshold",
+                "targetField": "Financials.DebtToIncomePercent",
+                "currentValue": "31.43",
+                "expectedValue": "<=35% for Tier C",
+                "description": "The applicant's DTI ratio is within the acceptable range for Tier C but is relatively high.",
+                "recommendation": "Verify the applicant's income and expenses to ensure the DTI ratio is accurate and sustainable.",
+                "reasoning": "The DTI ratio is a critical measure of affordability, and while it is within the acceptable range, its proximity to the maximum threshold warrants careful verification.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            }
+        ],
+        "reasoning": "The applicant's credit score places them in Tier C, necessitating stricter criteria. While the DTI ratio is within acceptable limits for Tier C, the low credit score and minimal deposit raise concerns about financial stability."
+    },
+    "message": "",
+    "isSuccessStatusCode": true
+}

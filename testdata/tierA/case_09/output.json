@@ -1,7 +1,7 @@
 {
     "content": {
         "triageFlags": [],
-        "reasoning": "The applicant's credit score places them in Tier A, allowing for the proposed DTI and LTV ratios. The vehicle and loan terms comply with policy requirements, and no discrepancies or red flags were found in the provided data."
+        "reasoning": "The applicant's credit score, DTI ratio, and LTV are all within acceptable ranges for their credit tier, and no significant risks or policy violations were identified."
     },
     "message": "",
     "isSuccessStatusCode": true

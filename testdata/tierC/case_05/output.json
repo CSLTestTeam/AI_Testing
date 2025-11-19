@@ -4,14 +4,14 @@
             {
                 "triageId": 0,
                 "triage": null,
-                "severity": "High",
-                "title": "Credit Score Below Required Threshold",
+                "severity": "Medium",
+                "title": "Credit Score in Sub-Prime Tier",
                 "targetField": "CreditSummary.Score",
                 "currentValue": "575",
                 "expectedValue": "620+",
-                "description": "The applicant's credit score is below the minimum required for the requested terms.",
-                "recommendation": "Decline the application or consider alternative terms suitable for the credit tier.",
-                "reasoning": "According to the policy, a credit score of 575 places the applicant in Tier C, which requires stricter lending criteria. The current terms do not align with these requirements.",
+                "description": "The applicant's credit score places them in the Sub-Prime tier, indicating higher risk.",
+                "recommendation": "Consider stricter lending criteria or additional guarantees.",
+                "reasoning": "According to the policy, a score of 575 falls into the Sub-Prime tier, requiring stricter lending criteria to mitigate risk.",
                 "createdAt": "0001-01-01T00:00:00",
                 "lastUpdatedAt": null,
                 "id": 0
@@ -20,19 +20,19 @@
                 "triageId": 0,
                 "triage": null,
                 "severity": "High",
-                "title": "Vehicle Age Exceeds Policy Limits",
+                "title": "Vehicle Age Exceeds Policy Limit",
                 "targetField": "Asset.VehicleAgeMonths",
                 "currentValue": "111",
-                "expectedValue": "96",
+                "expectedValue": "96 or less",
                 "description": "The vehicle's age at the start of the agreement exceeds the maximum allowed by policy.",
-                "recommendation": "Decline the application or adjust the vehicle selection to meet policy requirements.",
-                "reasoning": "The policy specifies a maximum vehicle age of 8 years (96 months) at the start of the agreement. The proposed vehicle is 111 months old, exceeding this limit.",
+                "recommendation": "Reassess the vehicle's eligibility or consider an alternative asset.",
+                "reasoning": "The policy specifies a maximum vehicle age of 8 years (96 months) at the start of the agreement. This vehicle is 111 months old, exceeding the limit.",
                 "createdAt": "0001-01-01T00:00:00",
                 "lastUpdatedAt": null,
                 "id": 0
             }
         ],
-        "reasoning": "The applicant's credit score places them in Tier C, which requires stricter criteria, including a lower LTV and a higher deposit. Additionally, the vehicle's age at the start of the agreement exceeds the maximum allowed by policy. These factors collectively indicate a medium risk level, and the proposal does not meet the underwriting criteria."
+        "reasoning": "The credit score places the applicant in a higher risk category, and the vehicle's age at the start of the agreement exceeds policy limits. However, the affordability metrics and LTV are compliant, suggesting manageable risk with proper mitigations."
     },
     "message": "",
     "isSuccessStatusCode": true

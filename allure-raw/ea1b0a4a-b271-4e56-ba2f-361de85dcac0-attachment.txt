@@ -1,5 +1,0 @@
-Metric: Correctness Evaluation
-Status: PASS
-Score: 1.0000
-Threshold: 0.8000
-Reasoning: The actual output correctly identifies the critical policy violation that the vehicle age at start of agreement (111 months) exceeds the maximum allowed (96 months). It includes a detailed finding with accurate target field, severity, title, description, recommendation, and reasoning consistent with the policy. The reasoning also correctly notes that the current LTV and DTI are within acceptable limits for the applicant's credit tier, aligning precisely with the input data and expected output.
