@@ -22,5 +22,23 @@
         "input_file": "boundary_values/case_04/input.json",
         "output_file": "boundary_values/case_04/output.json",
         "expected_output_prompt": "The applicant should be declined due to being in Tier D"
+    },
+    {
+        "scenario_name": "8_years_vehicle_age_at_start",
+        "input_file": "boundary_values/case_05/input.json",
+        "output_file": "boundary_values/case_05/output.json",
+        "expected_output_prompt": "There should be no flags raised due to the vehicle being over 8 years old at the start of the term"
+    },
+    {
+        "scenario_name": "12_years_vehicle_age_at_end",
+        "input_file": "boundary_values/case_06/input.json",
+        "output_file": "boundary_values/case_06/output.json",
+        "expected_output_prompt": "There should be no flags raised due to the vehicle being over 12 years old at the end of the term"
+    },
+    {
+        "scenario_name": "Date_of_birth_18_years_old_today",
+        "input_file": "boundary_values/case_07/input.json",
+        "output_file": "boundary_values/case_07/output.json",
+        "expected_output_prompt": "The applicant should be be identified as being exactly 18 years old"
     }
 ]

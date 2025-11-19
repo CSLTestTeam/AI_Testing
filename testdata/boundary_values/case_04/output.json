@@ -4,14 +4,14 @@
             {
                 "triageId": 0,
                 "triage": null,
-                "severity": "High",
-                "title": "Credit Score Below Acceptable Threshold",
+                "severity": "Critical",
+                "title": "Credit Score Below Minimum Threshold",
                 "targetField": "CreditSummary.Score",
                 "currentValue": "549",
                 "expectedValue": "550+",
                 "description": "The applicant's credit score is below the minimum threshold for approval.",
                 "recommendation": "Decline the application unless exceptional circumstances are documented.",
-                "reasoning": "According to the policy, a credit score below 550 is an automatic decline unless there are exceptional, documented circumstances.",
+                "reasoning": "According to the policy, a credit score below 550 results in automatic decline unless exceptional circumstances are documented. The applicant's score of 549 does not meet the minimum requirement.",
                 "createdAt": "0001-01-01T00:00:00",
                 "lastUpdatedAt": null,
                 "id": 0
@@ -20,19 +20,19 @@
                 "triageId": 0,
                 "triage": null,
                 "severity": "Medium",
-                "title": "DTI Ratio Close to Maximum Allowable Limit",
-                "targetField": "Financials.DebtToIncomePercent",
-                "currentValue": "12.94",
-                "expectedValue": "<=35% for Tier C",
-                "description": "The applicant's DTI ratio is close to the maximum allowable limit for their credit tier.",
-                "recommendation": "Verify all income and expense details to ensure the DTI calculation is accurate.",
-                "reasoning": "The DTI ratio is a critical measure of affordability, and being close to the limit requires careful verification to avoid overextension of the applicant's finances.",
+                "title": "Loan-to-Value Ratio Exceeds Maximum for Credit Tier",
+                "targetField": "Financials.LoanToValuePercent",
+                "currentValue": "91.11",
+                "expectedValue": "95% or less",
+                "description": "The Loan-to-Value ratio exceeds the maximum allowable for the applicant's credit tier.",
+                "recommendation": "Consider revising the loan structure to comply with the LTV policy.",
+                "reasoning": "The policy specifies a maximum LTV of 95% for applicants in the 'Sub-Prime' credit tier. The current LTV of 91.11% exceeds this limit, indicating a policy violation.",
                 "createdAt": "0001-01-01T00:00:00",
                 "lastUpdatedAt": null,
                 "id": 0
             }
         ],
-        "reasoning": "The applicant's credit score places them in a high-risk category, and while the DTI ratio is within the acceptable range, it is close to the threshold, necessitating further scrutiny to ensure affordability."
+        "reasoning": "The applicant's credit score of 549 places them in the 'Decline' tier, which typically results in automatic rejection unless exceptional circumstances are documented. Additionally, the Loan-to-Value ratio of 91.11% exceeds the maximum allowable 95% for their credit tier, further justifying the recommendation to decline."
     },
     "message": "",
     "isSuccessStatusCode": true

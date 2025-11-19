@@ -9,30 +9,15 @@
                 "targetField": "CreditSummary.Score",
                 "currentValue": "575",
                 "expectedValue": "550-619",
-                "description": "The applicant's credit score places them in Tier C, requiring stricter lending criteria.",
-                "recommendation": "Ensure all Tier C requirements, including deposit and affordability checks, are strictly adhered to.",
-                "reasoning": "According to the policy, a credit score in this range necessitates stricter lending criteria to mitigate risk.",
-                "createdAt": "0001-01-01T00:00:00",
-                "lastUpdatedAt": null,
-                "id": 0
-            },
-            {
-                "triageId": 0,
-                "triage": null,
-                "severity": "Medium",
-                "title": "Loan-to-Value Ratio Exceeds Tier C Limit",
-                "targetField": "Financials.LoanToValuePercent",
-                "currentValue": "91.11",
-                "expectedValue": "<=95%",
-                "description": "The LTV ratio is high but within the maximum limit for Tier C applicants.",
-                "recommendation": "Confirm the accuracy of the vehicle's trade price and ensure the LTV calculation is correct.",
-                "reasoning": "The policy allows a maximum LTV of 95% for Tier C applicants, and this proposal is close to that limit.",
+                "description": "The applicant's credit score places them in Tier C, which requires stricter lending criteria.",
+                "recommendation": "Ensure all Tier C requirements, including minimum deposit and affordability checks, are strictly adhered to.",
+                "reasoning": "According to the policy, a credit score in Tier C necessitates stricter lending criteria to mitigate risk.",
                 "createdAt": "0001-01-01T00:00:00",
                 "lastUpdatedAt": null,
                 "id": 0
             }
         ],
-        "reasoning": "The applicant's credit score places them in Tier C, necessitating stricter criteria. The DTI ratio is within acceptable limits for Tier C, but the high LTV ratio and the applicant's credit score suggest a moderate risk level."
+        "reasoning": "The applicant's credit score places them in Tier C, requiring stricter criteria. The DTI ratio is within acceptable limits for Tier C, but close to the threshold, indicating potential affordability concerns. The vehicle and loan structure comply with policy requirements."
     },
     "message": "",
     "isSuccessStatusCode": true

@@ -25,8 +25,8 @@
                 "currentValue": "619",
                 "expectedValue": "620+ for Tier B",
                 "description": "The applicant's credit score places them in the sub-prime category, requiring stricter lending criteria.",
-                "recommendation": "Consider additional measures such as a higher deposit or stricter affordability checks.",
-                "reasoning": "The policy categorizes a credit score of 619 as Tier C (Sub-Prime), which requires stricter lending criteria, including potential deposit minimums.",
+                "recommendation": "Consider additional measures such as a higher deposit or shorter loan term to mitigate risk.",
+                "reasoning": "The policy categorizes a credit score of 619 as Tier C (Sub-Prime), which necessitates stricter lending criteria, including a minimum deposit requirement.",
                 "createdAt": "0001-01-01T00:00:00",
                 "lastUpdatedAt": null,
                 "id": 0

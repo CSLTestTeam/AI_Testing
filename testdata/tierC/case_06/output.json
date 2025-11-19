@@ -8,10 +8,10 @@
                 "title": "Vehicle Age Exceeds Policy Limit",
                 "targetField": "Asset.VehicleAgeMonths",
                 "currentValue": "92",
-                "expectedValue": "Maximum 96 months at start, 144 months at end",
-                "description": "The vehicle's age at the end of the agreement exceeds the policy limit of 12 years.",
+                "expectedValue": "Maximum 96 months at the end of the agreement",
+                "description": "The vehicle's age at the start of the agreement exceeds the policy's maximum allowable age.",
                 "recommendation": "Consider adjusting the term or selecting a newer vehicle to comply with policy.",
-                "reasoning": "According to the policy, the vehicle's age at the end of the agreement must not exceed 12 years. With a starting age of 92 months and a term of 60 months, the vehicle will be 152 months old at the end of the agreement, which is beyond the allowable limit.",
+                "reasoning": "According to the policy, the vehicle's age at the start of the agreement must not exceed 8 years (96 months). The current vehicle age is 92 months, and with a 60-month term, it will exceed the maximum allowable age at the end of the agreement.",
                 "createdAt": "0001-01-01T00:00:00",
                 "lastUpdatedAt": null,
                 "id": 0
@@ -20,19 +20,19 @@
                 "triageId": 0,
                 "triage": null,
                 "severity": "Medium",
-                "title": "Loan-to-Value Ratio Exceeds Policy Limit",
-                "targetField": "Financials.LoanToValuePercent",
-                "currentValue": "91.11",
-                "expectedValue": "Maximum 100% for Tier B",
-                "description": "The Loan-to-Value ratio is slightly above the maximum allowed for the applicant's credit tier.",
-                "recommendation": "Consider reducing the loan amount or increasing the deposit to meet the LTV requirement.",
-                "reasoning": "The policy specifies a maximum LTV of 100% for Tier B applicants. The current LTV of 91.11% is within this limit, but it is close to the threshold, indicating a higher risk.",
+                "title": "Applicant in Tier B Credit Score Band",
+                "targetField": "CreditSummary.Score",
+                "currentValue": "627",
+                "expectedValue": "700+ for Tier A",
+                "description": "The applicant's credit score places them in Tier B, requiring stricter affordability checks.",
+                "recommendation": "Ensure all affordability checks are thoroughly conducted and consider additional security measures.",
+                "reasoning": "The applicant's credit score of 627 places them in Tier B, which requires stricter affordability checks as per the policy.",
                 "createdAt": "0001-01-01T00:00:00",
                 "lastUpdatedAt": null,
                 "id": 0
             }
         ],
-        "reasoning": "The analysis identified that the vehicle's age at the end of the agreement exceeds the policy limit, and the LTV ratio is slightly above the maximum allowed for the applicant's credit tier. These factors increase the risk level, but the overall financial health and credit profile of the applicant mitigate some concerns."
+        "reasoning": "The analysis identified that the vehicle's age at the start of the agreement exceeds the policy limit, and the applicant's credit score places them in Tier B, necessitating stricter affordability checks. These factors elevate the risk level to medium."
     },
     "message": "",
     "isSuccessStatusCode": true

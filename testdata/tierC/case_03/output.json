@@ -10,7 +10,7 @@
                 "currentValue": "11000",
                 "expectedValue": "35% or less for Tier C",
                 "description": "The applicant's DTI ratio is significantly above the maximum allowable threshold for their credit tier.",
-                "recommendation": "Decline the application due to unsustainable affordability.",
+                "recommendation": "Decline the application due to unsustainable affordability metrics.",
                 "reasoning": "According to the policy, the maximum DTI for Tier C applicants is 35%. The applicant's DTI ratio of 11000% is far beyond this limit, indicating severe affordability issues.",
                 "createdAt": "0001-01-01T00:00:00",
                 "lastUpdatedAt": null,
@@ -26,7 +26,7 @@
                 "expectedValue": "620 or above for Tier C",
                 "description": "The applicant's credit score is below the minimum required for financing.",
                 "recommendation": "Decline the application due to insufficient creditworthiness.",
-                "reasoning": "The policy specifies a minimum credit score of 620 for Tier C applicants. The applicant's score of 575 does not meet this requirement, categorizing them as high risk.",
+                "reasoning": "The policy specifies a minimum credit score of 620 for Tier C applicants. A score of 575 places the applicant in a high-risk category, making them ineligible for financing.",
                 "createdAt": "0001-01-01T00:00:00",
                 "lastUpdatedAt": null,
                 "id": 0
