@@ -1,0 +1,24 @@
+{
+    "content": {
+        "triageFlags": [
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "High Number of Hard Credit Searches",
+                "targetField": "CreditSummary.HardSearches12Months",
+                "currentValue": "6",
+                "expectedValue": "<5",
+                "description": "The applicant has a high number of hard credit searches in the past 12 months, which may indicate financial stress or frequent credit applications.",
+                "recommendation": "Request clarification from the applicant regarding the reasons for the high number of credit searches.",
+                "reasoning": "Policy does not explicitly limit hard searches, but a high number can indicate potential financial instability or credit-seeking behavior, which warrants further investigation.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            }
+        ],
+        "reasoning": "The applicant's credit score places them in Tier B, allowing a DTI of up to 40%, which is narrowly met. However, the high number of hard credit searches in the past year and the proximity to the DTI threshold suggest a need for careful consideration and additional verification."
+    },
+    "message": "",
+    "isSuccessStatusCode": true
+}

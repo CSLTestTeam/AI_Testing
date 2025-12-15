@@ -1,0 +1,111 @@
+# Oakwood Motor Finance - Underwriting Policy Manual
+
+        **Document ID:** OMF-POL-UW-2024-v3.1
+        **Effective Date:** 01 August 2024
+        **Status:** ACTIVE
+        **Owner:** Head of Credit Risk
+
+        ## 1.0 Introduction & Core Principles
+
+        This document outlines the underwriting criteria and risk appetite for Oakwood Motor Finance. Our primary goal is to conduct responsible, fair, and consistent lending in accordance with Financial Conduct Authority (FCA) regulations.
+
+        All lending decisions must balance commercial objectives with a duty of care to our customers, ensuring affordability and suitability. This manual serves as the primary source of truth for all underwriting decisions.
+
+        ---
+
+        ## 2.0 Credit Risk Assessment
+
+        Customer creditworthiness is assessed using a tiered system based on their credit score, obtained from our designated Credit Reference Agency (CRA).
+
+        ### 2.1 Credit Tiers
+
+        | Tier | Credit Score Band | Notes |
+        | :--- | :--- | :--- |
+        | **A (Prime)** | 700+ | Eligible for best rates and most flexible terms. |
+        | **B (Near-Prime)** | 620 - 699 | Standard terms apply. May require stricter affordability checks. |
+        | **C (Sub-Prime)** | 550 - 619 | Requires stricter lending criteria, including potential deposit minimums. |
+        | **D (Decline)** | Below 550 | Automatic decline unless exceptional, documented circumstances exist. |
+
+        ---
+
+        ## 3.0 Affordability Assessment
+
+        Affordability is primarily assessed using the **Debt-to-Income (DTI)** ratio.
+
+        `DTI = (Total Monthly Credit Commitments + Proposed Monthly Instalment) / Verified Net Monthly Income`
+
+        ### 3.1 DTI Thresholds
+
+        The maximum allowable DTI ratio is determined by the applicant's Credit Tier:
+
+        Tier A:** Maximum DTI is 45%
+        Tier B:** Maximum DTI is 40%.
+        Tier C:** Maximum DTI is 35%.
+
+        ### 3.2 Income Verification
+
+        *   **Standard Employment (PAYE):** Income must be verified via the most recent payslip. If the stated income on the application differs from the payslip by more than **5%**, the lower value (payslip) must be used for all calculations.
+        *   **Self-Employed:** A minimum of **2 years** of tax returns or accountant-verified statements are required. The average net income over the two years should be used.
+
+        ---
+
+        ## 4.0 Asset & Loan Structure Rules
+
+        These rules govern the structure of the finance agreement itself.
+
+        ### 4.1 Loan-to-Value (LTV)
+
+        LTV is calculated as `(Total Advance) / (Vehicle Trade Price)`.
+        
+      The maximum permitted LTV is based on the Credit Tier:
+
+        - Tier A (Prime): 110% (Allows financing of fees or small negative equity)
+        - Tier B (Near-Prime): 100%
+        - Tier C (Sub-Prime): 95%
+
+        ### 4.2 Vehicle Criteria
+
+        *   **Maximum Age at Start of Agreement:** **8 years**.
+        *   **Maximum Age at End of Agreement:** **12 years**. The underwriter must calculate this (`Vehicle Age + Term Years`).
+        *   **Maximum Mileage at Start of Agreement:** **100,000 miles**.
+        *   Vehicles previously recorded as Category S or N (Structural or Non-Structural write-offs) are not eligible for finance.
+
+        ### 4.3 Term Lengths
+
+        *   The maximum term for any agreement is **60 months (5 years)**.
+        *   For vehicles over **5 years old** at the start of the agreement, the maximum term is restricted to **48 months (4 years)**.
+
+        ### 4.4 Minimum Deposit
+
+        *   For applicants in **Credit Tier C**, a minimum cash deposit of **10%** of the vehicle's Goods Cost is mandatory. This cannot be financed.
+
+        ---
+
+        ## 5.0 Fraud & Identity Verification
+
+        *   All applicants must pass standard KYC (Know Your Customer) and AML (Anti-Money Laundering) checks.
+        *   **Income Discrepancy:** As per section 3.2, any significant variance requires justification.
+        *   **Applicant History Discrepancy:** Multiple applications (more than 2 in 90 days) from the same applicant with material differences in core information (e.g., employer, address history, income) must be flagged for manual fraud review. The proposal should be placed on hold until the review is complete.
+
+        ---
+
+        ## 6.0 Product-Specific Rules
+
+        ### 6.1 Personal Contract Purchase (PCP)
+
+        *   The Guaranteed Minimum Future Value (GMFV), which forms the basis of the final "balloon" payment, must be sourced from our approved valuation provider.
+        *   The GMFV cannot be manually inflated.
+
+        ### 6.2 Hire Purchase (HP)
+
+        *   The agreement must result in full ownership at the end of the term. The final payment will consist of the last instalment plus the "Option to Purchase" fee.
+
+        ---
+
+        ### Appendix A: Glossary
+
+        *   **APR (Annual Percentage Rate):** The total cost of borrowing, including interest and mandatory fees.
+        *   **DTI (Debt-to-Income):** The percentage of a customer's monthly income that is used to cover their total monthly debt obligations.
+        *   **LTV (Loan-to-Value):** The ratio of the loan amount to the appraised value of the asset.
+        *   **PCP (Personal Contract Purchase):** A finance product with lower monthly payments and a large final "balloon" payment.
+        *   **HP (Hire Purchase):** A finance product where the customer hires the vehicle until the final payment is made, at which point they take ownership.

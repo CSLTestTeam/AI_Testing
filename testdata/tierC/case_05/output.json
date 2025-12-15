@@ -1,0 +1,54 @@
+{
+    "content": {
+        "triageFlags": [
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Sub-prime Credit Score",
+                "targetField": "CreditSummary.Score",
+                "currentValue": "575",
+                "expectedValue": "620+",
+                "description": "The applicant's credit score falls into the sub-prime category, below the minimum for standard terms.",
+                "recommendation": "Consider stricter lending criteria or additional security measures.",
+                "reasoning": "According to the policy, a credit score below 620 requires stricter lending criteria, as it indicates a higher risk of default.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            },
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "High",
+                "title": "Vehicle Age Exceeds Policy Limit",
+                "targetField": "Asset.VehicleAgeMonths",
+                "currentValue": "111",
+                "expectedValue": "96 or less",
+                "description": "The vehicle's age at the start of the agreement exceeds the maximum allowed by policy.",
+                "recommendation": "Decline the proposal or consider a different vehicle that meets the age criteria.",
+                "reasoning": "The policy specifies a maximum vehicle age of 8 years (96 months) at the start of the agreement to ensure asset value retention.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            },
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "High Loan-to-Value Ratio",
+                "targetField": "Financials.LoanToValuePercent",
+                "currentValue": "91.11",
+                "expectedValue": "95% or less for Tier C",
+                "description": "The Loan-to-Value ratio is high, approaching the maximum allowed for the applicant's credit tier.",
+                "recommendation": "Ensure the LTV does not exceed the policy limit and consider additional deposit requirements.",
+                "reasoning": "High LTV ratios increase the lender's risk exposure, particularly for sub-prime applicants.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            }
+        ],
+        "reasoning": "The identified issues, such as the sub-prime credit score and vehicle age, indicate a higher risk profile. However, the applicant's stable income and low credit utilization provide some mitigating factors."
+    },
+    "message": "",
+    "isSuccessStatusCode": true
+}

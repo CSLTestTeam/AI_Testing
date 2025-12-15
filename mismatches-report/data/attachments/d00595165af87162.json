@@ -1,0 +1,105 @@
+{
+    "triageFlags": [
+        {
+            "severity": "Critical",
+            "title": "No Credit Report Available",
+            "targetField": "CreditReport",
+            "currentValue": "Not Available",
+            "expectedValue": "Required for Underwriting",
+            "description": "The credit report is unavailable and cannot be analyzed.",
+            "recommendation": "Reject application until a valid credit report is provided.",
+            "reasoning": "A credit report is essential for assessing the applicant's creditworthiness, identifying negative factors, and verifying data integrity as per standard underwriting criteria. Without this data, the risk cannot be quantified."
+        },
+        {
+            "severity": "Low",
+            "title": "Applicant Credit Score Tier Verified",
+            "targetField": "Applicant.CreditScore",
+            "currentValue": "731",
+            "expectedValue": "700+ for Tier A",
+            "description": "The applicant belongs to Tier A (Prime credit).",
+            "recommendation": "Confirm eligibility for best rates.",
+            "reasoning": "Per Policy Section 2.1, Tier A requires a credit score of 700 or above. The applicant's score of 731 qualifies them for Tier A benefits."
+        },
+        {
+            "severity": "Low",
+            "title": "LTV Ratio Within Limit for Tier A",
+            "targetField": "Financials.Advance",
+            "currentValue": "67.97%",
+            "expectedValue": "110% or below for Tier A",
+            "description": "The calculated LTV ratio is well below the maximum allowable limit.",
+            "recommendation": "No concerns regarding LTV ratio.",
+            "reasoning": "As per Policy Section 4.1, the maximum allowable LTV for a Tier A applicant is 110%. The calculated LTV ratio of 67.97% is safely within this limit."
+        },
+        {
+            "severity": "Low",
+            "title": "DTI Ratio Within Limit for Tier A",
+            "targetField": "Financials.MonthlyInstalment",
+            "currentValue": "2%",
+            "expectedValue": "45% or below for Tier A",
+            "description": "The calculated DTI ratio is significantly lower than the allowable threshold.",
+            "recommendation": "Acceptable affordability based on DTI ratio.",
+            "reasoning": "Policy Section 3.1 sets the maximum allowable DTI for Tier A applicants at 45%. The applicant's calculated DTI of 2% is well within this limit."
+        },
+        {
+            "severity": "Low",
+            "title": "Vehicle Age Acceptable",
+            "targetField": "Vehicle.Year",
+            "currentValue": "2019",
+            "expectedValue": "8 years max at agreement start",
+            "description": "The vehicle's age meets criteria for finance eligibility.",
+            "recommendation": "No concerns regarding vehicle age.",
+            "reasoning": "Per Policy Section 4.2, the maximum age of a vehicle at the start of a finance agreement is 8 years. The vehicle's age of 6 years complies with this requirement."
+        },
+        {
+            "severity": "Low",
+            "title": "Credit Tier A Eligibility - Confirmed",
+            "targetField": "Applicant.CreditScore",
+            "currentValue": "731",
+            "expectedValue": "700+",
+            "description": "The applicant qualifies for Tier A as per the credit score.",
+            "recommendation": "Proceed with Tier A evaluation.",
+            "reasoning": "The policy specifies that a score of 700 or higher qualifies for Tier A, which offers the best terms."
+        },
+        {
+            "severity": "Low",
+            "title": "LTV Within Tier A Maximum Threshold",
+            "targetField": "Financials.Advance",
+            "currentValue": "67.97%",
+            "expectedValue": "110% max",
+            "description": "Loan-to-Value ratio is within the acceptable range for Tier A.",
+            "recommendation": "No corrective action needed as the LTV complies with criteria.",
+            "reasoning": "Tier A requires an LTV ratio not to exceed 110%. The calculated LTV of 67.97% is well within this limit."
+        },
+        {
+            "severity": "Low",
+            "title": "DTI Well Below Tier A Maximum Threshold",
+            "targetField": "Financials.MonthlyInstalment",
+            "currentValue": "2%",
+            "expectedValue": "45% max",
+            "description": "The Debt-to-Income ratio is significantly within the acceptable range for Tier A.",
+            "recommendation": "No action required as the DTI is compliant.",
+            "reasoning": "Tier A affordability allows a DTI ratio of up to 45%. The calculated DTI for this applicant is only 2%, clearly within acceptable levels."
+        },
+        {
+            "severity": "Low",
+            "title": "Vehicle Age Within Acceptable Range",
+            "targetField": "Vehicle.Year",
+            "currentValue": "6 years at end of agreement",
+            "expectedValue": "12 years max",
+            "description": "The vehicle's age at the end of the agreement falls within the acceptable limit.",
+            "recommendation": "No action required as vehicle age complies.",
+            "reasoning": "The policy limits the vehicle age at the end of the term to a maximum of 12 years. As the application proposes a vehicle that will be 6 years old at term end, it meets policy criteria."
+        },
+        {
+            "severity": "Low",
+            "title": "Vehicle Mileage Compliant",
+            "targetField": "Vehicle.Mileage",
+            "currentValue": "48024",
+            "expectedValue": "100,000 max",
+            "description": "The mileage of the vehicle is acceptable under the policy.",
+            "recommendation": "No action required as the mileage meets policy standards.",
+            "reasoning": "The policy specifies that the maximum vehicle mileage at the start of the agreement should be 100,000 miles. The proposed vehicle mileage of 48,024 is compliant."
+        }
+    ],
+    "reasoning": "### Step 1: Data Verification & Credit Analysis\n- **Credit Report Issue:** The credit report for the applicant is unavailable, meaning an entire segment of verification data is missing. A finding with \"Critical\" severity was reported.\n\n### Step 2: Initial Sanity Check\n- While the credit report absence raises major concerns, based on the provided data:\n  - The loan amount of £27,381 is relatively modest compared to the applicant's stated net monthly income of £20,292.\n  - The requested vehicle, a 2019 Honda Jazz with a retail price of £42,757, seems reasonable given the applicant's income.\n\n### Step 3: Detailed Policy Verification\n**3a. Credit Risk**\n- Using the policy, the applicant’s credit score of 731 qualifies them for Tier A, which is the best available tier. Finding of \"Low\" severity was reported to confirm eligibility in Tier A.\n\n**3b. Asset & Loan Verification**\n- **Loan-to-Value (LTV):**\n  - Calculated LTV is 67.97%, which is within the allowable maximum of 110% for Tier A.\n  - A finding with \"Low\" severity was reported to confirm compliance with the LTV requirement.\n- **Vehicle Criteria:**\n  - Age at the start of the agreement is 6 years (2025-2019=6).\n  - Age at the end of the term is 6 years + 3 years = 9 years.\n  - Complies with maximum allowed vehicle age of 12 years at the end of the term. Finding of \"Low\" severity reported.\n  - The mileage is 48,024, significantly below the maximum allowed of 100,000. A \"Low\" severity finding confirms this compliance.\n\n**3c. Affordability Verification**\n- **Debt-to-Income (DTI):**\n  - Calculated DTI is 2%, which is far below the maximum threshold of 45% for Tier A applicants.\n  - A \"Low\" severity finding confirms the DTI calculation is within acceptable limits.\n\n### Step 4: Holistic Synthesis\n- The applicant is within compliance for all important metrics:\n  - Credit Tier: Tier A.\n  - LTV: Well within maximum thresholds.\n  - DTI: Very low, suggesting affordability is not a concern.\n  - Vehicle criteria (age and mileage): Acceptable.\n- The lack of a credit report is the sole critical stumbling block in this case.\n\n### Step 5: Conclusion\nThe primary concern is the missing credit report, which significantly hampers underwriting and necessitates outright rejection of the proposal unless the credit report can be retrieved. In all other respects, this proposal is strong and compliant with relevant policies.\n\n**TRIAGE_COMPLETE**"
+}

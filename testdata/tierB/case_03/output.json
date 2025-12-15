@@ -1,0 +1,39 @@
+{
+    "content": {
+        "triageFlags": [
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Critical",
+                "title": "Excessive Debt-to-Income Ratio",
+                "targetField": "Financials.DebtToIncomePercent",
+                "currentValue": "11000",
+                "expectedValue": "<= 40% for Tier B",
+                "description": "The applicant's DTI ratio is significantly above the allowable threshold for their credit tier.",
+                "recommendation": "Decline the application due to unsustainable affordability.",
+                "reasoning": "According to the policy, Tier B applicants must have a DTI ratio of 40% or less. The applicant's DTI ratio of 11000% is far beyond this limit, indicating severe affordability issues.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            },
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Critical",
+                "title": "Implausible Income Reporting",
+                "targetField": "Affordability.NetIncomeMonthly",
+                "currentValue": "20.0",
+                "expectedValue": "Reasonable income level for affordability",
+                "description": "The reported net income is implausibly low for the proposed financial obligations.",
+                "recommendation": "Request clarification or evidence of income; otherwise, decline the application.",
+                "reasoning": "The reported net income of £20 per month is not sufficient to support the proposed monthly instalment of £850, indicating either a reporting error or a significant affordability issue.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            }
+        ],
+        "reasoning": "The applicant's DTI ratio significantly exceeds the maximum allowable threshold for their credit tier, and the reported income is implausibly low for the proposed financial obligations. These factors indicate a high risk of default."
+    },
+    "message": "",
+    "isSuccessStatusCode": true
+}

@@ -1,0 +1,24 @@
+{
+    "content": {
+        "triageFlags": [
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Critical",
+                "title": "Excessive Debt-to-Income Ratio",
+                "targetField": "Financials.DebtToIncomePercent",
+                "currentValue": "440.0",
+                "expectedValue": "<= 40% for Tier B",
+                "description": "The applicant's Debt-to-Income ratio is significantly above the allowable threshold for their credit tier.",
+                "recommendation": "Decline the application due to affordability concerns.",
+                "reasoning": "According to the policy, the maximum DTI for Tier B applicants is 40%. The applicant's DTI of 440% indicates a severe affordability issue, making the proposal unviable.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            }
+        ],
+        "reasoning": "The applicant's DTI ratio is 440%, far exceeding the maximum allowable threshold of 40% for their credit tier. This indicates a severe affordability issue, making the proposal unviable under current policy guidelines."
+    },
+    "message": "",
+    "isSuccessStatusCode": true
+}

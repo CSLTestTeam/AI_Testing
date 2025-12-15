@@ -1,0 +1,39 @@
+{
+    "content": {
+        "triageFlags": [
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Exceeds Maximum Term Length for Vehicle Age",
+                "targetField": "Financials.TermMonths",
+                "currentValue": "72",
+                "expectedValue": "60",
+                "description": "The term length exceeds the maximum allowed for the vehicle's age.",
+                "recommendation": "Adjust the term length to comply with the policy's maximum of 60 months.",
+                "reasoning": "According to the policy, the maximum term for vehicles is 60 months. The proposed term of 72 months exceeds this limit, necessitating adjustment.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            },
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Loan-to-Value Ratio Exceeds Policy Threshold",
+                "targetField": "Financials.LoanToValuePercent",
+                "currentValue": "91.11",
+                "expectedValue": "100% or less",
+                "description": "The LTV ratio is slightly above the threshold for the applicant's credit tier.",
+                "recommendation": "Consider reducing the loan amount or increasing the deposit to bring the LTV ratio within acceptable limits.",
+                "reasoning": "The policy specifies a maximum LTV of 100% for Tier A applicants. The current LTV of 91.11% is acceptable but should be monitored closely.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            }
+        ],
+        "reasoning": "The identified issues, while not critical, indicate a need for adjustments to align the proposal with underwriting policies. The term length and LTV ratio are key factors that require attention."
+    },
+    "message": "",
+    "isSuccessStatusCode": true
+}

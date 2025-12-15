@@ -1,0 +1,39 @@
+{
+    "content": {
+        "triageFlags": [
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Critical",
+                "title": "Excessive Debt-to-Income Ratio",
+                "targetField": "Financials.DebtToIncomePercent",
+                "currentValue": "11000",
+                "expectedValue": "<=45",
+                "description": "The applicant's DTI ratio is significantly above the maximum allowable threshold for their credit tier.",
+                "recommendation": "Decline the application due to unsustainable DTI ratio.",
+                "reasoning": "According to the policy, the maximum DTI for Tier A applicants is 45%. The applicant's DTI ratio of 11000% is far beyond this limit, indicating severe affordability issues.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            },
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Critical",
+                "title": "Implausible Income Reporting",
+                "targetField": "Affordability.NetIncomeMonthly",
+                "currentValue": "20.0",
+                "expectedValue": "Reasonable living income",
+                "description": "The reported net monthly income is implausibly low and does not align with the applicant's profile.",
+                "recommendation": "Request accurate income documentation or decline the application.",
+                "reasoning": "The reported income figures are not consistent with the applicant's employment status and financial obligations, suggesting a potential data entry error or misrepresentation.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            }
+        ],
+        "reasoning": "The applicant's DTI ratio significantly exceeds the maximum allowable threshold for their credit tier, and the reported income figures are implausibly low, raising concerns about data accuracy and affordability."
+    },
+    "message": "",
+    "isSuccessStatusCode": true
+}

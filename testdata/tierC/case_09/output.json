@@ -1,0 +1,39 @@
+{
+    "content": {
+        "triageFlags": [
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Credit Score in Tier C",
+                "targetField": "CreditSummary.Score",
+                "currentValue": "575",
+                "expectedValue": "550-619",
+                "description": "The applicant's credit score places them in Tier C, requiring stricter lending criteria.",
+                "recommendation": "Ensure all Tier C requirements, including minimum deposit and affordability checks, are met.",
+                "reasoning": "According to the policy, Tier C applicants must meet stricter criteria due to higher risk. The credit score of 575 falls within this tier.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            },
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "High Loan-to-Value Ratio",
+                "targetField": "Financials.LoanToValuePercent",
+                "currentValue": "91.11",
+                "expectedValue": "<=95% for Tier C",
+                "description": "The LTV ratio is high but within the maximum allowable limit for Tier C applicants.",
+                "recommendation": "Confirm the accuracy of the vehicle's trade price and ensure the applicant's deposit meets the minimum requirement.",
+                "reasoning": "The policy allows a maximum LTV of 95% for Tier C applicants. The current LTV of 91.11% is close to this limit, necessitating careful review.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            }
+        ],
+        "reasoning": "The applicant's credit score places them in Tier C, necessitating stricter criteria. The DTI ratio is within acceptable limits for Tier C, but the high LTV ratio and the applicant's credit history warrant additional verification."
+    },
+    "message": "",
+    "isSuccessStatusCode": true
+}

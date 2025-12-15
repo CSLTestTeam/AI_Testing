@@ -1,0 +1,39 @@
+{
+    "content": {
+        "triageFlags": [
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Critical",
+                "title": "Excessive Debt-to-Income Ratio",
+                "targetField": "Financials.DebtToIncomePercent",
+                "currentValue": "180.33",
+                "expectedValue": "<= 35% for Tier C",
+                "description": "The applicant's DTI ratio significantly exceeds the maximum allowable threshold for their credit tier.",
+                "recommendation": "Decline the application due to affordability concerns.",
+                "reasoning": "According to the policy, Tier C applicants must have a DTI ratio of 35% or less. The current DTI ratio of 180.33% indicates that the applicant's financial obligations are unsustainable relative to their income.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            },
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Maximum Loan-to-Value Ratio Reached",
+                "targetField": "Financials.LoanToValuePercent",
+                "currentValue": "95.00",
+                "expectedValue": "<= 95% for Tier C",
+                "description": "The LTV ratio is at the maximum allowable limit for the applicant's credit tier.",
+                "recommendation": "Consider the risk of approving a loan at the maximum LTV limit.",
+                "reasoning": "The policy specifies a maximum LTV of 95% for Tier C applicants. While this is within the limit, it represents a high-risk scenario with no buffer for asset depreciation or other financial risks.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            }
+        ],
+        "reasoning": "The applicant's DTI ratio of 180.33% far exceeds the maximum allowable threshold of 35% for Tier C, indicating severe affordability concerns. Additionally, the LTV ratio is at the maximum permissible limit, leaving no margin for risk mitigation."
+    },
+    "message": "",
+    "isSuccessStatusCode": true
+}

@@ -1,0 +1,5 @@
+Metric: Hallucination
+Status: PASS
+Score: 0.8000
+Threshold: 0.8000
+Reasoning: The response accurately identifies and reports the Loan-to-Value (LTV) and Debt-to-Income (DTI) ratios exceeding the policy limits for Tier A applicants based on correct calculations from the input data. The reasoning is coherent, consistent, and references appropriate policy thresholds from the input. However, the reported maximum LTV of 90% conflicts with the retrieval context policy, which permits up to 110% for Tier A, indicating a hallucination on the LTV limit. No other fabrications or calculation errors are present, and the mention of credit report absence is correctly ignored per instructions.

@@ -1,0 +1,54 @@
+{
+    "content": {
+        "triageFlags": [
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Credit Score in Sub-Prime Tier",
+                "targetField": "CreditSummary.Score",
+                "currentValue": "575",
+                "expectedValue": "620+ for Tier B or higher",
+                "description": "The applicant's credit score places them in the Sub-Prime tier, requiring stricter lending criteria.",
+                "recommendation": "Ensure compliance with stricter criteria for Sub-Prime tier applicants.",
+                "reasoning": "According to policy, a score of 575 falls into Tier C, necessitating additional scrutiny and adherence to stricter lending rules.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            },
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Debt-to-Income Ratio Close to Maximum for Tier C",
+                "targetField": "Financials.DebtToIncomePercent",
+                "currentValue": "31.43%",
+                "expectedValue": "<= 35% for Tier C",
+                "description": "The applicant's DTI ratio is close to the maximum allowable for their credit tier.",
+                "recommendation": "Verify all income and expense details to ensure the DTI calculation is accurate.",
+                "reasoning": "The DTI ratio is a critical measure of affordability, and being close to the limit indicates potential financial strain.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            },
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "High",
+                "title": "Vehicle Mileage Exceeds Policy Limit",
+                "targetField": "Asset.Mileage",
+                "currentValue": "105000",
+                "expectedValue": "<= 100000 miles",
+                "description": "The vehicle's mileage exceeds the maximum allowed by policy.",
+                "recommendation": "Consider the impact of high mileage on the vehicle's value and resale potential.",
+                "reasoning": "High mileage can significantly affect the vehicle's residual value and the overall risk of the loan.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            }
+        ],
+        "reasoning": "The identified issues, while not deal-breaking, indicate a higher risk profile. The credit score and DTI ratio suggest financial strain, and the vehicle's mileage exceeds policy limits, potentially affecting resale value."
+    },
+    "message": "",
+    "isSuccessStatusCode": true
+}

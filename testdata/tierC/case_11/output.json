@@ -1,0 +1,39 @@
+{
+    "content": {
+        "triageFlags": [
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Credit Score Below Tier B Threshold",
+                "targetField": "CreditSummary.Score",
+                "currentValue": "575",
+                "expectedValue": "620+",
+                "description": "The applicant's credit score places them in Tier C, requiring stricter lending criteria.",
+                "recommendation": "Ensure all Tier C requirements are met, including a minimum deposit and thorough affordability checks.",
+                "reasoning": "According to the policy, a credit score of 575 falls into Tier C, which necessitates stricter lending criteria to mitigate risk.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            },
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Minimum Deposit Requirement for Tier C",
+                "targetField": "Financials.TotalDeposit",
+                "currentValue": "70.0",
+                "expectedValue": "4800.0 (10% of Goods Cost)",
+                "description": "The applicant's deposit does not meet the minimum requirement for Tier C applicants.",
+                "recommendation": "Request an additional deposit to meet the 10% minimum requirement for Tier C applicants.",
+                "reasoning": "Policy mandates a minimum deposit of 10% of the vehicle's Goods Cost for Tier C applicants to ensure financial commitment and reduce risk.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            }
+        ],
+        "reasoning": "The applicant's credit score places them in Tier C, necessitating stricter criteria. The DTI ratio is within acceptable limits for Tier C, but the low credit score and minimal deposit raise concerns about financial stability."
+    },
+    "message": "",
+    "isSuccessStatusCode": true
+}

@@ -1,0 +1,39 @@
+{
+    "content": {
+        "triageFlags": [
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Credit Score in Tier B",
+                "targetField": "CreditSummary.Score",
+                "currentValue": "621",
+                "expectedValue": "620-699",
+                "description": "The applicant's credit score places them in Tier B, requiring stricter affordability checks.",
+                "recommendation": "Ensure all affordability checks are thoroughly conducted and consider requesting additional documentation.",
+                "reasoning": "According to the policy, Tier B applicants are subject to standard terms but may require stricter affordability checks due to their credit score range.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            },
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "High Loan-to-Value Ratio",
+                "targetField": "Financials.LoanToValuePercent",
+                "currentValue": "91.11",
+                "expectedValue": "<=100% for Tier B",
+                "description": "The Loan-to-Value ratio is high but within the permissible range for Tier B applicants.",
+                "recommendation": "Verify the valuation of the vehicle and ensure the applicant can manage the financial commitment.",
+                "reasoning": "The policy allows a maximum LTV of 100% for Tier B applicants. While the current LTV is within this limit, it is relatively high, indicating a higher financial risk.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            }
+        ],
+        "reasoning": "The applicant's credit score places them in Tier B, which is acceptable but requires stricter affordability checks. The Loan-to-Value ratio is high but within the permissible range for Tier B. The Debt-to-Income ratio is well within the acceptable threshold, indicating affordability. However, the applicant's young age and the high LTV ratio suggest a need for careful consideration."
+    },
+    "message": "",
+    "isSuccessStatusCode": true
+}

@@ -1,0 +1,39 @@
+{
+    "content": {
+        "triageFlags": [
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "High",
+                "title": "Applicant Age Exceeds Typical Limits",
+                "targetField": "Applicant.AgeYears",
+                "currentValue": "110",
+                "expectedValue": "Below 100",
+                "description": "The applicant's age is significantly higher than typical underwriting limits.",
+                "recommendation": "Verify the applicant's age and assess the implications for the loan term.",
+                "reasoning": "The applicant's age of 110 years is highly unusual and may impact the feasibility of the loan term. This requires further verification and consideration.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            },
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Debt-to-Income Ratio at Maximum Threshold",
+                "targetField": "Financials.DebtToIncomePercent",
+                "currentValue": "40.0",
+                "expectedValue": "<= 40% for Tier B",
+                "description": "The applicant's DTI ratio is at the maximum allowable threshold for their credit tier.",
+                "recommendation": "Ensure the applicant's income and expenses are accurately verified to confirm affordability.",
+                "reasoning": "The DTI ratio is a critical measure of affordability. Being at the maximum threshold indicates a potential risk of financial strain, necessitating thorough verification.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            }
+        ],
+        "reasoning": "The applicant's age significantly exceeds typical underwriting norms, and the DTI ratio is at the maximum allowable threshold for their credit tier. These factors necessitate careful consideration and potential additional documentation."
+    },
+    "message": "",
+    "isSuccessStatusCode": true
+}

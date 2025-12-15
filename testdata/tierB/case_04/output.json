@@ -1,0 +1,39 @@
+{
+    "content": {
+        "triageFlags": [
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Critical",
+                "title": "Excessive Loan-to-Value (LTV) Ratio",
+                "targetField": "Financials.LoanToValuePercent",
+                "currentValue": "224.44",
+                "expectedValue": "100% (Tier B)",
+                "description": "The LTV ratio significantly exceeds the maximum allowable for the applicant's credit tier.",
+                "recommendation": "Decline the proposal as the LTV ratio is not compliant with policy.",
+                "reasoning": "According to the policy, the maximum LTV for Tier B applicants is 100%. The current LTV of 224.44% is far above this limit, indicating an over-leveraged loan structure.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            },
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "High",
+                "title": "Debt-to-Income (DTI) Ratio Exceeds Threshold",
+                "targetField": "Financials.DebtToIncomePercent",
+                "currentValue": "55.00",
+                "expectedValue": "40% (Tier B)",
+                "description": "The DTI ratio exceeds the maximum allowable for the applicant's credit tier.",
+                "recommendation": "Decline the proposal as the DTI ratio indicates affordability concerns.",
+                "reasoning": "The policy specifies a maximum DTI of 40% for Tier B applicants. The current DTI of 55% suggests the applicant may struggle to meet the financial obligations of the loan.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            }
+        ],
+        "reasoning": "The analysis identified critical violations of the underwriting policy, including an LTV ratio far exceeding the maximum allowable for the applicant's credit tier and a DTI ratio that surpasses the threshold for affordability. These factors collectively indicate a high risk of default."
+    },
+    "message": "",
+    "isSuccessStatusCode": true
+}

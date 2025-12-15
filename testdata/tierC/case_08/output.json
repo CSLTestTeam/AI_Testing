@@ -1,0 +1,39 @@
+{
+    "content": {
+        "triageFlags": [
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Credit Score in Sub-Prime Tier",
+                "targetField": "CreditSummary.Score",
+                "currentValue": "575",
+                "expectedValue": "620+ for Tier B or higher",
+                "description": "The applicant's credit score places them in the 'Sub-Prime' tier, requiring stricter lending criteria.",
+                "recommendation": "Proceed with caution and ensure all other criteria are strictly met.",
+                "reasoning": "According to the policy, a credit score of 575 falls into the 'Sub-Prime' tier, which necessitates additional scrutiny and adherence to stricter lending criteria.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            },
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Debt-to-Income Ratio Close to Maximum Threshold",
+                "targetField": "Financials.DebtToIncomePercent",
+                "currentValue": "31.43%",
+                "expectedValue": "<= 35% for Tier C",
+                "description": "The applicant's Debt-to-Income ratio is close to the maximum allowable threshold for their credit tier.",
+                "recommendation": "Verify all income and expense details to ensure the DTI calculation is accurate.",
+                "reasoning": "The policy specifies a maximum DTI of 35% for 'Sub-Prime' tier applicants. The current DTI of 31.43% is within this limit but close enough to warrant careful verification of affordability.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            }
+        ],
+        "reasoning": "The applicant's credit score places them in the 'Sub-Prime' tier, necessitating stricter lending criteria. The Debt-to-Income ratio is within the allowable range but close to the limit, indicating potential affordability concerns. The vehicle and loan structure meet policy requirements, mitigating some risk."
+    },
+    "message": "",
+    "isSuccessStatusCode": true
+}

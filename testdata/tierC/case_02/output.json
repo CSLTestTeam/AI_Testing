@@ -1,0 +1,39 @@
+{
+    "content": {
+        "triageFlags": [
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Critical",
+                "title": "Excessive Debt-to-Income Ratio",
+                "targetField": "Financials.DebtToIncomePercent",
+                "currentValue": "440.0",
+                "expectedValue": "35% or less for Tier C",
+                "description": "The applicant's DTI ratio is significantly above the allowable threshold for their credit tier.",
+                "recommendation": "Decline the application due to unsustainable affordability.",
+                "reasoning": "According to the policy, Tier C applicants must have a DTI ratio of 35% or less. The applicant's DTI ratio of 440% is far beyond this limit, indicating severe affordability issues.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            },
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "High",
+                "title": "Sub-Prime Credit Score",
+                "targetField": "CreditSummary.Score",
+                "currentValue": "575",
+                "expectedValue": "620+ for Tier B or higher",
+                "description": "The applicant's credit score places them in the sub-prime category, requiring stricter lending criteria.",
+                "recommendation": "Consider declining the application or imposing additional conditions if proceeding.",
+                "reasoning": "The credit score of 575 categorizes the applicant as sub-prime (Tier C), which necessitates stricter lending criteria, including a lower DTI ratio and potentially higher deposit requirements.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            }
+        ],
+        "reasoning": "The applicant's DTI ratio significantly exceeds the maximum allowable threshold for their credit tier, and their credit score indicates a high-risk profile. These factors combined present an unacceptable level of financial risk."
+    },
+    "message": "",
+    "isSuccessStatusCode": true
+}

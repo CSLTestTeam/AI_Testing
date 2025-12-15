@@ -1,0 +1,31 @@
+
+    public static List<TriageFlag> Flags { get; set; } = [];
+
+    [KernelFunction, Description("Use this function to report a single issue, risk, or policy violation you have found.")]
+    public void ReportFinding(
+        [Description("The severity of the issue, must be one of 'Low', 'Medium', 'High', or 'Critical'.")] string severity,
+        [Description("A short, descriptive title for the issue.")] string title,
+        [Description("The specific field path in the proposal JSON that this issue relates to (e.g., 'Applicant.CreditScore', 'Vehicle.Age', 'Financials.TermMonths').")] string targetField,
+        [Description("The current value found in the target field.")] string currentValue,
+        [Description("The expected value according to policy, or 'N/A' if not applicable.")] string expectedValue,
+        [Description("A concise, one-sentence description of the issue.")] string description,
+        [Description("A one-sentence recommendation for the underwriter.")] string recommendation,
+        [Description("Your detailed reasoning for flagging this issue, referencing specific policy rules and data points.")] string reasoning
+    )
+    {
+        // Simple data validation before adding
+        if (Enum.TryParse<EnSeverity>(severity, true, out EnSeverity parsedSeverity))
+        {
+            Flags.Add(new TriageFlag
+            {
+                Severity = parsedSeverity,
+                Title = title,
+                Description = description,
+                Recommendation = recommendation,
+                Reasoning = reasoning,
+                TargetField = targetField,
+                CurrentValue = currentValue,
+                ExpectedValue = expectedValue,
+            });
+        }
+    }

@@ -1,0 +1,39 @@
+{
+    "content": {
+        "triageFlags": [
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Critical",
+                "title": "Excessive Debt-to-Income Ratio",
+                "targetField": "Financials.DebtToIncomePercent",
+                "currentValue": "55.00",
+                "expectedValue": "<= 35% for Tier C",
+                "description": "The applicant's DTI ratio exceeds the maximum allowable threshold for their credit tier.",
+                "recommendation": "Decline the application due to affordability concerns.",
+                "reasoning": "According to the policy, Tier C applicants must have a DTI ratio of 35% or less. The applicant's DTI ratio of 55% indicates a significant affordability issue.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            },
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Critical",
+                "title": "Excessive Loan-to-Value Ratio",
+                "targetField": "Financials.LoanToValuePercent",
+                "currentValue": "224.44",
+                "expectedValue": "<= 95% for Tier C",
+                "description": "The LTV ratio is significantly above the maximum allowable limit for the applicant's credit tier.",
+                "recommendation": "Decline the application due to excessive LTV ratio.",
+                "reasoning": "The policy specifies a maximum LTV of 95% for Tier C applicants. The current LTV of 224.44% is far beyond this limit, indicating a high risk of financial loss.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            }
+        ],
+        "reasoning": "The applicant's DTI ratio of 55% exceeds the maximum allowable 35% for their credit tier (C), and the LTV ratio of 224.44% is significantly above the maximum permitted 95%. These factors indicate a high risk of default and non-compliance with underwriting policies."
+    },
+    "message": "",
+    "isSuccessStatusCode": true
+}

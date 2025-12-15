@@ -1,0 +1,39 @@
+{
+    "content": {
+        "triageFlags": [
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Applicant's Age",
+                "targetField": "Applicant.AgeYears",
+                "currentValue": "19",
+                "expectedValue": "21+",
+                "description": "The applicant's age is below the typical threshold for independent financial responsibility.",
+                "recommendation": "Consider requesting a guarantor or additional proof of financial stability.",
+                "reasoning": "Young applicants may lack the financial experience to manage significant credit obligations, increasing the risk of default.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            },
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Debt-to-Income Ratio at Maximum Threshold",
+                "targetField": "Financials.DebtToIncomePercent",
+                "currentValue": "40.0",
+                "expectedValue": "<= 40% for Tier A",
+                "description": "The applicant's DTI ratio is at the maximum allowable limit for their credit tier.",
+                "recommendation": "Verify the accuracy of income and expense data to ensure affordability.",
+                "reasoning": "A DTI at the maximum threshold leaves no buffer for unexpected financial changes, increasing the risk of financial strain.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            }
+        ],
+        "reasoning": "The applicant's credit score qualifies them for Tier A, allowing a DTI of up to 45%. However, their DTI is at the threshold, and their young age (19 years) may indicate limited financial experience. These factors suggest a need for careful consideration and additional verification."
+    },
+    "message": "",
+    "isSuccessStatusCode": true
+}

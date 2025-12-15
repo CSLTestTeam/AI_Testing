@@ -1,0 +1,8 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","18956","test_all_boundary_values_scenarios[Date_of_birth_18_years_old_today]","tests","2025-11-24","failed","2025-11-24","","test_boundary_values","",""
+"","58665","test_all_boundary_values_scenarios[LTV]","tests","2025-11-24","passed","2025-11-24","","test_boundary_values","",""
+"","55328","test_all_boundary_values_scenarios[8_years_vehicle_age_at_start]","tests","2025-11-24","passed","2025-11-24","","test_boundary_values","",""
+"","59013","test_all_boundary_values_scenarios[DTI]","tests","2025-11-24","passed","2025-11-24","","test_boundary_values","",""
+"","58585","test_all_boundary_values_scenarios[Decline]","tests","2025-11-24","passed","2025-11-24","","test_boundary_values","",""
+"","68761","test_all_boundary_values_scenarios[credit score]","tests","2025-11-24","passed","2025-11-24","","test_boundary_values","",""
+"","17995","test_all_boundary_values_scenarios[12_years_vehicle_age_at_end]","tests","2025-11-24","failed","2025-11-24","","test_boundary_values","",""

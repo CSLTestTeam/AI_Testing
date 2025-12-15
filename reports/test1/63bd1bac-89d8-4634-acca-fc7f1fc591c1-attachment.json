@@ -1,0 +1,54 @@
+{
+    "content": {
+        "triageFlags": [
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Critical",
+                "title": "Applicant Age Below Minimum Requirement",
+                "targetField": "Applicant.AgeYears",
+                "currentValue": "10",
+                "expectedValue": "18+",
+                "description": "The applicant's age is below the minimum legal requirement for entering into a finance agreement.",
+                "recommendation": "Decline the application as the applicant does not meet the legal age requirement.",
+                "reasoning": "The applicant is 10 years old, which is below the legal age of 18 required to enter into a finance agreement. This is a critical issue as it violates legal and policy requirements.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            },
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Loan-to-Value Ratio Not Calculated",
+                "targetField": "Financials.LoanToValuePercent",
+                "currentValue": "0",
+                "expectedValue": "<= 110% for Tier A",
+                "description": "The Loan-to-Value (LTV) ratio has not been calculated in the proposal.",
+                "recommendation": "Calculate the LTV ratio to ensure compliance with policy limits.",
+                "reasoning": "The LTV ratio is a critical metric for assessing the financial structure of the loan. Policy Section 4.1 specifies maximum LTV limits based on credit tiers, which must be adhered to.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            },
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Debt-to-Income Ratio Not Calculated",
+                "targetField": "Financials.DebtToIncomePercent",
+                "currentValue": "0",
+                "expectedValue": "<= 45% for Tier A",
+                "description": "The Debt-to-Income (DTI) ratio has not been calculated in the proposal.",
+                "recommendation": "Calculate the DTI ratio to ensure compliance with policy thresholds.",
+                "reasoning": "The DTI ratio is essential for evaluating affordability. Policy Section 3.1 outlines maximum allowable DTI ratios based on credit tiers, which must be verified for compliance.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            }
+        ],
+        "reasoning": "The analysis identified critical and medium-severity issues in the proposal. The applicant's age is below the legal requirement, which is a critical issue. Additionally, the Loan-to-Value (LTV) and Debt-to-Income (DTI) ratios were not calculated, which are essential for assessing the financial viability of the loan. These findings indicate significant compliance and financial assessment issues that must be addressed before proceeding."
+    },
+    "message": "",
+    "isSuccessStatusCode": true
+}

@@ -1,0 +1,45 @@
+[
+    {
+        "scenario_name": "First_Name",
+        "input_file": "mismatches/case_01/input.json",
+        "output_file": "mismatches/case_01/output.json",
+        "expected_output_prompt": "The output should mention that there is a mismatch in the name provided."
+    },
+    {
+        "scenario_name": "Last_Name",
+        "input_file": "mismatches/case_02/input.json",
+        "output_file": "mismatches/case_02/output.json",
+        "expected_output_prompt": "The output should mention that there is a mismatch in the name provided."
+    },
+    {
+        "scenario_name": "Address_street",
+        "input_file": "mismatches/case_03/input.json",
+        "output_file": "mismatches/case_03/output.json",
+        "expected_output_prompt": "The output should mention a mismatch in address details."
+    },
+    {
+        "scenario_name": "Address_City",
+        "input_file": "mismatches/case_04/input.json",
+        "output_file": "mismatches/case_04/output.json",
+        "expected_output_prompt": "The output should highlight discrepancies in the city listed in the addresses."
+    },
+    {
+        "scenario_name": "Address_Postcode",
+        "input_file": "mismatches/case_05/input.json",
+        "output_file": "mismatches/case_05/output.json",
+        "expected_output_prompt": "The output should mention a mismatch in postcode"
+    },
+    {
+        "scenario_name": "Address_History",
+        "input_file": "mismatches/case_06/input.json",
+        "output_file": "mismatches/case_06/output.json",
+        "expected_output_prompt": "The output should mention a mismatch in the months at address compared to the dates given"
+    },
+    {
+        "scenario_name": "Date_of_Birth",
+        "input_file": "mismatches/case_07/input.json",
+        "output_file": "mismatches/case_07/output.json",
+        "expected_output_prompt": "The output should mention a mismatch in the date of birth"
+    }
+
+]

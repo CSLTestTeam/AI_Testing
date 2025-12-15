@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="2" time="53.693" timestamp="2025-10-14T13:45:10.987433+01:00" hostname="LAPTOP-GT42QV3"><testcase classname="tests.test_low_risk" name="test_all_low_risk_scenarios[perfect_credit_high_income]" time="26.693"><failure message="AssertionError: Metrics: Analysis Evaluation [GEval] (score: 0.4, threshold: 0.5, strict: False, error: None, reason: The response correctly identifies the missing credit report (as instructed, this is acknowledged but not penalized) and otherwise follows the systematic five-step review process. However, it fails to fully apply several critical requirements found in the retrieval context: (1) In Step 1, it omits mandatory data integrity checks between the proposal and credit report (e.g., address discrepancies: proposal address is '248 Queen Street' vs. credit report '213 Queen Street'), which should be flagged using ReportFinding. (2) In Step 1b, negative factors in the credit report (e.g., 'High credit utilisation' in creditScoreSummary and several accounts with high balances) are not flagged as required. (3) No findings reported for missing 'Total Monthly Credit Commitments' or the potential underestimation of DTI due to absent liability data. (4) The output incorrectly concludes the deal's policy compliance without flagging the excessive term length: policy permits max term of 48 months for vehicles over 5 years old, but term is 72 months, which should trigger a High or Critical finding. These omissions mean the response does not fully comply with the step-by-step and reporting requirements. No false mismatches are present, but these gaps result in substantial penalty.) failed.">azure_model = &lt;src.test_azure.AzureOpenAIModel object at 0x0000019902218440&gt;
+scenario_data = {'input_file': 'low_risk/case_01/input.json', 'output_file': 'low_risk/case_01/output.json', 'scenario_name': 'perfect_credit_high_income'}
+
+    @pytest.mark.parametrize(
+        "scenario_data",
+        # CRITICAL: Call the fixture function (low_risk_scenarios()) to get the list of data
+        LOW_RISK_DATA,
+        # Use the scenario_name for clear output in the test report
+        ids=[s["scenario_name"] for s in LOW_RISK_DATA]
+    )
+    def test_all_low_risk_scenarios(azure_model, scenario_data):
+        """
+        Tests all low-risk scenarios defined in the dataset_low_risk.json manifest.
+    
+        Args:
+            azure_model: The DeepEval custom LLM client fixture.
+            scenario_data: A dictionary containing the metadata for the current test case.
+        """
+    
+        # 1. Define the GEval metric, passing the necessary model fixture
+        overall_model_evaluation_metric = GEval(
+            name="Analysis Evaluation",
+            evaluation_steps=[
+            "1. ACKNOWLEDGE, BUT DO NOT PENALISE:** If the 'actual_output' contains a mention of a missing or unavailable credit report, state this fact clearly in the analysis, **but DO NOT deduct any score for this specific point.** The score must be based solely on all other criteria.",
+            "2. Check if the 'actual output' follows the steps detailed in 'retrieval context",
+            "3. Assess if the 'actual output' covers ALL points in the 'retrieval context'.",
+            "4. Mention where 'actual output' has failed to follow the 'retrieval context",
+            "5. Mention and penalise where false mismatches have been highligted in the 'actual output'",
+            "6. Assign a final score from 0.0 to 1.0 based on the combined assessment.",
+            "7. Present findings in basic, easy to understand English"
+    
+    
+        ],
+            evaluation_params=[LLMTestCaseParams.ACTUAL_OUTPUT, LLMTestCaseParams.INPUT, LLMTestCaseParams.RETRIEVAL_CONTEXT],
+            model=azure_model,
+            threshold=0.5
+        )
+    
+        output_hallucination = GEval(
+            name="Output Hallucination",
+            evaluation_steps=[
+            "1. DO NOT ACKNOWLEDGE AND DO NOT PENALISE:** If the 'actual_output' contains a mention of a missing or unavailable credit report, ignore this in the analysis. DO NOT deduct any score for this specific point.** The score must be based solely on all other criteria.",
+            "2. Read the 'actual output' and compare the findings to what is in the 'input'",
+            "3. Assess if the 'actual output' is faithful. Mention any hallucinations or if anything has been made up",
+            "4. Do not judge the 'actual_output' based on how well it follows the steps in the 'retrieval context'. The only thing you should judge is if any hallucinations are present",
+            "5. Assign a final score from 0.0 to 1.0 based on the combined assessment of steps 1, 2, 3, and 4. **ENSURE the penalty for the missing credit report (Step 5) is 0.0.**",
+            "6. Reiterate and ensure that you have not penalised the 'actual_output' for the mention of missing credit report in the traige flags and reasoning"
+    
+    
+    
+        ],
+            evaluation_params=[LLMTestCaseParams.ACTUAL_OUTPUT, LLMTestCaseParams.INPUT, LLMTestCaseParams.RETRIEVAL_CONTEXT],
+            model=azure_model,
+            threshold=0.5
+        )
+    
+    
+        # 2. Build the LLMTestCase object dynamically (calls API inside)
+        test_case = create_deepeval_test_case(scenario_data)
+    
+        # 3. Assert the test using the correctness GEval metric
+&gt;       assert_test(test_case, [overall_model_evaluation_metric])
+
+tests\test_low_risk.py:75: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+test_case = LLMTestCase(input='{"proposalNumber": "PRO-59894", "applicant": {"title": "Mr", "firstName": "Daniel", "lastName": "Jo...ne, tools_called=None, comments=None, expected_tools=None, token_cost=None, completion_time=None, name=None, tags=None)
+metrics = [&lt;deepeval.metrics.g_eval.g_eval.GEval object at 0x0000019902219550&gt;], golden = None, observed_callback = None
+run_async = True
+
+    def assert_test(
+        test_case: Optional[
+            Union[LLMTestCase, ConversationalTestCase, MLLMTestCase]
+        ] = None,
+        metrics: Optional[
+            Union[
+                List[BaseMetric],
+                List[BaseConversationalMetric],
+                List[BaseMultimodalMetric],
+            ]
+        ] = None,
+        golden: Optional[Golden] = None,
+        observed_callback: Optional[
+            Union[Callable[[str], Any], Callable[[str], Awaitable[Any]]]
+        ] = None,
+        run_async: bool = True,
+    ):
+        validate_assert_test_inputs(
+            golden=golden,
+            observed_callback=observed_callback,
+            test_case=test_case,
+            metrics=metrics,
+        )
+    
+        if golden and observed_callback:
+            if run_async:
+                loop = get_or_create_event_loop()
+                test_result = loop.run_until_complete(
+                    a_execute_agentic_test_cases(
+                        goldens=[golden],
+                        observed_callback=observed_callback,
+                        ignore_errors=should_ignore_errors(),
+                        verbose_mode=should_verbose_print(),
+                        show_indicator=True,
+                        save_to_disk=get_is_running_deepeval(),
+                        skip_on_missing_params=should_skip_on_missing_params(),
+                        throttle_value=0,
+                        max_concurrent=100,
+                        _use_bar_indicator=True,
+                        _is_assert_test=True,
+                    )
+                )[0]
+            else:
+                test_result = execute_agentic_test_cases(
+                    goldens=[golden],
+                    observed_callback=observed_callback,
+                    ignore_errors=should_ignore_errors(),
+                    verbose_mode=should_verbose_print(),
+                    show_indicator=True,
+                    save_to_disk=get_is_running_deepeval(),
+                    skip_on_missing_params=should_skip_on_missing_params(),
+                    _use_bar_indicator=False,
+                    _is_assert_test=True,
+                )[0]
+    
+        elif test_case and metrics:
+            if run_async:
+                loop = get_or_create_event_loop()
+                test_result = loop.run_until_complete(
+                    a_execute_test_cases(
+                        [test_case],
+                        metrics,
+                        skip_on_missing_params=should_skip_on_missing_params(),
+                        ignore_errors=should_ignore_errors(),
+                        use_cache=should_use_cache(),
+                        verbose_mode=should_verbose_print(),
+                        throttle_value=0,
+                        # this doesn't matter for pytest
+                        max_concurrent=100,
+                        save_to_disk=get_is_running_deepeval(),
+                        show_indicator=True,
+                        _use_bar_indicator=True,
+                        _is_assert_test=True,
+                    )
+                )[0]
+            else:
+                test_result = execute_test_cases(
+                    [test_case],
+                    metrics,
+                    skip_on_missing_params=should_skip_on_missing_params(),
+                    ignore_errors=should_ignore_errors(),
+                    use_cache=should_use_cache(),
+                    verbose_mode=should_verbose_print(),
+                    save_to_disk=get_is_running_deepeval(),
+                    show_indicator=True,
+                    _use_bar_indicator=False,
+                    _is_assert_test=True,
+                )[0]
+    
+        if not test_result.success:
+            failed_metrics_data: List[MetricData] = []
+            # even for conversations, test_result right now is just the
+            # result for the last message
+            for metric_data in test_result.metrics_data:
+                if metric_data.error is not None:
+                    failed_metrics_data.append(metric_data)
+                else:
+                    # This try block is for user defined custom metrics,
+                    # which might not handle the score == undefined case elegantly
+                    try:
+                        if not metric_data.success:
+                            failed_metrics_data.append(metric_data)
+                    except:
+                        failed_metrics_data.append(metric_data)
+    
+            failed_metrics_str = ", ".join(
+                [
+                    f"{metrics_data.name} (score: {metrics_data.score}, threshold: {metrics_data.threshold}, strict: {metrics_data.strict_mode}, error: {metrics_data.error}, reason: {metrics_data.reason})"
+                    for metrics_data in failed_metrics_data
+                ]
+            )
+&gt;           raise AssertionError(f"Metrics: {failed_metrics_str} failed.")
+E           AssertionError: Metrics: Analysis Evaluation [GEval] (score: 0.4, threshold: 0.5, strict: False, error: None, reason: The response correctly identifies the missing credit report (as instructed, this is acknowledged but not penalized) and otherwise follows the systematic five-step review process. However, it fails to fully apply several critical requirements found in the retrieval context: (1) In Step 1, it omits mandatory data integrity checks between the proposal and credit report (e.g., address discrepancies: proposal address is '248 Queen Street' vs. credit report '213 Queen Street'), which should be flagged using ReportFinding. (2) In Step 1b, negative factors in the credit report (e.g., 'High credit utilisation' in creditScoreSummary and several accounts with high balances) are not flagged as required. (3) No findings reported for missing 'Total Monthly Credit Commitments' or the potential underestimation of DTI due to absent liability data. (4) The output incorrectly concludes the deal's policy compliance without flagging the excessive term length: policy permits max term of 48 months for vehicles over 5 years old, but term is 72 months, which should trigger a High or Critical finding. These omissions mean the response does not fully comply with the step-by-step and reporting requirements. No false mismatches are present, but these gaps result in substantial penalty.) failed.
+
+venv\Lib\site-packages\deepeval\evaluate\evaluate.py:183: AssertionError</failure></testcase><testcase classname="tests.test_low_risk" name="test_all_low_risk_scenarios[short_history_no_debt]" time="24.984" /></testsuite></testsuites>

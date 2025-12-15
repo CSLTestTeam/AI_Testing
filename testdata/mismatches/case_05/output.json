@@ -1,0 +1,24 @@
+{
+    "content": {
+        "triageFlags": [
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Excessive Debt-to-Income Ratio",
+                "targetField": "Financials.DebtToIncomePercent",
+                "currentValue": "55.00",
+                "expectedValue": "<= 45% for Tier A",
+                "description": "The applicant's DTI ratio exceeds the maximum allowable limit for their credit tier.",
+                "recommendation": "Consider requesting additional income verification or a higher deposit to reduce the DTI ratio.",
+                "reasoning": "According to the policy, Tier A applicants must have a DTI ratio of 45% or less. The current DTI of 55% is above this threshold, indicating a potential affordability issue.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            }
+        ],
+        "reasoning": "The applicant's credit score qualifies them for Tier A, allowing a maximum DTI of 45%. However, the current DTI is 55%, which exceeds this limit. Adjustments to the loan structure or additional income verification are necessary to align with policy."
+    },
+    "message": "",
+    "isSuccessStatusCode": true
+}

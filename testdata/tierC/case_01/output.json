@@ -1,0 +1,24 @@
+{
+    "content": {
+        "triageFlags": [
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Credit Score in Tier C",
+                "targetField": "CreditSummary.Score",
+                "currentValue": "575",
+                "expectedValue": "550-619",
+                "description": "The applicant's credit score places them in Tier C, which requires stricter lending criteria.",
+                "recommendation": "Ensure all Tier C requirements, including minimum deposit and affordability checks, are strictly adhered to.",
+                "reasoning": "According to the policy, a credit score in Tier C necessitates stricter lending criteria to mitigate risk.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            }
+        ],
+        "reasoning": "The applicant's credit score places them in Tier C, requiring stricter criteria. The DTI ratio is within acceptable limits for Tier C, but close to the threshold, indicating potential affordability concerns. The vehicle and loan structure comply with policy requirements."
+    },
+    "message": "",
+    "isSuccessStatusCode": true
+}

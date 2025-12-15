@@ -1,0 +1,39 @@
+{
+    "content": {
+        "triageFlags": [
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Debt-to-Income Ratio at Maximum Threshold",
+                "targetField": "Financials.DebtToIncomePercent",
+                "currentValue": "35.00",
+                "expectedValue": "<= 35% for Tier C",
+                "description": "The applicant's DTI ratio is at the maximum allowable limit for their credit tier.",
+                "recommendation": "Verify the applicant's income and consider additional affordability checks.",
+                "reasoning": "According to the policy, Tier C applicants must have a DTI ratio of 35% or less. The applicant's DTI ratio is exactly at this threshold, indicating a potential affordability risk.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            },
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Credit Score in Sub-Prime Range",
+                "targetField": "CreditSummary.Score",
+                "currentValue": "619",
+                "expectedValue": "620+ for Tier B",
+                "description": "The applicant's credit score places them in the sub-prime category, requiring stricter lending criteria.",
+                "recommendation": "Ensure compliance with stricter lending criteria for sub-prime applicants.",
+                "reasoning": "The policy categorizes a credit score of 619 as Tier C (Sub-Prime), which necessitates stricter lending criteria, including a minimum deposit requirement.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            }
+        ],
+        "reasoning": "The applicant's DTI ratio is at the maximum allowable limit for their credit tier, and their credit score is in the sub-prime range, necessitating stricter lending criteria. Additional income verification is recommended to ensure affordability."
+    },
+    "message": "",
+    "isSuccessStatusCode": true
+}

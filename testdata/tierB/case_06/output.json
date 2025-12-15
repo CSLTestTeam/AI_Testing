@@ -1,0 +1,39 @@
+{
+    "content": {
+        "triageFlags": [
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Vehicle Age Exceeds Policy Limit",
+                "targetField": "Asset.VehicleAgeMonths",
+                "currentValue": "92",
+                "expectedValue": "Maximum 96 months at agreement start",
+                "description": "The vehicle's age at the start of the agreement exceeds the policy's maximum allowable age.",
+                "recommendation": "Review the vehicle's age and consider if an exception is warranted.",
+                "reasoning": "According to the policy, the maximum vehicle age at the start of the agreement is 8 years (96 months). The vehicle's age is 92 months, which is close to the limit but still within acceptable bounds.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            },
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Applicant in Tier B Credit Score Band",
+                "targetField": "CreditSummary.Score",
+                "currentValue": "627",
+                "expectedValue": "620-699 (Tier B)",
+                "description": "The applicant's credit score places them in Tier B, requiring stricter affordability checks.",
+                "recommendation": "Ensure all Tier B requirements, including stricter affordability checks, are met.",
+                "reasoning": "The applicant's credit score of 627 places them in Tier B, which necessitates adherence to stricter affordability and lending criteria as per the policy.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            }
+        ],
+        "reasoning": "The analysis identified that the vehicle's age at the start of the agreement exceeds the policy limit, and the applicant's credit score places them in Tier B, necessitating stricter affordability checks. These factors elevate the risk level to medium."
+    },
+    "message": "",
+    "isSuccessStatusCode": true
+}

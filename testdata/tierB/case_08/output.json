@@ -1,0 +1,39 @@
+{
+    "content": {
+        "triageFlags": [
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "High Loan-to-Value Ratio",
+                "targetField": "Financials.LoanToValuePercent",
+                "currentValue": "91.11",
+                "expectedValue": "<= 100% for Tier B",
+                "description": "The Loan-to-Value ratio is high, nearing the maximum allowable limit for the applicant's credit tier.",
+                "recommendation": "Verify the accuracy of the vehicle's trade price and consider requesting a higher deposit to reduce the LTV.",
+                "reasoning": "According to the policy, the maximum LTV for Tier B applicants is 100%. The current LTV of 91.11% is within the limit but is relatively high, which could increase the risk of the loan.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            },
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Debt-to-Income Ratio Near Maximum Threshold",
+                "targetField": "Financials.DebtToIncomePercent",
+                "currentValue": "31.43",
+                "expectedValue": "<= 40% for Tier B",
+                "description": "The Debt-to-Income ratio is close to the maximum allowable threshold for the applicant's credit tier.",
+                "recommendation": "Request additional documentation to confirm the applicant's income and ensure the affordability of the loan.",
+                "reasoning": "The policy specifies a maximum DTI of 40% for Tier B applicants. The current DTI of 31.43% is within the limit but indicates a significant portion of the applicant's income is allocated to debt obligations.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            }
+        ],
+        "reasoning": "The analysis identified a high Loan-to-Value ratio and a Debt-to-Income ratio near the policy limit, which could indicate potential financial strain. However, the applicant's credit score and other financial indicators are within acceptable ranges, suggesting manageable risk with proper verification."
+    },
+    "message": "",
+    "isSuccessStatusCode": true
+}

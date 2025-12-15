@@ -1,0 +1,39 @@
+{
+    "content": {
+        "triageFlags": [
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Loan-to-Value exceeds policy limit",
+                "targetField": "Financials.LoanToValuePercent",
+                "currentValue": "102.5%",
+                "expectedValue": "100% or less",
+                "description": "The Loan-to-Value ratio exceeds the maximum allowed for the applicant's credit tier.",
+                "recommendation": "Consider reducing the loan amount or increasing the deposit to meet the LTV policy requirements.",
+                "reasoning": "According to the policy, the maximum LTV for Tier A applicants is 110%. The calculated LTV for this proposal is 102.5%, which is within the acceptable range for Tier A.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            },
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Debt-to-Income Ratio Exceeds Policy Limit",
+                "targetField": "Financials.DebtToIncomePercent",
+                "currentValue": "42.5%",
+                "expectedValue": "<= 40%",
+                "description": "The applicant's Debt-to-Income ratio exceeds the maximum allowed for their credit tier.",
+                "recommendation": "Consider reducing the loan amount or increasing the deposit to lower the DTI ratio.",
+                "reasoning": "The policy specifies a maximum DTI of 40% for Tier B applicants. The calculated DTI for this proposal is 42.5%, which exceeds the allowable limit.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            }
+        ],
+        "reasoning": "The analysis of the proposal revealed two medium-severity issues: the Loan-to-Value (LTV) ratio exceeds the policy limit for the applicant's credit tier, and the Debt-to-Income (DTI) ratio is above the maximum allowed for the same tier. These findings suggest that the financial structure of the loan may pose a moderate risk."
+    },
+    "message": "",
+    "isSuccessStatusCode": true
+}

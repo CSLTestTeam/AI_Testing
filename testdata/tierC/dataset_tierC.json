@@ -1,0 +1,69 @@
+[
+    {
+        "scenario_name": "Ctier_high_income",
+        "input_file": "tierC/case_01/input.json",
+        "output_file": "tierC/case_01/output.json",
+        "expected_output_prompt": "Medium risk factor mentioned due to being a Tier C applicant."
+    },
+    {
+        "scenario_name": "Ctier_lower_income",
+        "input_file": "tierC/case_02/input.json",
+        "output_file": "tierC/case_02/output.json",
+        "expected_output_prompt": "Medium risk factor mentioned due to being a Tier C applicant. The low income should also be mentioned"
+    },
+    {
+        "scenario_name": "Ctier_AboveMaxDTI",
+        "input_file": "tierC/case_03/input.json",
+        "output_file": "tierC/case_03/output.json",
+        "expected_output_prompt": "The output should mention that the DtI ratio exceeds the maximum allowed for Tier C (35%) applicants as per policy. Other risk factors should be low severity"
+    },
+    {
+        "scenario_name": "Ctier_Over95LTV",
+        "input_file": "tierC/case_04/input.json",
+        "output_file": "tierC/case_04/output.json",
+        "expected_output_prompt": "There should be a mention that the LTV exceeds 95% which is not allowed as per policy. Other risk factors should be low severity"
+    },
+    {
+        "scenario_name": "Ctier_AboveMaxVehicleAgeAtStart",
+        "input_file": "tierC/case_05/input.json",
+        "output_file": "tierC/case_05/output.json",
+        "expected_output_prompt": "The output should highlight that the vehicle age at the start of the agreement exceeds the maximum allowed age as per policy."
+    },
+    {
+        "scenario_name": "Ctier_AboveMaxVehicleAgeAtEnd",
+        "input_file": "tierC/case_06/input.json",
+        "output_file": "tierC/case_06/output.json",
+        "expected_output_prompt": "The output should highlight that the vehicle age at the end of the agreement exceeds the maximum allowed age as per policy."
+    },
+    {
+        "scenario_name": "Ctier_AboveMaxTerm5Years",
+        "input_file": "tierC/case_07/input.json",
+        "output_file": "tierC/case_07/output.json",
+        "expected_output_prompt": "The output should highlight that the max term exceeds 5 years as per policy."
+    },
+    {
+        "scenario_name": "Ctier_AboveMaxTerm4Years",
+        "input_file": "tierC/case_08/input.json",
+        "output_file": "tierC/case_08/output.json",
+        "expected_output_prompt": "The output should highlight that the max term exceeds 4 years as the vehicle is above 5 years old as per policy."
+    },
+    {
+        "scenario_name": "Ctier_HighCreditSearches",
+        "input_file": "tierC/case_09/input.json",
+        "output_file": "tierC/case_09/output.json",
+        "expected_output_prompt": "The output should mention that there have been a high number of credit searches"
+    },
+    {
+        "scenario_name": "Ctier_HighMileage",
+        "input_file": "tierC/case_10/input.json",
+        "output_file": "tierC/case_10/output.json",
+        "expected_output_prompt": "The output should mention that the vehicle mileage is high and may pose a risk."
+    },
+    {
+        "scenario_name": "Ctier_LowDeposit",
+        "input_file": "tierC/case_11/input.json",
+        "output_file": "tierC/case_11/output.json",
+        "expected_output_prompt": "The output should mention that the deposit is below the minimum for tier C applicants"
+    }
+
+]

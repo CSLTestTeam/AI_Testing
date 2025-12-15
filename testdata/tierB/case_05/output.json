@@ -1,0 +1,24 @@
+{
+    "content": {
+        "triageFlags": [
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "High",
+                "title": "Vehicle Age Exceeds Policy Limit",
+                "targetField": "Asset.VehicleAgeMonths",
+                "currentValue": "111",
+                "expectedValue": "96 or less",
+                "description": "The vehicle's age at the start of the agreement exceeds the maximum allowed by policy.",
+                "recommendation": "Consider rejecting the proposal or seeking an exception with strong justification.",
+                "reasoning": "Policy states that the maximum vehicle age at the start of the agreement is 8 years (96 months). The vehicle is 111 months old, exceeding this limit.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            }
+        ],
+        "reasoning": "The applicant's credit score places them in Tier B, which allows a maximum LTV of 100%. However, the current LTV is 91.11%, which is within the acceptable range. The vehicle's age at the start of the agreement exceeds the maximum allowed by policy, which is a significant concern. The DTI ratio is within acceptable limits for Tier B applicants."
+    },
+    "message": "",
+    "isSuccessStatusCode": true
+}

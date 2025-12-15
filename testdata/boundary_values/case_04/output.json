@@ -1,0 +1,39 @@
+{
+    "content": {
+        "triageFlags": [
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Critical",
+                "title": "Credit Score Below Acceptable Threshold",
+                "targetField": "CreditSummary.Score",
+                "currentValue": "549",
+                "expectedValue": "550+",
+                "description": "The applicant's credit score is below the minimum required for consideration.",
+                "recommendation": "Decline the application as the credit score does not meet the minimum threshold.",
+                "reasoning": "According to the policy, a credit score below 550 results in automatic decline unless exceptional circumstances are documented.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            },
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "High",
+                "title": "Debt-to-Income Ratio Exceeds Policy Limit",
+                "targetField": "Financials.DebtToIncomePercent",
+                "currentValue": "12.94%",
+                "expectedValue": "<=35%",
+                "description": "The applicant's Debt-to-Income ratio exceeds the maximum allowable for their credit tier.",
+                "recommendation": "Decline the application due to affordability concerns.",
+                "reasoning": "The Debt-to-Income ratio is a critical measure of affordability, and exceeding the threshold indicates potential financial strain for the applicant.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            }
+        ],
+        "reasoning": "The applicant's credit score falls into the automatic decline category, and the Debt-to-Income ratio exceeds the maximum allowable threshold for their credit tier, indicating significant financial risk."
+    },
+    "message": "",
+    "isSuccessStatusCode": true
+}

@@ -1,0 +1,39 @@
+{
+    "content": {
+        "triageFlags": [
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "High",
+                "title": "Excessive Debt-to-Income Ratio",
+                "targetField": "Financials.DebtToIncomePercent",
+                "currentValue": "55.00",
+                "expectedValue": "<= 40% for Tier B",
+                "description": "The applicant's Debt-to-Income ratio exceeds the maximum allowable threshold for their credit tier.",
+                "recommendation": "Decline the application due to affordability concerns.",
+                "reasoning": "According to the policy, the maximum DTI for Tier B applicants is 40%. The applicant's DTI of 55% significantly exceeds this limit, indicating potential financial strain.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            },
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "High",
+                "title": "Loan-to-Value Ratio Exceeds Policy Limit",
+                "targetField": "Financials.LoanToValuePercent",
+                "currentValue": "91.11",
+                "expectedValue": "<= 100% for Tier B",
+                "description": "The Loan-to-Value ratio is higher than the maximum allowed for the applicant's credit tier.",
+                "recommendation": "Decline the application due to non-compliance with LTV policy.",
+                "reasoning": "The policy specifies a maximum LTV of 100% for Tier B applicants. The current LTV of 91.11% is above this threshold, indicating a higher risk of financial exposure.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            }
+        ],
+        "reasoning": "The applicant's DTI ratio of 55% exceeds the maximum allowable 40% for Tier B, indicating affordability concerns. Additionally, the LTV ratio of 91.11% surpasses the 100% limit for Tier B, further breaching policy guidelines. These factors collectively present a high risk."
+    },
+    "message": "",
+    "isSuccessStatusCode": true
+}

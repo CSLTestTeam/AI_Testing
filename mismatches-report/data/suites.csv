@@ -1,0 +1,6 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","51141","test_all_mismatches_scenarios[Address_street]","tests","2025-11-03","failed","2025-11-03","","test_mismatches","",""
+"","54496","test_all_mismatches_scenarios[Address_Postcode]","tests","2025-11-03","failed","2025-11-03","","test_mismatches","",""
+"","37985","test_all_mismatches_scenarios[Address_History]","tests","2025-11-03","failed","2025-11-03","","test_mismatches","",""
+"","34400","test_all_mismatches_scenarios[Name]","tests","2025-11-03","failed","2025-11-03","","test_mismatches","",""
+"","94267","test_all_mismatches_scenarios[Address_City]","tests","2025-11-03","failed","2025-11-03","","test_mismatches","",""

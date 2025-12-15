@@ -1,0 +1,63 @@
+[
+    {
+        "scenario_name": "Atier_high_income",
+        "input_file": "tierA/case_01/input.json",
+        "output_file": "tierA/case_01/output.json",
+        "expected_output_prompt": "No mention of any significant risks, all risk factors should be low severity."
+    },
+    {
+        "scenario_name": "Atier_lower_income",
+        "input_file": "tierA/case_02/input.json",
+        "output_file": "tierA/case_02/output.json",
+        "expected_output_prompt": "Allow mentions of the lower income but all risk factors should be low severity."
+    },
+    {
+        "scenario_name": "Atier_AboveMaxDTI",
+        "input_file": "tierA/case_03/input.json",
+        "output_file": "tierA/case_03/output.json",
+        "expected_output_prompt": "The output should mention that the DtI ratio exceeds the maximum allowed for Tier A applicants as per policy. Other risk factors should be low severity"
+    },
+    {
+        "scenario_name": "Atier_Over110LTV",
+        "input_file": "tierA/case_04/input.json",
+        "output_file": "tierA/case_04/output.json",
+        "expected_output_prompt": "There should be a mention that the LTV exceeds 110% which is not allowed as per policy. Other risk factors should be low severity"
+    },
+    {
+        "scenario_name": "Atier_AboveMaxVehicleAgeAtStart",
+        "input_file": "tierA/case_05/input.json",
+        "output_file": "tierA/case_05/output.json",
+        "expected_output_prompt": "The output should highlight that the vehicle age at the start of the agreement exceeds the maximum allowed age as per policy."
+    },
+    {
+        "scenario_name": "Atier_AboveMaxVehicleAgeAtEnd",
+        "input_file": "tierA/case_06/input.json",
+        "output_file": "tierA/case_06/output.json",
+        "expected_output_prompt": "The output should highlight that the vehicle age at the end of the agreement exceeds the maximum allowed age as per policy."
+    },
+    {
+        "scenario_name": "Atier_AboveMaxTerm5Years",
+        "input_file": "tierA/case_07/input.json",
+        "output_file": "tierA/case_07/output.json",
+        "expected_output_prompt": "The output should highlight that the max term exceeds 5 years as per policy."
+    },
+    {
+        "scenario_name": "Atier_AboveMaxTerm4Years",
+        "input_file": "tierA/case_08/input.json",
+        "output_file": "tierA/case_08/output.json",
+        "expected_output_prompt": "The output should highlight that the max term exceeds 4 years as the vehicle is above 5 years old as per policy."
+    },
+    {
+        "scenario_name": "Atier_HighCreditSearches",
+        "input_file": "tierA/case_09/input.json",
+        "output_file": "tierA/case_09/output.json",
+        "expected_output_prompt": "The output should mention that there have been a high number of credit searches"
+    },
+    {
+        "scenario_name": "Atier_HighMileage",
+        "input_file": "tierA/case_10/input.json",
+        "output_file": "tierA/case_10/output.json",
+        "expected_output_prompt": "The output should mention that the vehicle mileage is high and may pose a risk."
+    }
+
+]

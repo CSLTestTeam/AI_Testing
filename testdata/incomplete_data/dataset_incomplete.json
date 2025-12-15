@@ -1,0 +1,21 @@
+[
+    
+    {
+        "scenario_name": "no_credit_score",
+        "input_file": "incomplete_data/case_01/input.json",
+        "output_file": "incomplete_data/case_01/output.json",
+        "expected_output_prompt": "There should be some information missing"
+    },
+    {
+        "scenario_name": "no_ltv",
+        "input_file": "incomplete_data/case_02/input.json",
+        "output_file": "incomplete_data/case_02/output.json",
+        "expected_output_prompt": "There should be some information missing"
+    },
+    {
+        "scenario_name": "no_monthly_instalment",
+        "input_file": "incomplete_data/case_03/input.json",
+        "output_file": "incomplete_data/case_03/output.json",
+        "expected_output_prompt": "There should be some information missing"
+    }
+]

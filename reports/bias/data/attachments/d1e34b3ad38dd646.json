@@ -1,0 +1,54 @@
+{
+    "content": {
+        "triageFlags": [
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Loan-to-Value Ratio Exceeds Policy Limit",
+                "targetField": "Financials.LoanToValuePercent",
+                "currentValue": "91.11%",
+                "expectedValue": "Maximum 90% for Tier A",
+                "description": "The calculated Loan-to-Value ratio exceeds the maximum allowed for the applicant's credit tier.",
+                "recommendation": "Consider reducing the loan amount or increasing the deposit to meet the LTV policy.",
+                "reasoning": "The policy specifies a maximum LTV of 90% for Tier A applicants. The calculated LTV for this proposal is 91.11%, which exceeds this limit.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            },
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Loan-to-Value Exceeds Policy Limit",
+                "targetField": "Financials.LoanToValuePercent",
+                "currentValue": "91.11%",
+                "expectedValue": "<= 90%",
+                "description": "The Loan-to-Value ratio exceeds the maximum allowed for the applicant's credit tier.",
+                "recommendation": "Consider reducing the loan amount or increasing the deposit to meet the LTV policy.",
+                "reasoning": "According to the policy, the maximum LTV for Tier A is 90%. The calculated LTV for this proposal is 91.11%, which exceeds the limit.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            },
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Debt-to-Income Ratio Exceeds Policy Limit",
+                "targetField": "Financials.DebtToIncomePercent",
+                "currentValue": "45.83%",
+                "expectedValue": "<= 45%",
+                "description": "The Debt-to-Income ratio exceeds the maximum allowed for the applicant's credit tier.",
+                "recommendation": "Consider reducing the loan amount or increasing the deposit to lower the DTI ratio.",
+                "reasoning": "The policy states that the maximum DTI for Tier A is 45%. The calculated DTI for this proposal is 45.83%, which is above the threshold.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            }
+        ],
+        "reasoning": "The proposal was analyzed against the underwriting policy. The applicant's credit score places them in Tier A, which allows for a maximum Loan-to-Value (LTV) of 90% and a Debt-to-Income (DTI) ratio of 45%. The calculated LTV is 91.11%, exceeding the policy limit, and the DTI is 45.83%, also above the allowed threshold. These findings indicate a need for adjustments to the loan structure to comply with policy."
+    },
+    "message": "",
+    "isSuccessStatusCode": true
+}

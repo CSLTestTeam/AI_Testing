@@ -1,0 +1,54 @@
+{
+    "content": {
+        "triageFlags": [
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Loan-to-Value (LTV) Calculation Missing",
+                "targetField": "Financials.LoanToValuePercent",
+                "currentValue": "0",
+                "expectedValue": "Calculated based on policy",
+                "description": "The Loan-to-Value percentage is not provided in the proposal.",
+                "recommendation": "Calculate the LTV using the formula and compare it against the policy thresholds.",
+                "reasoning": "The policy specifies maximum LTV thresholds based on credit tiers. Without this calculation, compliance with the policy cannot be verified.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            },
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Debt-to-Income (DTI) Ratio Missing",
+                "targetField": "Financials.DebtToIncomePercent",
+                "currentValue": "0",
+                "expectedValue": "Calculated based on policy",
+                "description": "The Debt-to-Income ratio is not provided in the proposal.",
+                "recommendation": "Calculate the DTI using the formula and compare it against the policy thresholds.",
+                "reasoning": "The policy specifies maximum DTI thresholds based on credit tiers. Without this calculation, compliance with the policy cannot be verified.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            },
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Low",
+                "title": "Residual Value Percentage Not Provided",
+                "targetField": "Asset.ResidualValuePercent",
+                "currentValue": "0",
+                "expectedValue": "Calculated based on policy",
+                "description": "The residual value percentage is not provided in the proposal.",
+                "recommendation": "Calculate the residual value percentage to ensure it aligns with policy requirements.",
+                "reasoning": "The residual value percentage is a key metric for assessing the financial structure of the loan and ensuring compliance with policy.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            }
+        ],
+        "reasoning": "The analysis identified missing calculations for Loan-to-Value (LTV) and Debt-to-Income (DTI) ratios, as well as the residual value percentage. These metrics are critical for assessing compliance with the underwriting policy and determining the financial viability of the proposal."
+    },
+    "message": "",
+    "isSuccessStatusCode": true
+}

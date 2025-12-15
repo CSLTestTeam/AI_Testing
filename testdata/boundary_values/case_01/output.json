@@ -1,0 +1,39 @@
+{
+    "content": {
+        "triageFlags": [
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Credit Score in Tier C",
+                "targetField": "CreditSummary.Score",
+                "currentValue": "550",
+                "expectedValue": "550-619",
+                "description": "The applicant's credit score places them in Tier C, which requires stricter lending criteria.",
+                "recommendation": "Ensure all Tier C requirements, including minimum deposit and affordability checks, are met.",
+                "reasoning": "According to the policy, a credit score of 550 falls into Tier C, necessitating stricter lending criteria to mitigate risk.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            },
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Debt-to-Income Ratio Near Maximum Threshold",
+                "targetField": "Financials.DebtToIncomePercent",
+                "currentValue": "31.43",
+                "expectedValue": "<=35% for Tier C",
+                "description": "The applicant's Debt-to-Income ratio is close to the maximum allowable threshold for Tier C.",
+                "recommendation": "Verify income and expenses to ensure the applicant can afford the loan.",
+                "reasoning": "The policy specifies a maximum DTI of 35% for Tier C applicants. The current DTI of 31.43% is within limits but close to the threshold, warranting careful review.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            }
+        ],
+        "reasoning": "The applicant's credit score categorizes them as Tier C, necessitating stricter criteria. The Debt-to-Income ratio is within the acceptable range but close to the limit, indicating potential affordability concerns. The vehicle and loan structure comply with policy requirements."
+    },
+    "message": "",
+    "isSuccessStatusCode": true
+}

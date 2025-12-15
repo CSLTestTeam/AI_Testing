@@ -1,0 +1,39 @@
+{
+    "content": {
+        "triageFlags": [
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Vehicle Age Exceeds Policy Limit",
+                "targetField": "Asset.VehicleAgeMonths",
+                "currentValue": "92",
+                "expectedValue": "Maximum 96 months at the end of the agreement",
+                "description": "The vehicle's age at the start of the agreement exceeds the policy limit when considering the term length.",
+                "recommendation": "Consider adjusting the term length or declining the proposal.",
+                "reasoning": "Policy states the vehicle's age at the end of the agreement must not exceed 12 years. With a 60-month term, the vehicle will be 12 years and 8 months old, exceeding the limit.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            },
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Loan-to-Value Ratio Exceeds Policy Limit",
+                "targetField": "Financials.LoanToValuePercent",
+                "currentValue": "91.11",
+                "expectedValue": "Maximum 100% for Tier A",
+                "description": "The LTV ratio is slightly above the policy limit for the applicant's credit tier.",
+                "recommendation": "Review the LTV ratio and consider requiring a higher deposit.",
+                "reasoning": "Policy specifies a maximum LTV of 100% for Tier A applicants. The current LTV ratio of 91.11% is within acceptable limits but should be monitored closely.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            }
+        ],
+        "reasoning": "The vehicle's age at the start of the agreement exceeds the maximum allowed, and the LTV ratio is slightly above the policy limit for the applicant's credit tier. These factors increase the risk level, but the applicant's strong credit score and affordability metrics mitigate some concerns."
+    },
+    "message": "",
+    "isSuccessStatusCode": true
+}

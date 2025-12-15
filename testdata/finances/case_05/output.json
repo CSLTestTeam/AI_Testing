@@ -1,0 +1,39 @@
+{
+    "content": {
+        "triageFlags": [
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Loan-to-Value Exceeds Policy Limit",
+                "targetField": "Financials.LoanToValuePercent",
+                "currentValue": "91.11%",
+                "expectedValue": "<= 90%",
+                "description": "The Loan-to-Value ratio exceeds the maximum allowed by policy for the applicant's credit tier.",
+                "recommendation": "Consider requesting a higher deposit or reducing the loan amount to meet the LTV requirement.",
+                "reasoning": "According to the policy, the maximum LTV for Tier A is 90%. The calculated LTV for this proposal is 91.11%, which exceeds the limit.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            },
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Debt-to-Income Ratio Exceeds Policy Limit",
+                "targetField": "Financials.DebtToIncomePercent",
+                "currentValue": "41.25%",
+                "expectedValue": "<= 40%",
+                "description": "The Debt-to-Income ratio exceeds the maximum allowed by policy for the applicant's credit tier.",
+                "recommendation": "Consider reducing the loan amount or increasing the deposit to lower the DTI ratio.",
+                "reasoning": "The policy specifies a maximum DTI of 40% for Tier A applicants. The calculated DTI for this proposal is 41.25%, which is above the threshold.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            }
+        ],
+        "reasoning": "The proposal was analyzed against the underwriting policy. The applicant's credit score qualifies for Tier A, which allows for a maximum Loan-to-Value (LTV) of 90% and a Debt-to-Income (DTI) ratio of 40%. However, the proposal's LTV is 91.11%, exceeding the policy limit, and the DTI is 41.25%, also above the allowed threshold. These findings indicate a medium risk level due to the policy violations."
+    },
+    "message": "",
+    "isSuccessStatusCode": true
+}

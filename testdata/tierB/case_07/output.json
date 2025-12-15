@@ -1,0 +1,39 @@
+{
+    "content": {
+        "triageFlags": [
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Term Length Exceeds Policy Limit",
+                "targetField": "Financials.TermMonths",
+                "currentValue": "72",
+                "expectedValue": "60",
+                "description": "The term length of 72 months exceeds the maximum allowed term of 60 months for this vehicle.",
+                "recommendation": "Adjust the term length to comply with the policy limit of 60 months.",
+                "reasoning": "According to the policy, the maximum term for any agreement is 60 months. The proposed term of 72 months exceeds this limit, which could increase the risk of default.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            },
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "LTV Ratio Exceeds Policy Limit for Credit Tier",
+                "targetField": "Financials.LoanToValuePercent",
+                "currentValue": "91.11",
+                "expectedValue": "100",
+                "description": "The LTV ratio of 91.11% is above the maximum allowed for the applicant's credit tier.",
+                "recommendation": "Consider reducing the loan amount or increasing the deposit to bring the LTV ratio within acceptable limits.",
+                "reasoning": "The policy specifies a maximum LTV of 100% for Tier B applicants. The current LTV ratio slightly exceeds this threshold, indicating a higher risk level.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            }
+        ],
+        "reasoning": "The analysis identified a term length exceeding the maximum allowed for the vehicle's age and an LTV ratio slightly above the policy limit for the applicant's credit tier. These factors increase the risk level, but they may be mitigated with adjustments."
+    },
+    "message": "",
+    "isSuccessStatusCode": true
+}

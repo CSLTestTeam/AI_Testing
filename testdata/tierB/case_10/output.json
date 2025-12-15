@@ -1,0 +1,39 @@
+{
+    "content": {
+        "triageFlags": [
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Excessive Vehicle Mileage",
+                "targetField": "Asset.Mileage",
+                "currentValue": "105000",
+                "expectedValue": "<=100000",
+                "description": "The vehicle's mileage exceeds the maximum allowable limit of 100,000 miles at the start of the agreement.",
+                "recommendation": "Consider rejecting the proposal or renegotiating terms to include a vehicle within the mileage limit.",
+                "reasoning": "According to the policy, vehicles with mileage exceeding 100,000 miles at the start of the agreement are not eligible for financing. This ensures the asset's value and reliability align with the loan's terms.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            },
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Loan-to-Value Ratio Exceeds Policy Limit",
+                "targetField": "Financials.LoanToValuePercent",
+                "currentValue": "91.11",
+                "expectedValue": "<=85% for Tier B",
+                "description": "The Loan-to-Value (LTV) ratio exceeds the maximum allowable limit for the applicant's credit tier.",
+                "recommendation": "Consider reducing the loan amount or increasing the deposit to meet the LTV policy requirements.",
+                "reasoning": "The policy specifies a maximum LTV of 85% for applicants in Tier B. This ensures the loan amount is proportionate to the asset's value, mitigating financial risk.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            }
+        ],
+        "reasoning": "The analysis identified a medium risk level due to the vehicle's mileage exceeding the policy's maximum limit and the LTV ratio being slightly above the acceptable range for the applicant's credit tier. These issues warrant further review and potential adjustments to ensure compliance with underwriting policies."
+    },
+    "message": "",
+    "isSuccessStatusCode": true
+}

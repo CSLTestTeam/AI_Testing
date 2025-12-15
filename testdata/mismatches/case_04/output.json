@@ -1,0 +1,39 @@
+{
+    "content": {
+        "triageFlags": [
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Critical",
+                "title": "Debt-to-Income Ratio Exceeds Policy Threshold",
+                "targetField": "Financials.DebtToIncomePercent",
+                "currentValue": "55.00",
+                "expectedValue": "<= 45.00",
+                "description": "The applicant's Debt-to-Income ratio exceeds the maximum allowable threshold for their credit tier.",
+                "recommendation": "Decline the application due to affordability concerns.",
+                "reasoning": "According to the policy, the maximum DTI for Tier A applicants is 45%. The applicant's DTI of 55% indicates a significant risk of financial overextension.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            },
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "High",
+                "title": "Loan-to-Value Ratio Exceeds Policy Threshold",
+                "targetField": "Financials.LoanToValuePercent",
+                "currentValue": "91.11",
+                "expectedValue": "<= 100.00",
+                "description": "The Loan-to-Value ratio exceeds the maximum allowable threshold for the applicant's credit tier.",
+                "recommendation": "Decline the application due to non-compliance with loan structure policies.",
+                "reasoning": "The policy specifies a maximum LTV of 100% for Tier A applicants. The current LTV of 91.11% is above this limit, indicating a potential risk in asset valuation and loan recovery.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            }
+        ],
+        "reasoning": "The applicant's DTI ratio of 55% significantly exceeds the maximum allowable threshold of 45% for their credit tier (Tier A). Additionally, the LTV ratio of 91.11% surpasses the policy limit of 100% for Tier A. These violations indicate a high risk of financial strain and non-compliance with underwriting policies."
+    },
+    "message": "",
+    "isSuccessStatusCode": true
+}

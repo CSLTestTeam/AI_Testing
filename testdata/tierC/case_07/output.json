@@ -1,0 +1,39 @@
+{
+    "content": {
+        "triageFlags": [
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Critical",
+                "title": "Excessive Term Length",
+                "targetField": "Financials.TermMonths",
+                "currentValue": "72",
+                "expectedValue": "Maximum 60 months",
+                "description": "The proposed term length exceeds the maximum allowable term for any agreement.",
+                "recommendation": "Decline the application or adjust the term length to comply with policy.",
+                "reasoning": "According to the underwriting policy, the maximum term for any agreement is 60 months. The proposed term of 72 months violates this policy, indicating a significant risk.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            },
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "High",
+                "title": "Debt-to-Income Ratio Exceeds Threshold",
+                "targetField": "Financials.DebtToIncomePercent",
+                "currentValue": "31.43",
+                "expectedValue": "Maximum 35% for Tier C",
+                "description": "The applicant's DTI ratio exceeds the maximum allowable threshold for their credit tier.",
+                "recommendation": "Decline the application or reassess affordability to reduce the DTI ratio.",
+                "reasoning": "The applicant's credit score places them in Tier C, which has a maximum allowable DTI ratio of 35%. The current DTI ratio of 31.43% is above this threshold, indicating affordability concerns.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            }
+        ],
+        "reasoning": "The analysis identified critical policy violations, including a term length of 72 months which exceeds the maximum allowable term of 60 months, and a DTI ratio of 31.43% which is above the 35% threshold for the applicant's credit tier. These factors indicate a high risk level and non-compliance with underwriting policies."
+    },
+    "message": "",
+    "isSuccessStatusCode": true
+}

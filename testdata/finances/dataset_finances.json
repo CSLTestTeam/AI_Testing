@@ -1,0 +1,33 @@
+[
+    {
+        "scenario_name": "Recent_Defaults",
+        "input_file": "finances/case_01/input.json",
+        "output_file": "finances/case_01/output.json",
+        "expected_output_prompt": "The defaults on credit accounts should be highlighted"
+    },
+    {
+        "scenario_name": "Incorrect_Loan_Financing",
+        "input_file": "finances/case_02/input.json",
+        "output_file": "finances/case_02/output.json",
+        "expected_output_prompt": "It should be mentioned that the loan setup will not fully pay off the vehicle"
+    },
+    {
+        "scenario_name": "High_Credit_Utilization",
+        "input_file": "finances/case_03/input.json",
+        "output_file": "finances/case_03/output.json",
+        "expected_output_prompt": "High credit utilization should be highlighted"
+    },
+    {
+        "scenario_name": "Negative_Credit_Score_Factors",
+        "input_file": "finances/case_04/input.json",
+        "output_file": "finances/case_04/output.json",
+        "expected_output_prompt": "The negative factors on the credit score should be mentioned"
+    },
+    {
+        "scenario_name": "Fraud_Markers",
+        "input_file": "finances/case_05/input.json",
+        "output_file": "finances/case_05/output.json",
+        "expected_output_prompt": "The fraud markers present in the credit report should be highlighted"
+    }
+
+]

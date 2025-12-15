@@ -1,0 +1,24 @@
+{
+    "content": {
+        "triageFlags": [
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Critical",
+                "title": "Credit Score Below Minimum Threshold",
+                "targetField": "CreditSummary.Score",
+                "currentValue": "0",
+                "expectedValue": "550+",
+                "description": "The applicant's credit score is below the minimum threshold required for financing.",
+                "recommendation": "Decline the application as the credit score does not meet the minimum policy requirements.",
+                "reasoning": "According to the policy, a credit score below 550 is automatically declined unless there are exceptional, documented circumstances. The applicant's score of zero is significantly below this threshold, indicating a critical issue.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            }
+        ],
+        "reasoning": "The applicant's credit score of zero does not meet the minimum requirements outlined in the policy, which mandates a score of at least 550 for consideration. This is a critical issue that cannot be mitigated under current policy guidelines."
+    },
+    "message": "",
+    "isSuccessStatusCode": true
+}

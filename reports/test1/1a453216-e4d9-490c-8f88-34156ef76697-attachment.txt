@@ -1,0 +1,5 @@
+Metric: Hallucination
+Status: FAIL
+Score: 0.4000
+Threshold: 0.8000
+Reasoning: The output incorrectly lists two Loan-to-Value findings with conflicting current values and severity for different credit tiers, including one stating an LTV of 102.5% exceeding a Tier B limit, which is inconsistent with the input's credit score of 720 (Tier A). The scoring tier assignment and policy expected values do not align with the credit score from the input, demonstrating factual errors and hallucinations. Additionally, the Debt-to-Income finding states the DTI exceeds the limit for Tier A but reports 41.25% is within the 45% limit, showing flawed reasoning. The output also fails to report any data discrepancies between proposal and credit report where expected. Despite ignoring missing credit report mentions, these errors reduce faithfulness and correctness markedly.

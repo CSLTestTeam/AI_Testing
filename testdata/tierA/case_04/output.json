@@ -1,0 +1,39 @@
+{
+    "content": {
+        "triageFlags": [
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Critical",
+                "title": "Excessive Loan-to-Value (LTV) Ratio",
+                "targetField": "Financials.LoanToValuePercent",
+                "currentValue": "224.44",
+                "expectedValue": "<= 110%",
+                "description": "The LTV ratio exceeds the maximum allowable threshold for the applicant's credit tier.",
+                "recommendation": "Decline the proposal as the LTV ratio is non-compliant with policy.",
+                "reasoning": "According to the policy, the maximum LTV for Tier A applicants is 110%. The current LTV of 224.44% is significantly higher, indicating a high risk of financial overextension.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            },
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Critical",
+                "title": "Excessive Debt-to-Income (DTI) Ratio",
+                "targetField": "Financials.DebtToIncomePercent",
+                "currentValue": "55.00",
+                "expectedValue": "<= 45%",
+                "description": "The DTI ratio exceeds the maximum allowable threshold for the applicant's credit tier.",
+                "recommendation": "Decline the proposal as the DTI ratio is non-compliant with policy.",
+                "reasoning": "The policy specifies a maximum DTI of 45% for Tier A applicants. The current DTI of 55% indicates that the applicant's financial commitments are too high relative to their income, posing a significant risk.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            }
+        ],
+        "reasoning": "The applicant's LTV ratio of 224.44% significantly exceeds the maximum allowable threshold of 110% for their credit tier (Tier A). Additionally, the DTI ratio of 55% surpasses the maximum allowable threshold of 45% for Tier A applicants. These violations indicate a high risk of financial overextension, making the proposal non-compliant with underwriting policies."
+    },
+    "message": "",
+    "isSuccessStatusCode": true
+}

@@ -1,0 +1,39 @@
+{
+    "content": {
+        "triageFlags": [
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Excessive Vehicle Mileage",
+                "targetField": "Asset.Mileage",
+                "currentValue": "105000",
+                "expectedValue": "<= 100000",
+                "description": "The vehicle's mileage exceeds the maximum allowable limit at the start of the agreement.",
+                "recommendation": "Consider requesting a different vehicle or adjusting the terms to comply with mileage limits.",
+                "reasoning": "Policy states that vehicles must not exceed 100,000 miles at the start of the agreement. This vehicle's mileage is 105,000 miles, which is above the limit.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            },
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Loan-to-Value Ratio Exceeds Threshold",
+                "targetField": "Financials.LoanToValuePercent",
+                "currentValue": "91.11",
+                "expectedValue": "<= 85.42",
+                "description": "The Loan-to-Value ratio exceeds the maximum allowable threshold for the applicant's credit tier.",
+                "recommendation": "Review the advance amount or consider increasing the deposit to reduce the LTV ratio.",
+                "reasoning": "The policy specifies a maximum LTV of 85.42% for the applicant's credit tier, but the current LTV is 91.11%, indicating a higher risk.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            }
+        ],
+        "reasoning": "The applicant's credit score and financial stability are strong, but the vehicle's mileage and LTV ratio present moderate risks that should be addressed to align with policy requirements."
+    },
+    "message": "",
+    "isSuccessStatusCode": true
+}

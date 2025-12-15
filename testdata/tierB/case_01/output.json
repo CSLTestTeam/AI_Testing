@@ -1,0 +1,39 @@
+{
+    "content": {
+        "triageFlags": [
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Credit Score in Tier B",
+                "targetField": "CreditSummary.Score",
+                "currentValue": "627",
+                "expectedValue": "620-699",
+                "description": "The applicant's credit score places them in Tier B, which requires stricter affordability checks.",
+                "recommendation": "Ensure that all affordability checks are thoroughly conducted and documented.",
+                "reasoning": "According to the policy, a credit score in the range of 620-699 places the applicant in Tier B, which requires standard terms and stricter affordability checks.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            },
+            {
+                "triageId": 0,
+                "triage": null,
+                "severity": "Medium",
+                "title": "Loan-to-Value Ratio Close to Maximum for Tier B",
+                "targetField": "Financials.LoanToValuePercent",
+                "currentValue": "91.11",
+                "expectedValue": "<=100",
+                "description": "The Loan-to-Value ratio is close to the maximum allowable for Tier B applicants.",
+                "recommendation": "Verify the accuracy of the vehicle's trade price and ensure the LTV calculation is correct.",
+                "reasoning": "The policy states that the maximum LTV for Tier B applicants is 100%. The current LTV of 91.11% is within this limit but close to the maximum, which warrants careful verification.",
+                "createdAt": "0001-01-01T00:00:00",
+                "lastUpdatedAt": null,
+                "id": 0
+            }
+        ],
+        "reasoning": "The applicant's credit score places them in Tier B, which is acceptable but requires stricter affordability checks. The LTV ratio is within the acceptable range for Tier B, but close to the maximum limit, necessitating careful consideration."
+    },
+    "message": "",
+    "isSuccessStatusCode": true
+}

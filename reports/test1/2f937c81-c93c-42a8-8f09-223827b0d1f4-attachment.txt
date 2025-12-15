@@ -1,0 +1,5 @@
+Metric: Hallucination
+Status: FAIL
+Score: 0.7000
+Threshold: 0.8000
+Reasoning: The output correctly identifies missing calculations for Loan-to-Value (LTV), Debt-to-Income (DTI), and residual value percentage, which are key policy-required metrics. There are no hallucinations or fabricated details beyond these missing calculations. The reasoning is clear and consistent with the input data and policy context. However, the output does not show any actual calculations or attempts to verify values from the input data, nor does it report any discrepancies found between the credit report and proposal details, which should have been part of a thorough triage. The absence of these verifications lowers the completeness of the response despite correctly flagging important missing metrics.
